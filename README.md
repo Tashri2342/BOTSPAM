@@ -8,4 +8,4 @@
 
 - Then click Down One Button 
 
-- [![Deploy](https://telegra.ph/file/1ded5ead2f8cc5828897a.jpg)](https://heroku.com/deploy/)
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
