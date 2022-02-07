@@ -1,0 +1,99 @@
+{
+    "name": "LegendSpam",
+    "description": "Spamming Bot Made By LegendBoy and Manisha",
+    "logo": "https://te.legra.ph/file/51153ee3e3b62182782ba.jpg",
+    "keywords": [
+        "telegram",
+        "telethon",
+        "telegrambot",
+        "legendboy",
+        "Botspam"
+    ],
+    "repository": "https://github.com/LEGEND-AI/BOTSPAM",
+    "website": "https://t.me/LegendBoy_XD",
+    "success_url": "https://t.me/LegendBoy_XD",
+    "env": {
+        "API_HASH": {
+            "description": "Write API_HASH from my.telegram.org",
+            "value": ""
+        },
+        "APP_ID": {
+            "description": "Paste API ID from my.telegram.org",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Use @BotFather. To Get BOT_TOKEN",
+            "value": ""
+        },
+        "BOT_TOKEN2": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+
+        },
+        "BOT_TOKEN3": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+           
+        },
+        "BOT_TOKEN4": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+            
+        },
+        "BOT_TOKEN5": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+           
+        },
+        "BOT_TOKEN6": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+            
+        },
+        "BOT_TOKEN7": {
+            "description": "Use @BotFather. To Get BOT_TOKEN",
+            "value": ""
+            
+        },
+        "BOT_TOKEN8": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+            
+        },
+        "BOT_TOKEN9": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+            
+        },
+        "BOT_TOKEN10": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": ""
+            
+        },
+        "SUDO_USERS": {
+            "description": "OWNER_ID",
+            "value": ""
+            
+        },
+        "YOUR_NAME": {
+            "description": "NAME",
+            "value": "LegendBoy"
+            
+        },
+        "HEROKU_API_KEY": {
+            "description": "Your Heroku api key to update your bot",
+            "value": ""
+            
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Your app name to Update your bot",
+            "value": ""
+            
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
