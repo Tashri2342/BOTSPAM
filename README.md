@@ -1,6 +1,6 @@
 ## This Is Bot Token Spam Bot Used For Spam By Bot Token 
 
-## Creator -[⚡LegendBoy⚡](https://t.me/The_LegendBoy)
+## Creator -[⚡LegendBoy⚡](https://t.me/LegendBoy_XD)
 
 ## ⚡ Deploy on Heroku ⚡
 
