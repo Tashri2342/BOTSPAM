@@ -1,7 +1,8 @@
-## This Is Bot Token Spam Bot Used For Spam By Bot Token 
+# BOTSPAM
 <p>
-<h2> This Is SpamBot Of <a href="https://telegram.me/LegendBot_XD">@LegendBoy_XD</a></h2>
+<h2> This Is BOTSPAM Of <a href="https://telegram.me/LegendBot_XD">@LegendBoy_XD</a></h2>
 </p>
+
 ## 👨‍💻 Commands 👨‍💻
 
 <br>
@@ -25,7 +26,7 @@
 - <b>```/restart```</b> - To Restart Your Bots
 <br>
 
-## ⚡ Deploy on Heroku ⚡
+## ⚡ Deploy On Heroku ⚡
 
 <br>
 
