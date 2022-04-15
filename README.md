@@ -13,7 +13,7 @@
 
 - <b>```/spam <1-100> <text>```</b> - For Value Between 1-100
 
-- <b>```/bigspam <101-9999><text>```</b> - For Value Between 100-10000
+- <b>```/bigspam <101-9999> <text>```</b> - For Value Between 100-10000
 
 - <b>```/delayspam <delay> <count> <text>```</b> - To Add The Delay Of Some Time Between Each Message Sending Time 
 
