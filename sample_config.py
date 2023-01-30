@@ -1,3 +1,6 @@
+from telethon import TelegramClient
+from decouple import config
+
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
