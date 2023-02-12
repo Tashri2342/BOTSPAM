@@ -21,6 +21,10 @@
             "description": "Paste API ID from my.telegram.org, Join Group https://t.me/LegendBot_Op, then check notes",
             "value": ""
         },
+        "ENV": {
+            "description": "dont edit this",
+            "value": "ANYTHING"
+        },
         "BOT_TOKEN": {
             "description": "Use @BotFather. To Get BOT_TOKEN",
             "value": ""
