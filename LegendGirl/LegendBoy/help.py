@@ -1,9 +1,12 @@
 import os
-YOUR_NAME = os.environ.get("YOUR_NAME, None")
 from .. import *
 from telethon import events
 from time import time
 from datetime import datetime
+
+SMEX_USERS = []
+for x in SUDO_USERS:
+    SMEX_USERS.append(x)
 
 @bot.on(
     events.NewMessage(pattern="^/help", func=lambda e: e.sender_id in SMEX_USERS)
