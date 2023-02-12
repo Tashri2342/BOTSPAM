@@ -1,4 +1,3 @@
-
 import asyncio
 import os
 import sys
@@ -44,7 +43,7 @@ RESTARTING_APP = "re-starting heroku application"
 @bot10.on(events.NewMessage(pattern="/update"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = " 🔰𝐔𝐏𝐃𝐀𝐓𝐈𝐍𝐆 𝐘𝐎𝐔𝐑 𝐒𝐏𝐀𝐌𝐁𝐎𝐓🔰....\n𝐓𝐘𝐏𝐄 /𝐩𝐢𝐧𝐠 𝐀𝐅𝐓𝐄𝐑 𝟓 𝐌𝐈𝐍𝐒 𝐓𝐎 𝐂𝐇𝐄𝐂𝐊 𝐈𝐅 𝐈'𝐌 𝐎𝐍"
+        text = "⚜ Updating Your Spam Bot ⚜ \n\n Type /ping After 5 min to check update"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
@@ -156,7 +155,7 @@ def generate_change_log(git_repo, diff_marker):
 async def deploy_start(bot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "Updated your 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 successfully sur!!!\nNow type `/ping` after 5 mins to check if I'm on🚶😏"
+        "Updated your Spambot successfully sur!!!\nNow type `/ping` after 5 mins to check if I'm on🚶😏"
     )
     await remote.push(refspec=refspec)
     await bot.disconnect()
