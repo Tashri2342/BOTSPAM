@@ -16,6 +16,7 @@ BOT_TOKEN8 = config("BOT_TOKEN8", default=None)
 BOT_TOKEN9 = config("BOT_TOKEN9", default=None)
 BOT_TOKEN10 = config("BOT_TOKEN10", default=None)
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
+YOUR_NAME = config("YOUR_NAME", None)
 
 bot = TelegramClient('LegendBoy', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
 bot2 = TelegramClient('LegendBoy2', APP_ID, API_HASH).start(bot_token=BOT_TOKEN2) 
