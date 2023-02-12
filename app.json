@@ -1,7 +1,7 @@
 {
     "name": "LegendSpam",
     "description": "Spamming Bot Made By LegendBoy and Manisha",
-    "logo": "https://te.legra.ph/file/51153ee3e3b62182782ba.jpg",
+    "logo": "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg",
     "keywords": [
         "telegram",
         "telethon",
@@ -10,15 +10,15 @@
         "Botspam"
     ],
     "repository": "https://github.com/LEGEND-AI/BOTSPAM",
-    "website": "https://t.me/LegendBoy_XD",
-    "success_url": "https://t.me/LegendBoy_XD",
+    "website": "https://t.me/LegendBoy_OP",
+    "success_url": "https://t.me/LegendBoy_OP",
     "env": {
         "API_HASH": {
-            "description": "Write API_HASH from my.telegram.org",
+            "description": "Write API_HASH from my.telegram.org, Join Group https://t.me/LegendBot_Op, then check notes",
             "value": ""
         },
         "APP_ID": {
-            "description": "Paste API ID from my.telegram.org",
+            "description": "Paste API ID from my.telegram.org, Join Group https://t.me/LegendBot_Op, then check notes",
             "value": ""
         },
         "BOT_TOKEN": {
@@ -71,17 +71,17 @@
             
         },
         "SUDO_USERS": {
-            "description": "OWNER_ID",
+            "description": "Owner Id Get It From start @missrose_bot , then do /id",
             "value": ""
             
         },
         "YOUR_NAME": {
-            "description": "NAME",
+            "description": "Your Name",
             "value": "LegendBoy"
             
         },
         "HEROKU_API_KEY": {
-            "description": "Your Heroku api key to update your bot",
+            "description": "Your Heroku api key to update your bot Get it from https://dashboard.heroku.com/account, then go down and click on reveal",
             "value": ""
             
         },
