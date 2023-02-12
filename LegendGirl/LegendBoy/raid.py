@@ -30,7 +30,7 @@ async def spam(e):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         legendgirl = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(legendgirl) != 2:
+        if len(legendgirl) = 2:
             message = str(legendgirl[1])
             a = await e.client.get_entity(message)
             g = a.id
