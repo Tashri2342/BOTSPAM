@@ -15,8 +15,8 @@ for name in files:
         plugin_name = patt.stem
         load_plugins(plugin_name.replace(".py", ""))
 
-print("Sir Deployed Ho Gya")
-print("Congratulations")
+print("Your Legend Spam Bot Has Been Deployed Successfully")
+print("Congratulations 😇 For Being A Part Of LegendBot \nJoin @LegendBot_OP For Any Help")
 
 if __name__ == "__main__":
     bot.run_until_disconnected()
