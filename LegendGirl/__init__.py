@@ -5,12 +5,6 @@ import time
 from decouple import config
 from telethon import TelegramClient
 
-ENV = bool(os.environ.get("ENV", False))
-
-if ENV:
-    from sample_config import *  # noqa
-elif os.path.exists("config.py"):
-    from config import *
 
 RAID = [
     "MADARCHOD TERI MAA KI CHUT ME GHUTKA KHAAKE THOOK DUNGA 🤣🤣",
