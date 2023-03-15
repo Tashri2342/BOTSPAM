@@ -1,11 +1,8 @@
-
-import sys
-import logging
 import importlib
-from telethon import events
+import logging
+import sys
 from pathlib import Path
-import inspect
-import re
+
 
 def load_plugins(plugin_name):
     path = Path(f"LegendGirl/LegendBoy/{plugin_name}.py")
@@ -17,6 +14,7 @@ def load_plugins(plugin_name):
     sys.modules["LegendGirl.LegendBoy." + plugin_name] = load
     print("💝[Bot Spam]💝 ~ Has Imported " + plugin_name)
 
+
 async def edit_or_reply(event, text):
     if event.sender_id in SUDO_USERS:
         reply_to = await event.get_reply_message()
@@ -24,4 +22,3 @@ async def edit_or_reply(event, text):
             return await reply_to.reply(text)
         return await event.reply(text)
     return await event.edit(text)
-

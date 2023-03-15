@@ -1,6 +1,5 @@
 from telethon import TelegramClient
 
-
 APP_ID = 
 API_HASH = 
 BOT_TOKEN = 

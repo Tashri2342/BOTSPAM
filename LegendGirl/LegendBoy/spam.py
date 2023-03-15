@@ -1,4 +1,3 @@
-
 async def gifspam(e, smex):
     try:
         await e.client(
@@ -14,18 +13,16 @@ async def gifspam(e, smex):
     except Exception:
         pass
 
+
 import asyncio
-import base64
-import os
-from telethon import events
-from telethon import functions, types
-from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+
+from telethon import events, functions, types
+
 from .. import *
 
 SMEX_USERS = []
 for x in SUDO_USERS:
     SMEX_USERS.append(x)
-
 
 
 @bot.on(events.NewMessage(pattern="/spam"))

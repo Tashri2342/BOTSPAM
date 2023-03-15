@@ -1,9 +1,12 @@
 import asyncio
 import os
 import sys
+
 import git
 from telethon import events
+
 from .. import *
+
 SMEX_USERS = []
 for x in SUDO_USERS:
     SMEX_USERS.append(x)
@@ -31,6 +34,7 @@ HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "re-starting heroku application"
 # -- Constants End -- #
 
+
 @bot.on(events.NewMessage(pattern="/update"))
 @bot2.on(events.NewMessage(pattern="/update"))
 @bot3.on(events.NewMessage(pattern="/update"))
@@ -47,10 +51,7 @@ async def restart(e):
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
-
-@bot.on(
-    events.NewMessage(pattern="^/update", func=lambda e: e.sender_id in SMEX_USERS)
-)
+@bot.on(events.NewMessage(pattern="^/update", func=lambda e: e.sender_id in SMEX_USERS))
 async def updater(message):
     try:
         repo = git.Repo()

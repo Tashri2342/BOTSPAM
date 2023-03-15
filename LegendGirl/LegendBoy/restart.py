@@ -1,12 +1,14 @@
-from .. import *
-from telethon import events
 import os
-import random
 import sys
+
+from telethon import events
+
+from .. import *
 
 SMEX_USERS = []
 for x in SUDO_USERS:
     SMEX_USERS.append(x)
+
 
 @bot.on(events.NewMessage(pattern="/restart"))
 @bot2.on(events.NewMessage(pattern="/restart"))

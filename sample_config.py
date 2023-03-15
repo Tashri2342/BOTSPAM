@@ -1,6 +1,8 @@
-from telethon import TelegramClient
-from decouple import config
 from os import getenv
+
+from decouple import config
+from telethon import TelegramClient
+
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
@@ -18,13 +20,13 @@ BOT_TOKEN10 = config("BOT_TOKEN10", default=None)
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
 YOUR_NAME = config("YOUR_NAME", None)
 
-bot = TelegramClient('LegendBoy', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
-bot2 = TelegramClient('LegendBoy2', APP_ID, API_HASH).start(bot_token=BOT_TOKEN2) 
-bot3 = TelegramClient('LegendBoy3', APP_ID, API_HASH).start(bot_token=BOT_TOKEN3) 
-bot4 = TelegramClient('LegendBoy4', APP_ID, API_HASH).start(bot_token=BOT_TOKEN4) 
-bot5 = TelegramClient('LegendBoy5', APP_ID, API_HASH).start(bot_token=BOT_TOKEN5) 
-bot6 = TelegramClient('LegendBoy6', APP_ID, API_HASH).start(bot_token=BOT_TOKEN6) 
-bot7 = TelegramClient('LegendBoy7', APP_ID, API_HASH).start(bot_token=BOT_TOKEN7) 
-bot8 = TelegramClient('LegendBoy8', APP_ID, API_HASH).start(bot_token=BOT_TOKEN8) 
-bot9 = TelegramClient('LegendBoy9', APP_ID, API_HASH).start(bot_token=BOT_TOKEN9) 
-bot10 = TelegramClient('LegendBoy10', APP_ID, API_HASH).start(bot_token=BOT_TOKEN10)
+bot = TelegramClient("LegendBoy", APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
+bot2 = TelegramClient("LegendBoy2", APP_ID, API_HASH).start(bot_token=BOT_TOKEN2)
+bot3 = TelegramClient("LegendBoy3", APP_ID, API_HASH).start(bot_token=BOT_TOKEN3)
+bot4 = TelegramClient("LegendBoy4", APP_ID, API_HASH).start(bot_token=BOT_TOKEN4)
+bot5 = TelegramClient("LegendBoy5", APP_ID, API_HASH).start(bot_token=BOT_TOKEN5)
+bot6 = TelegramClient("LegendBoy6", APP_ID, API_HASH).start(bot_token=BOT_TOKEN6)
+bot7 = TelegramClient("LegendBoy7", APP_ID, API_HASH).start(bot_token=BOT_TOKEN7)
+bot8 = TelegramClient("LegendBoy8", APP_ID, API_HASH).start(bot_token=BOT_TOKEN8)
+bot9 = TelegramClient("LegendBoy9", APP_ID, API_HASH).start(bot_token=BOT_TOKEN9)
+bot10 = TelegramClient("LegendBoy10", APP_ID, API_HASH).start(bot_token=BOT_TOKEN10)
