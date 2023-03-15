@@ -1,13 +1,8 @@
+import os
 from telethon import TelegramClient
 from decouple import config
 import logging
 import time
-from os import getenv
-
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.WARNING)
-
-import os
 
 ENV = bool(os.environ.get("ENV", False))
 
