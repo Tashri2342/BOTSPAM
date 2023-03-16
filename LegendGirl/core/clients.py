@@ -17,7 +17,7 @@ else:
 if BOT_TOKEN2:
     Client2 = Client(
         "LegendSpam2",
-        api_id=API_ID,
+        api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN2,
         plugins=dict(root="LegendGirls.LegendBoy"),
@@ -30,7 +30,7 @@ else:
 if BOT_TOKEN3:
     Client3 = Client(
         "LegendSpam3",
-        api_id=API_ID,
+        api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN3,
         plugins=dict(root="LegendGirls.LegendBoy"),
@@ -43,7 +43,7 @@ else:
 if BOT_TOKEN4:
     Client4 = Client(
         "LegendSpam4",
-        api_id=API_ID,
+        api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN4,
         plugins=dict(root="LegendGirls.LegendBoy"),
