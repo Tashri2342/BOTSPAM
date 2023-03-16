@@ -1,7 +1,6 @@
 from os import getenv
 
 from decouple import config
-from telethon import TelegramClient
 
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
