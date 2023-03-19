@@ -18,7 +18,7 @@ lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
         return
     if LOGS_CHANNEL:
          try:
-            await SpamX.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
+            await Legend.send_message(LOGS_CHANNEL, f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}")
          except Exception as a:
              print(a)
              pass 
