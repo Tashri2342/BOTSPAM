@@ -31,6 +31,6 @@ BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 try:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
 except Exception:
-    SUDO_USERS = str(getenv("SUDO_USERS", "123 456")
+    SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
 LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 HANDLER = getenv("HANDLER", None)
