@@ -10,14 +10,14 @@ start_time = time.time()
 # full debugging
 if SUDO_USERS:
     try:
-        sudouser = str(SUDO_USERS).split(" ")
+        sudouser = SUDO_USERS
         print(sudouser)
         _list = []
         for x in sudouser:
             print(x)
             _list.append(int(x))
     except Exception as e:
-        global SUDO_USERS
+        sudouser = SUDO_USERS
         print(e)
 else:
     print("Add Key Sudo User")
