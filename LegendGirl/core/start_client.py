@@ -1,7 +1,7 @@
 from .clients import *
 from LegendGirl.Config import *
 
-from LegendGirl import version
+from LegendGirl import version, group_username
 from pyrogram import __version__ as py_version
 import platform
 from pyrogram import idle
@@ -24,7 +24,7 @@ def Start_BotSpam():
         start_bot(Client2)
 
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
-    print(f"Legend Spam Bot [INFO] : Group Username {group_username})
+    print(f"Legend Spam Bot [INFO] : Group Username {group_username}")
     print(f"Legend Spam Bot [INFO] : Version - {platform.python_version()}")
     print(f"Legend Spam Bot [INFO]: SpamBot Version - {version}")
     print(f"Legend Spam Bot  [INFO]: Pyrogram Version - {py_version}")
