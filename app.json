@@ -36,43 +36,43 @@
         },
         "BOT_TOKEN3": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-           
+            "value": "",
+            "required": false
         },
         "BOT_TOKEN4": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-            
+            "value": "",
+            "required": false       
         },
         "BOT_TOKEN5": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-           
+            "value": "",
+            "required": false         
         },
         "BOT_TOKEN6": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-            
+            "value": "",
+            "required": false     
         },
         "BOT_TOKEN7": {
             "description": "Use @BotFather. To Get BOT_TOKEN",
-            "value": ""
-            
+            "value": "",
+            "required": false       
         },
         "BOT_TOKEN8": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-            
+            "value": "",
+            "required": false         
         },
         "BOT_TOKEN9": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-            
+            "value": "",
+            "required": false         
         },
         "BOT_TOKEN10": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-            
+            "value": "",
+            "required": false        
         },
         "SUDO_USERS": {
             "description": "Owner Id Get It From start @missrose_bot , then do /id",
