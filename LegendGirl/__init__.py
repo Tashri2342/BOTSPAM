@@ -8,9 +8,9 @@ start_time  = time.time()
 
 #Sudo Users
 
-sudoser = []
+sudouser = []
 if SUDO_USERS:
-  sudoser = str(SUDO_USERS).split(" ")
+  sudouser = str(SUDO_USERS).split(" ")
   _list = []
   for x in sudouser:
         _list.append(int(x))
