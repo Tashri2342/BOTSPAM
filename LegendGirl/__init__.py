@@ -6,7 +6,7 @@ from .Resources import *
 
 start_time = time.time()
 # Sudo Users
-sudouser = []
+sudos = []
 # full debugging
 if SUDO_USERS:
     try:
@@ -15,8 +15,9 @@ if SUDO_USERS:
         _list = []
         for x in sudouser:
             _list.append(int(x))
+        sudos = _list
     except Exception as e:
-        sudouser = SUDO_USERS
+        sudos = SUDO_USERS
         print(e)
 else:
     print("Add Key Sudo User")
