@@ -7,7 +7,6 @@ from .Resources import *
 start_time = time.time()
 # Sudo Users
 
-sudouser = []
 if SUDO_USERS:
     sudouser = str(SUDO_USERS).split(" ")
     _list = []
