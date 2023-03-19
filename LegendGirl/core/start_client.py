@@ -23,10 +23,10 @@ def Start_BotSpam():
     if CLIENT2:
         start_bot(Client2)
 
-    print(➖➖➖➖➖➖➖➖➖➖➖➖)
+    print("➖➖➖➖➖➖➖➖➖➖➖➖")
     print(f"Legend Spam Bot [INFO] : Group Username {group_username})
     print(f"Legend Spam Bot [INFO] : Version - {platform.python_version()}")
     print(f"Legend Spam Bot [INFO]: SpamBot Version - {version}")
     print(f"Legend Spam Bot  [INFO]: Pyrogram Version - {py_version}")
-    print(➖➖➖➖➖➖➖➖➖➖➖➖)
+    print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
