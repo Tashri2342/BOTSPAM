@@ -27,8 +27,8 @@
         },
         "BOT_TOKEN": {
             "description": "Use @BotFather. To Get BOT_TOKEN",
-            "required": false
             "value": ""
+            "required": false
         },
         "BOT_TOKEN2": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
