@@ -29,7 +29,7 @@ BOT_TOKEN19 = config("BOT_TOKEN19", default=None)
 BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 try:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
-    print(str(getenv("SUDO_USERS", False))
+    print(str(getenv("SUDO_USERS", False)))
 except Exception as error:
     print(error)
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
