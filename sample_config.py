@@ -4,6 +4,7 @@ from decouple import config
 
 APP_ID = config("APP_ID", default=None, cast=int)
 API_HASH = config("API_HASH", default=None)
+
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = config("HEROKU_API_KEY", None)
 
@@ -30,6 +31,6 @@ BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 try:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
 except Exception:
-    SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
-
-YOUR_NAME = config("YOUR_NAME", None)
+    SUDO_USERS = str(getenv("SUDO_USERS", "123 456")
+LOG_CHANNEL = getenv("LOG_CHANNEL", None)
+HANDLER = getenv("HANDLER", None)
