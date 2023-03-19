@@ -28,7 +28,7 @@ BOT_TOKEN18 = config("BOT_TOKEN18", default=None)
 BOT_TOKEN19 = config("BOT_TOKEN19", default=None)
 BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 try:
-  SUDO_USERS = str(getenv("SUDO_USERS", "123 456").split(" ")
+  SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
 except:
   SUDO_USERS = str(getenv("SUDO_USERS", "123 456")
 
