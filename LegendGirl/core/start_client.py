@@ -3,7 +3,8 @@ import platform
 from pyrogram import __version__ as py_version
 from pyrogram import idle
 
-from LegendGirl import group_username, version
+version = "v1.0"
+group_username = "@LegendBot_OP"
 from LegendGirl.Config import *
 
 from .clients import *
