@@ -28,12 +28,11 @@
         "BOT_TOKEN": {
             "description": "Use @BotFather. To Get BOT_TOKEN",
             "value": ""
-            "required": false
         },
         "BOT_TOKEN2": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
-            "value": ""
-
+            "value": "",
+            "required": false
         },
         "BOT_TOKEN3": {
             "description": "Use @BotFather. To Get BOT_TOKEN.",
