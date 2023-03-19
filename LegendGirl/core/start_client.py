@@ -13,7 +13,7 @@ def start_bot(Client):
         x = Client.get_me()
         print(f"Client - [INFO]: @{x.username} get started ")
     except Exception as e:
-        print(f"Error - {e})
+        print(f"Error - {e}")
 
 
 def Start_BotSpam():
