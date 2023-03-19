@@ -1,10 +1,12 @@
-from .clients import *
+import platform
+
+from pyrogram import __version__ as py_version
+from pyrogram import idle
+
+from LegendGirl import group_username, version
 from LegendGirl.Config import *
 
-from LegendGirl import version, group_username
-from pyrogram import __version__ as py_version
-import platform
-from pyrogram import idle
+from .clients import *
 
 
 def start_bot(Client):
