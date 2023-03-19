@@ -14,7 +14,6 @@ if SUDO_USERS:
         print(sudouser)
         _list = []
         for x in sudouser:
-            print(x)
             _list.append(int(x))
     except Exception as e:
         sudouser = SUDO_USERS
