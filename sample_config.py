@@ -28,6 +28,6 @@ BOT_TOKEN18 = config("BOT_TOKEN18", default=None)
 BOT_TOKEN19 = config("BOT_TOKEN19", default=None)
 BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 
-SUDO_USERS = str(getenv("SUDO_USERS", None)
+SUDO_USERS = str(getenv("SUDO_USERS", None))
 
 YOUR_NAME = config("YOUR_NAME", None)
