@@ -11,7 +11,7 @@ def start_bot(Client):
     Client.start()
     try:
         x = Client.get_me()
-         print(f"Client - [INFO]: @{x.username} get started ")
+        print(f"Client - [INFO]: @{x.username} get started ")
     except Exception as e:
         print(f"Error - {e})
 
@@ -21,7 +21,7 @@ def Start_BotSpam():
         start_bot(Client)
 
     if CLIENT2:
-        start_bot(Client2
+        start_bot(Client2)
 
     print(➖➖➖➖➖➖➖➖➖➖➖➖)
     print(f"Legend Spam Bot [INFO] : Group Username {group_username}
