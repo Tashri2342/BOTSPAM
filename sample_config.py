@@ -28,5 +28,5 @@ BOT_TOKEN18 = config("BOT_TOKEN18", default=None)
 BOT_TOKEN19 = config("BOT_TOKEN19", default=None)
 BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
+SUDO_USERS = config("SUDO_USERS", dafault=None)
 YOUR_NAME = config("YOUR_NAME", None)
