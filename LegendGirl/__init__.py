@@ -6,7 +6,7 @@ from .Resources import *
 
 start_time = time.time()
 # Sudo Users
-
+sudouser = []
 # full debugging
 if SUDO_USERS:
     try:
