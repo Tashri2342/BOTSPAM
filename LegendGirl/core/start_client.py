@@ -20,10 +20,10 @@ def start_bot(Client):
 
 
 def Start_BotSpam():
-    if CLIENT:
+    if Client:
         start_bot(Client)
 
-    if CLIENT2:
+    if Client2:
         start_bot(Client2)
 
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
