@@ -2,7 +2,7 @@
 from LegendGirl.Config import *
 
 if ":" in BOT_TOKEN:
-    Client1 = Client(
+    Client = Client(
         "LegendSpam",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -20,7 +20,7 @@ if BOT_TOKEN2:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN2,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 2 Found")
 else:
@@ -33,7 +33,7 @@ if BOT_TOKEN3:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN3,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 3 Found")
 else:
@@ -46,7 +46,7 @@ if BOT_TOKEN4:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN4,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam - [INFO]: Bot token 4 Found")
 else:
@@ -58,7 +58,7 @@ if BOT_TOKEN5:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN5,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 5 Found")
 else:
@@ -70,7 +70,7 @@ if BOT_TOKEN6:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN6,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 6 Found")
 else:
@@ -82,7 +82,7 @@ if BOT_TOKEN7:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN7,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 7 Found")
 else:
@@ -94,7 +94,7 @@ if BOT_TOKEN8:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN8,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 8 Found")
 else:
@@ -106,7 +106,7 @@ if BOT_TOKEN9:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN9,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 9 Found")
 else:
@@ -118,7 +118,7 @@ if BOT_TOKEN10:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN10,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 10 Found")
 else:
@@ -130,7 +130,7 @@ if BOT_TOKEN11:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN11,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 11 Found")
 else:
@@ -142,7 +142,7 @@ if BOT_TOKEN12:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN12,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 12 Found")
 else:
@@ -154,7 +154,7 @@ if BOT_TOKEN13:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN13,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 13 Found")
 else:
@@ -166,7 +166,7 @@ if BOT_TOKEN14:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN14,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 14 Found")
 else:
@@ -178,7 +178,7 @@ if BOT_TOKEN15:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN15,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 15 Found")
 else:
@@ -190,7 +190,7 @@ if BOT_TOKEN16:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN16,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 16 Found")
 else:
@@ -202,7 +202,7 @@ if BOT_TOKEN17:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN17,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 17 Found")
 else:
@@ -214,7 +214,7 @@ if BOT_TOKEN18:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN18,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 18 Found")
 else:
@@ -226,7 +226,7 @@ if BOT_TOKEN19:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN19,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 19 Found")
 else:
@@ -238,7 +238,7 @@ if BOT_TOKEN20:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN20,
-        plugins=dict(root="LegendGirls.LegendBoy"),
+        plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 20 Found")
 else:
