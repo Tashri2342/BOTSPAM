@@ -1,6 +1,6 @@
 # starting all clients
 from LegendGirl.Config import *
-
+from pyrogram import Client
 if ":" in BOT_TOKEN:
     Client = Client(
         "LegendSpam",
