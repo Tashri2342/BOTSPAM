@@ -32,5 +32,6 @@ try:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
 except Exception:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
+ALIVE_PIC = getenv("ALIVE_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
 LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 HANDLER = getenv("HANDLER", None)
