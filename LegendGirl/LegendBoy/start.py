@@ -1,5 +1,6 @@
-from LegendGirl.Config import *
 from pyrogram import Client, filters
+
+from LegendGirl.Config import *
 
 handler = HANDLER
 
