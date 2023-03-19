@@ -27,11 +27,11 @@ BOT_TOKEN17 = config("BOT_TOKEN17", default=None)
 BOT_TOKEN18 = config("BOT_TOKEN18", default=None)
 BOT_TOKEN19 = config("BOT_TOKEN19", default=None)
 BOT_TOKEN20 = config("BOT_TOKEN20", default=None)
-try:
+"""try:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456")).split(" ")
 except:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
-
-# SUDO_USERS = str(getenv("SUDO_USERS", None))
+"""
+SUDO_USERS = str(getenv("SUDO_USERS", None))
 
 YOUR_NAME = config("YOUR_NAME", None)
