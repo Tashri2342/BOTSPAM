@@ -220,7 +220,7 @@ if BOT_TOKEN18:
     )
     print("LegendSpam : Bot token 18 Found")
 else:
-    Clien18 = None
+    Client18 = None
 
 if BOT_TOKEN19:
     Client19 = Client(
