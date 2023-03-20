@@ -45,6 +45,11 @@ async def start(Legend: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
         )
     elif ".mp4" in START_PIC.lower():
-        await Legend.send_video(message.chat.id, START_PIC, caption=ALIVE_MESSAGE, reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)))
+        await Legend.send_video(
+            message.chat.id,
+            START_PIC,
+            caption=ALIVE_MESSAGE,
+            reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
+        )
     else:
         await Legend.send_message(message.chat_id, ALIVE_MESSAGE)
