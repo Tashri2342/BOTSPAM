@@ -40,11 +40,10 @@ async def spam(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["dspam", "delayspam"], prefixes=HANDLER)
 )
 async def delayspam(Legend: Client, e: Message): 
-    usage = "Command :- /dspam <count> <sleeptime> <text>\nExample :- `/dspam 25 8 LegendBot`
+    usage = "Command :- /dspam <count> <sleeptime> <text>\nExample :- `/dspam 25 8 LegendBot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     owo = lol[1:]
-    chat = e.chat0l
-
+    chat = e.chat
     if len(owo) == 2:
        counts = int(owo[0])
        spam_text = str(owo[1])
