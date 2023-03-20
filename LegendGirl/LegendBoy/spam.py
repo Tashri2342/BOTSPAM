@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import *
 
 from .. import sudos
-import ayncio
+
 
 @Client.on_message(
     filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=handler)
