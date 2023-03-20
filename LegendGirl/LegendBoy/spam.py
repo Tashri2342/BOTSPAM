@@ -1,10 +1,12 @@
 from pyrogram import Client, filters
+from pyrogram.types import *
+from .. import sudos
 from LegendBoy.Config import *
 
 
-@Client.on_message(filters.user(Sudos) & filters.command(["spam", "bigspam"], prefixes=handler))
+@Client.on_message(filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=handler))
 async def spam(Legend: Client, e: Message):
-lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     if len(lol) == 2:
        counts = int(lol[0])
        spam_text = str(lol[1])
