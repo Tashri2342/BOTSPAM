@@ -1,7 +1,10 @@
-from LegendGirl.Config import *
+import asyncio
+
 from pyrogram import Client, filters
 from pyrogram.types import *
-import asyncio 
+
+from LegendGirl.Config import *
+
 from .. import sudos
 
 
