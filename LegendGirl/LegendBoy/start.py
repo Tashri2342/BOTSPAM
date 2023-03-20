@@ -20,7 +20,7 @@ async def start_cmd(Legend):
         [
             InlineKeyboardButton(
                 text="🧸 Add me in your group 🧸",
-                url=f"https://t.me/@{x.username}?startgroup=true",
+                url=f"https://t.me/{x.username}?startgroup=true",
             ),
         ],
         [
