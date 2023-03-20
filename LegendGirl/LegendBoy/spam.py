@@ -9,7 +9,7 @@ from .. import sudos
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=handler)
+    filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=HANDLER)
 )
 async def spam(Legend: Client, e: Message):
     usage = "Command :- /spam <count> <text>\nExample :- `/spam 5 SpamBot OP`\n\n/bigspam <count> <text> op\nExample :- `/bigspam 103 Legend Spam Bot`"
