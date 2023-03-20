@@ -17,7 +17,7 @@ def start_cmd(Legend):
         [
             InlineKeyboardButton(
                 text="🧸 Add me in your group 🧸",
-                url=f"https://t.me/{x.usernamp}?startgroup=true",
+                url=f"https://t.me/{x.username}?startgroup=true",
             ),
         ],
         [
@@ -37,7 +37,7 @@ async def start(Legend: Client, message: Message):
              message.chat.id,
              START_PIC, 
              caption="trying",
-             reply_markup=InlineKeyboardMarkup(start_cmd(Legend)),)
+             reply_markup=InlineKeyboardMarkup(start_cmd(Legend)))
     elif ".mp4" in  or ".MP4," in START_PIC:
        await Legend.send_video(message.chat.id, 
              START_PIC, 
