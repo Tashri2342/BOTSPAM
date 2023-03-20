@@ -40,6 +40,8 @@ except Exception:
 
 ALIVE_PIC = getenv("ALIVE_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
 
+ALIVE_MESSAGE = getenv("ALIVE_MESSAGE", "This is a Powerful Bot Spam Made By Team Legend")
+
 PING_PIC = getenv("PING_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
 
 START_PIC = getenv("START_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
