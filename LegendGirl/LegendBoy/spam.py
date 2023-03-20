@@ -1,7 +1,7 @@
 from LegendBoy.Config import *
 from pyrogram import Client, filters
 from pyrogram.types import *
-import aysncio
+
 from .. import sudos
 
 
