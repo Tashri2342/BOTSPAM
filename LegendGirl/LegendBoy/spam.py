@@ -24,10 +24,10 @@ async def spam(Legend: Client, e: Message):
     else:
         await e.reply_text(usage)
         return
-    if LOGS_CHANNEL:
+    if LOG_CHANNEL:
         try:
             await Legend.send_message(
-                LOGS_CHANNEL,
+                LOG_CHANNEL,
                 f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {spam_text}",
             )
         except Exception as a:
