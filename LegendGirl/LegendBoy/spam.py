@@ -1,3 +1,4 @@
+
 import asyncio
 
 from pyrogram import Client, filters
@@ -82,7 +83,11 @@ async def pornspam(Legend: Client, e: Message):
             await Legend.send_video(chat.id, porn)
             await asyncio.sleep(0.4)
     else:
-        if LOG_CHANNEL:
+        await e.reply_text(usage)
+        return
+l
+
+    if LOG_CHANNEL:
         try:
             await Legend.send_message(
                 LOG_CHANNEL,
