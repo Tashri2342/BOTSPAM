@@ -6,8 +6,8 @@ from LegendGirl.Config import *
 from .. import sudos
 
 
-async def start_cmd(Client):
-    x = Client.get_me()
+async def start_cmd(Legend):
+    x = Legend.get_me()
     START_OP = [
         [
             InlineKeyboardButton(
