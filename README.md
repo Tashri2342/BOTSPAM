@@ -3,6 +3,21 @@
 <h2> This Is BOTSPAM Of <a href="https://telegram.me/LegendBot_XD">@LegendBoy_XD</a></h2>
 </p>
 
+
+## variable 
+
+Required :-
+- APP_ID
+- API_HASH
+_ BOT_TOKEN
+- SUDO_USERS
+
+optional :-
+
+- ALIVE_PIC
+- START_PIC
+- PING_PIC
+
 ## 👨‍💻 Commands 👨‍💻
 
 <br>
