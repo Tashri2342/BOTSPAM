@@ -1,7 +1,7 @@
 from LegendBoy.Config import *
 from pyrogram import Client, filters
 from pyrogram.types import *
-
+import aysncio
 from .. import sudos
 
 
@@ -24,7 +24,7 @@ async def spam(Legend: Client, e: Message):
         try:
             await Legend.send_message(
                 LOGS_CHANNEL,
-                f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {msg}",
+                f"started Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts} \n Spam Message: {spam_text}",
             )
         except Exception as a:
             print(a)
