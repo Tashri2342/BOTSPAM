@@ -1,2 +1,2 @@
 from .porn import pornlinks
-from .raid import 
+from .raid import *
