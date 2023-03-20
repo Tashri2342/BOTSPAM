@@ -4,7 +4,7 @@
     "logo": "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg",
     "keywords": [
         "telegram",
-        "telethon",
+        "pyrogram",
         "telegrambot",
         "legendboy",
         "Botspam"
@@ -14,11 +14,11 @@
     "success_url": "https://t.me/LegendBot_Owner",
     "env": {
         "API_HASH": {
-            "description": "Write API_HASH from my.telegram.org, Join Group https://t.me/LegendBot_Op, then check notes",
+            "description": "Write API_HASH from my.telegram.org, Join Group https://t.me/LegendBot_Group, then check notes",
             "value": ""
         },
         "APP_ID": {
-            "description": "Paste API ID from my.telegram.org, Join Group https://t.me/LegendBot_Op, then check notes",
+            "description": "Paste API ID from my.telegram.org, Join Group https://t.me/LegendBot_Group1, then check notes",
             "value": ""
         },
         "ENV": {
@@ -73,6 +73,81 @@
             "description": "Use @BotFather. To Get BOT_TOKEN.",
             "value": "",
             "required": false        
+        },
+        "BOT_TOKEN11": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN12": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN13": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN14": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false       
+        },
+        "BOT_TOKEN15": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false         
+        },
+        "BOT_TOKEN16": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false     
+        },
+        "BOT_TOKEN17": {
+            "description": "Use @BotFather. To Get BOT_TOKEN",
+            "value": "",
+            "required": false       
+        },
+        "BOT_TOKEN18": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false         
+        },
+        "BOT_TOKEN19": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false         
+        },
+        "BOT_TOKEN20": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false        
+        },
+        "BOT_TOKEN21": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN22": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN23": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN24": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
+        },
+        "BOT_TOKEN25": {
+            "description": "Use @BotFather. To Get BOT_TOKEN.",
+            "value": "",
+            "required": false
         },
         "SUDO_USERS": {
             "description": "Owner Id Get It From start @missrose_bot , then do /id",
