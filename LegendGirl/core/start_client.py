@@ -96,7 +96,6 @@ def Start_BotSpam():
     if Client25:
         start_bot(Client25)
 
-
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     print(f"Legend Spam Bot [INFO] : Group Username {group_username}")
     print(f"Legend Spam Bot [INFO] : Version - {platform.python_version()}")
