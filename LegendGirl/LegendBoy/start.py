@@ -24,9 +24,6 @@ async def start_cmd(Legend):
             ),
         ],
         [
-            InlineKeyboardButton(text="🚀 Helps & Cmds 🚀", callback_data="HELP"),
-        ],
-        [
             InlineKeyboardButton(
                 text="❄️ Source Code ❄️", url=f"https://github.com/LEGEND-AI/BOTSPAM"
             ),
@@ -44,10 +41,10 @@ async def start(Legend: Client, message: Message):
         await Legend.send_photo(
             message.chat.id,
             START_PIC,
-            caption="trying",
+            caption=ALIVE_MESSAGE,
             reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
         )
     elif ".mp4" in START_PIC.lower():
-        await Legend.send_video(message.chat.id, START_PIC, caption="trying")
+        await Legend.send_video(message.chat.id, START_PIC, caption=ALIVE_MESSAGE, reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)))
     else:
-        await Legend.send_message(message.chat_id, "trying")
+        await Legend.send_message(message.chat_id, ALIVE_MESSAGE)
