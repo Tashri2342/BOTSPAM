@@ -1,3 +1,4 @@
+
 import asyncio
 
 from pyrogram import Client, filters
@@ -82,7 +83,7 @@ async def pornspam(Legend: Client, e: Message):
     else:
         await e.reply_text(usage)
         return
-l
+
 
     if LOG_CHANNEL:
         try:
