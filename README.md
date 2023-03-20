@@ -13,7 +13,7 @@ Required :-
 - SUDO_USERS
 
 optional :-
-
+- ALIVE_MESSAGE
 - ALIVE_PIC
 - START_PIC
 - PING_PIC
