@@ -79,8 +79,6 @@ def Start_BotSpam():
 
     if Client20:
         start_bot(Client20)
-        if Client:
-        start_bot(Client)
 
     if Client21:
         start_bot(Client21)
