@@ -156,7 +156,7 @@
         },
         "HANDLER": {
             "description": "HANDLER",
-            "value": "LegendBoy"
+            "value": "/"
             "required": false 
         },
         "HEROKU_API_KEY": {
