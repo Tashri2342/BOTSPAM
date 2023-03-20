@@ -154,10 +154,10 @@
             "value": ""
             
         },
-        "YOUR_NAME": {
-            "description": "Your Name",
+        "HANDLER": {
+            "description": "HANDLER",
             "value": "LegendBoy"
-            
+            "required": false 
         },
         "HEROKU_API_KEY": {
             "description": "Your Heroku api key to update your bot Get it from https://dashboard.heroku.com/account, then go down and click on reveal",
