@@ -9,7 +9,7 @@
 Required :-
 - APP_ID
 - API_HASH
-_ BOT_TOKEN
+- BOT_TOKEN
 - SUDO_USERS
 
 optional :-
@@ -17,6 +17,8 @@ optional :-
 - ALIVE_PIC
 - START_PIC
 - PING_PIC
+- LOG_CHANNEL
+- HANDLER
 
 ## 👨‍💻 Commands 👨‍💻
 
