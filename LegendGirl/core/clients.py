@@ -163,7 +163,7 @@ else:
     Client13 = None
 
 if BOT_TOKEN14:
-    Client13 = Client(
+    Client14 = Client(
         "LegendSpam14",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -245,3 +245,63 @@ if BOT_TOKEN20:
     print("LegendSpam : Bot token 20 Found")
 else:
     Client20 = None
+
+if BOT_TOKEN21:
+    Client11 = Client(
+        "LegendSpam21",
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN21,
+        plugins=dict(root="LegendGirl.LegendBoy"),
+    )
+    print("LegendSpam : Bot token 12 Found")
+else:
+    Client21 = None
+
+if BOT_TOKEN22:
+    Client12 = Client(
+        "LegendSpam22",
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN22,
+        plugins=dict(root="LegendGirl.LegendBoy"),
+    )
+    print("LegendSpam : Bot token 22 Found")
+else:
+    Client22 = None
+
+if BOT_TOKEN23:
+    Client23 = Client(
+        "LegendSpam23",
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN23,
+        plugins=dict(root="LegendGirl.LegendBoy"),
+    )
+    print("LegendSpam : Bot token 23 Found")
+else:
+    Client23 = None
+
+if BOT_TOKEN24:
+    Client24 = Client(
+        "LegendSpam14",
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN14,
+        plugins=dict(root="LegendGirl.LegendBoy"),
+    )
+    print("LegendSpam : Bot token 24 Found")
+else:
+    Client24 = None
+
+if BOT_TOKEN25:
+    Client25 = Client(
+        "LegendSpam25",
+        api_id=APP_ID,
+        api_hash=API_HASH,
+        bot_token=BOT_TOKEN25,
+        plugins=dict(root="LegendGirl.LegendBoy"),
+    )
+    print("LegendSpam : Bot token 25 Found")
+else:
+    Client25 = None
