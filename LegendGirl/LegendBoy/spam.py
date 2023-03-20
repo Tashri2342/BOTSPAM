@@ -12,12 +12,12 @@ from .. import sudos
     filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=HANDLER)
 )
 async def spam(Legend: Client, e: Message):
-    usage = "Command :- /spam <count> <text>\nExample :- `/spam 5 SpamBot OP`\n\n/bigspam <count> <text> op\nExample :- `/bigspam 103 Legend Spam Bot`"
+    usage = "Command :- /spam <count> <text>\nExample :- `/spam 5 SpamBot OP`\n\n/bigspam <count> <text>\nExample :- `/bigspam 103 Legend Spam Bot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     if len(lol) == 2:
         counts = int(lol[0])
         spam_text = str(lol[1])
-        chat = message.chat
+        chat = e.chat
         for _ in range(counts):
             await Legend.send_message(chat.id, str(spam_text))
             await asyncio.sleep(0.3)
