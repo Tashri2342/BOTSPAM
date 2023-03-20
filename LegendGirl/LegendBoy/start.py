@@ -7,7 +7,7 @@ from .. import sudos
 
 
 def start_cmd(Legend):
-    x = await Legend.get_me()
+    x = Legend.get_me()
     START_OP = [
         [
             InlineKeyboardButton(
