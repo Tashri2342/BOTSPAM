@@ -6,7 +6,7 @@ from LegendGirl.Config import *
 from .. import sudos
 
 
-def start_cmd(Client):
+asyn def start_cmd(Client):
     x = Client.get_me()
     START_OP = [
         [
