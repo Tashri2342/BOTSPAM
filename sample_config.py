@@ -40,6 +40,10 @@ except Exception:
 
 ALIVE_PIC = getenv("ALIVE_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
 
+PING_PIC = getenv("PING_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
+
+START_PIC = getenv("START_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
+
 LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 
-HANDLER = getenv("HANDLER", None)
+HANDLER = getenv("HANDLER", "/")
