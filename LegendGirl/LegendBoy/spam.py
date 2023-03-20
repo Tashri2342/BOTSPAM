@@ -1,4 +1,3 @@
-
 import asyncio
 
 from pyrogram import Client, filters
@@ -48,8 +47,8 @@ async def delayspam(Legend: Client, e: Message):
        spam_text = str(owo[1])
        sleeptime = float(owo[0])
        for _ in range(counts):
-       await Legend.send_message(chat.id, str(spam_text))
-      await asyncio.sleep(sleeptime)
+           await Legend.send_message(chat.id, str(spam_text))
+           await asyncio.sleep(sleeptime)
     else:
         await e.reply_text(usage)
         return
