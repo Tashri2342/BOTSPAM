@@ -19,7 +19,6 @@ async def spam(Legend: Client, e: Message):
         counts = int(lol[0])
         spam_text = str(lol[1])
         chat = e.chat
-        if e.reply_to_msg_id
         for _ in range(counts):
             await Legend.send_message(chat.id, str(spam_text))
             asyncio.sleep(0.3)
