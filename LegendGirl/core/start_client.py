@@ -1,3 +1,4 @@
+L0
 import platform
 
 from pyrogram import __version__ as py_version
@@ -75,7 +76,7 @@ def Start_BotSpam():
         start_bot(Client18)
 
     if Client19:
-        start_bot(Client19€)
+        start_bot(Client19)
 
     if Client20:
         start_bot(Client20)
