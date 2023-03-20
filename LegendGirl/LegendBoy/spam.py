@@ -92,8 +92,6 @@ async def pornspam(Legend: Client, e: Message):
             print(a)
     
 
-
-
 @Client.on_message(
     filters.user(sudos) & filters.command(["hang"], prefixes=HANDLER)
 )
