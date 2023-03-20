@@ -6,7 +6,7 @@ from LegendGirl.Config import *
 from .. import sudos
 
 
-async def start_cmd(Legend):
+def start_cmd(Legend):
     x = Legend.get_me()
     START_OP = [
         [
@@ -47,7 +47,7 @@ async def start(Legend: Client, message: Message):
             caption="trying",
             reply_markup=InlineKeyboardMarkup(start_cmd(Legend)),
         )
-    elif ".mp4" in START_PIC or ".MP4," in START_PIC:
+    elif ".mp4" in START_PIC.lower():
         await Legend.send_video(message.chat.id, START_PIC, caption="trying")
     else:
         await Legend.send_message(message.chat_id, "trying")
