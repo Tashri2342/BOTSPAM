@@ -1,4 +1,3 @@
-L0
 import platform
 
 from pyrogram import __version__ as py_version
