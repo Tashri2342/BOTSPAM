@@ -12,7 +12,7 @@ from .. import sudos
 
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
 async def raid(Legend: Client, e: Message):
-    usage = "Command: /raid"
+    usage = "Command :- /raid <count> <reply to anyone>\n Usage :- `/raid 3 <reply to anyone\n\nCommand :- /raid <count> <username>\n Usage :- `/raid 3 @Royal`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
     if len(lol) == 2:
@@ -76,7 +76,7 @@ async def replyraid(Legend: Client, e: Message):
         if user_.isnumeric():
             user_ = int(user_)
         if not user_:
-            await message.reply_text(
+            await e.reply_text(
                 "I don't know who you're talking about, you're going to need to specify a user.!"
             )
             return
@@ -88,7 +88,7 @@ async def replyraid(Legend: Client, e: Message):
             )
             return
     else:
-        await message.reply_text(
+        await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
         return
@@ -124,7 +124,7 @@ async def draid(Legend: Client, e: Message):
         if user_.isnumeric():
             user_ = int(user_)
         if not user_:
-            await message.reply_text(
+            await e.reply_text(
                 "I don't know who you're talking about, you're going to need to specify a user.!"
             )
             return
@@ -136,7 +136,7 @@ async def draid(Legend: Client, e: Message):
             )
             return
     else:
-        await message.reply_text(
+        await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
         return
@@ -166,7 +166,7 @@ async def watcher(_, msg: Message):
 @Client.on_message(
     filters.user(sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
 )
-async def raidlist(Legend: Client, message: Message):
+async def rllist(Legend: Client, e: Message):
     global users
     _reply = "**Raid users list - Legend Bot Spam** \n\n"
     if len(users) > 0:
@@ -177,6 +177,6 @@ async def raidlist(Legend: Client, message: Message):
             except:
                 _reply += f" × [{x}](tg://user?id={x}) \n"
     else:
-        await message.reply_text("Not yet!")
+        await e.reply_text("Not yet!")
         return
-    await message.reply_text(_reply)
+    await e.reply_text(_reply)
