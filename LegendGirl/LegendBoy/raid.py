@@ -1,5 +1,3 @@
-
-
 import os, sys, asyncio
 from random import choice
 from pyrogram import Client, filters
@@ -71,20 +69,19 @@ async def replyraid(Legend: Client, e: Message):
 
 @Client.on_message(filters.user(Sudos) & filters.command(["draid", "dreplyraid"], prefixes=HANDLER))
 async def draid(Legend: Client, e: Message):
-      global users
-     if int(user.id) not in users:
-       await e.reply_text("User not in Raid list!")
-           return
-      users.remove(user.id)
-      mention = user.mention
-      await e.reply_text(f"Reply Raid Activated Successfully On User {mention}")
-      
-      if LOG_CHANNEL:
-         try:
+    global users
+    if int(user.id) not in users:
+        await e.reply_text("User not in Raid list!")
+        return
+    users.remove(user.id)
+    mention = user.mention
+    await e.reply_text(f"Reply Raid Deactivated Successfully On User {mention}")
+    if LOG_CHANNEL:
+        try:
             await Legend.send_message(LOG_CHANNEL, f" Deactivated Reply Raid By User: {e.from_user.id} \n\n User: {mention} \n Chat: {e.chat.id}")
          except Exception as a:
-             print(a)
-             pass
+            print(a)
+            pass
 
 @Client.on_message(filters.all)
 async def watcher(_, msg: Message):
@@ -96,14 +93,14 @@ async def watcher(_, msg: Message):
 async def raidlist(Legend: Client, message: Message):
     global users
     _reply = "**Raid users list - Legend Bot Spam** \n\n"
-     if len(RUSERs) > 0:
+    if len(RUSERs) > 0:
         for x in users:
-           try:
-              user = await Legend.get_users(x)
-              _reply += f" × {user.mention} \n"
-          except:
-              _reply += f" × [{x}](tg://user?id={x}) \n"
+            try:
+                user = await Legend.get_users(x)
+                _reply += f" × {user.mention} \n"
+            except:
+                _reply += f" × [{x}](tg://user?id={x}) \n"
      else:
-        await message.reply_text("Not yet!")
-        return
-    await message.reply_text(_reply)
+         await message.reply_text("Not yet!")
+         return
+     await message.reply_text(_reply)
