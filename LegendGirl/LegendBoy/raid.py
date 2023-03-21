@@ -14,6 +14,7 @@ from .. import sudos
 async def raid(Legend: Client, e: Message):
     usage = "Command: /raid"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+    chat = e.chat
     if len(lol) == 2:
         counts = int(lol[0])
         if not counts:
@@ -65,6 +66,29 @@ users = []
 async def replyraid(Legend: Client, e: Message):
     global users
     usage: "/re"
+    try:
+       lol = e.text.split(" ", 1)[1].split(" ", 1)
+    except IndexError:
+       lol = None
+    if e.reply_to_message and e.reply_to_message.from_user:
+       user = e.reply_to_message.from_user
+    elif lol:
+        user_ = lol[0]
+        if user_.isnumeric():
+            user_ = int(user_)
+        if not user_:
+            await message.reply_text("I don't know who you're talking about, you're going to need to specify a user.!")
+            return
+        try:
+            user = await Legend.get_users(user_)
+        except(TypeError, ValueError):
+            await message.reply_text("Looks like I don't have control over that user, or the ID isn't a valid one. If you reply to one of their messages, I'll be able to interact with them.")
+           return
+    else:
+        await message.reply_text("I don't know who you're talking about, you're going to need to specify a user...!")
+        return 
+        await message.reply_text("I don't know who you're talking about, you're going to need to specify a user.!")
+        return
     if int(user.id) in users:
         await e.reply_text("User already in Raid list!")
         return
@@ -86,6 +110,7 @@ async def replyraid(Legend: Client, e: Message):
 )
 async def draid(Legend: Client, e: Message):
     global users
+    user = 
     if int(user.id) not in users:
         await e.reply_text("User not in Raid list!")
         return
