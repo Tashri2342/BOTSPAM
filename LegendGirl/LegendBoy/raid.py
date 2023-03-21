@@ -46,7 +46,6 @@ async def raid(Legend: Client, e: Message):
         raid = choice(RAID)
         await Legend.send_message(chat.id, f"{user.mention} {raid}")
         await asyncio.sleep(0.3)
-        return
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
