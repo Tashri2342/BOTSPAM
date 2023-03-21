@@ -151,8 +151,7 @@
         },
         "SUDO_USERS": {
             "description": "Owner Id Get It From start @missrose_bot , then do /id",
-            "value": ""
-            
+            "value": ""        
         },
         "HANDLER": {
             "description": "HANDLER",
@@ -162,12 +161,10 @@
         "HEROKU_API_KEY": {
             "description": "Your Heroku api key to update your bot Get it from https://dashboard.heroku.com/account, then go down and click on reveal",
             "value": ""
-            
         },
         "HEROKU_APP_NAME": {
             "description": "Your app name to Update your bot",
-            "value": ""
-            
+            "value": ""         
         }
     },
     "buildpacks": [
