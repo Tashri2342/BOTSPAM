@@ -12,7 +12,7 @@ from .. import sudos
 
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
 async def raid(Legend: Client, e: Message):
-    usage = "Command :- /raid <count> <reply to anyone>\n Usage :- `/raid 3 <reply to anyone\n\nCommand :- /raid <count> <username>\n Usage :- `/raid 3 @Royal`"
+    usage = "Command :- /raid <count> <reply to anyone>\n Usage :- `/raid 3 <reply to anyone>`\n\nCommand :- /raid <count> <username>\n Usage :- `/raid 3 @Royal`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
     if len(lol) == 2:
@@ -64,7 +64,7 @@ users = []
 )
 async def replyraid(Legend: Client, e: Message):
     global users
-    usage: "/re"
+    usage: "Command :- /rraid <reply to anyone>\n\nCommand :- /replyraid <reply to anyone>"
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
