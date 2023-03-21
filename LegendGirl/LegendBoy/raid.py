@@ -79,7 +79,7 @@ async def draid(Legend: Client, e: Message):
     if LOG_CHANNEL:
         try:
             await Legend.send_message(LOG_CHANNEL, f" Deactivated Reply Raid By User: {e.from_user.id} \n\n User: {mention} \n Chat: {e.chat.id}")
-         except Exception as a:
+        except Exception as a:
             print(a)
             pass
 
