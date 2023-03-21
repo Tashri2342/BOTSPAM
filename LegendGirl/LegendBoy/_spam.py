@@ -1,11 +1,11 @@
 import asyncio
 import random
 
+from LegendBS.porn import pornlinks
 from pyrogram import Client, filters
 from pyrogram.types import *
 
 from LegendGirl.Config import *
-from LegendBS.porn import pornlinks
 
 from .. import sudos
 
