@@ -1,10 +1,11 @@
+from LegendBS.get_user import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from LegendGirl.Config import *
 
 from .. import sudos
-from LegendBS.get_user import get_user
+
 
 @Client.on_message(filters.me & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
