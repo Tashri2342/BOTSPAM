@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+0from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from LegendGirl.Config import *
@@ -67,7 +67,7 @@ async def remsudo(Legend: Client, message: Message):
 
 
 @Client.on_message(
-    filters.me & filters.command(["sudos", "sudolist"], prefixes=handler)
+    filters.me & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
 )
 async def sudolist(Legend: Client, message: Message):
     sudo_reply = "**Sudo users list - SpamX** \n\n"
