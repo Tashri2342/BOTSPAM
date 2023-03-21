@@ -169,7 +169,7 @@ async def watcher(_, msg: Message):
 async def raidlist(Legend: Client, message: Message):
     global users
     _reply = "**Raid users list - Legend Bot Spam** \n\n"
-    if len(RUSERs) > 0:
+    if len(users) > 0:
         for x in users:
             try:
                 user = await Legend.get_users(x)
