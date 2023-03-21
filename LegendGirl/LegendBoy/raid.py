@@ -3,11 +3,11 @@ from random import choice
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+from LegendGirl.Config import *
 from LegendGirl.Resources import *
 
 
-@Client.on_message(filters.user(Sudos) & filters.command(["raid"], prefixes=HANDLER))
+@Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
 async def raid(Legend: Client, e: Message):
     usage = "Command: /raid"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -57,7 +57,7 @@ users = []
 
 
 @Client.on_message(
-    filters.user(Sudos) & filters.command(["rraid", "replyraid"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["rraid", "replyraid"], prefixes=HANDLER)
 )
 async def replyraid(Legend: Client, e: Message):
     global users
@@ -79,7 +79,7 @@ async def replyraid(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(Sudos) & filters.command(["draid", "dreplyraid"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["draid", "dreplyraid"], prefixes=HANDLER)
 )
 async def draid(Legend: Client, e: Message):
     global users
@@ -107,7 +107,7 @@ async def watcher(_, msg: Message):
 
 
 @Client.on_message(
-    filters.user(Sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
 )
 async def raidlist(Legend: Client, message: Message):
     global users
