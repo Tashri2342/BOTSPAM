@@ -83,7 +83,7 @@ async def replyraid(Legend: Client, e: Message):
             user = await Legend.get_users(user_)
         except(TypeError, ValueError):
             await message.reply_text("Looks like I don't have control over that user, or the ID isn't a valid one. If you reply to one of their messages, I'll be able to interact with them.")
-           return
+            return
     else:
         await message.reply_text("I don't know who you're talking about, you're going to need to specify a user...!")
         return 
