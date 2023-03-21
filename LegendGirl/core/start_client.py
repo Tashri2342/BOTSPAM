@@ -9,16 +9,6 @@ from LegendGirl.Config import *
 
 from .clients import *
 
-
-def start_bot(Client):
-    Client.start()
-    try:
-        x = Client.get_me()
-        print(f"Client - [INFO]: @{x.username} get started ")
-    except Exception as e:
-        print(f"Error - {e}")
-
-
 def Start_BotSpam():
     if Client:
         start_bot(Client)
