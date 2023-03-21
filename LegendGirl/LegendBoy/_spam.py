@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 from pyrogram.types import *
 
 from LegendGirl.Config import *
-from LegendGirl.Resources import pornlinks
+from LegendBS.porn import pornlinks
 
 from .. import sudos
 
