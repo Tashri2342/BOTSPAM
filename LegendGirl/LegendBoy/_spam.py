@@ -22,7 +22,7 @@ async def spam(Legend: Client, e: Message):
         chat = e.chat
         for _ in range(counts):
             await Legend.send_message(chat.id, str(spam_text))
-            asyncio.sleep(0.3)
+            await asyncio.sleep(0.3)
     else:
         await e.reply_text(usage)
         return
