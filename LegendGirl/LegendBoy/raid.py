@@ -11,7 +11,7 @@ from LegendGirl.Resources import *
 
 @Client.on_message(filters.user(Sudos) & filters.command(["raid"], prefixes=HANDLER))
 async def raid(Legend: Client, e: Message):
-      usage = "Command: /raid
+      usage = "Command: /raid"
       lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
       if len(lol) == 2:
         counts = int(lol[0])
