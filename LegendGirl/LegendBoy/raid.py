@@ -7,7 +7,7 @@ from pyrogram.types import Message
 from LegendGirl.Config import *
 from LegendGirl.Resources import *
 
-
+from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
 async def raid(Legend: Client, e: Message):
     usage = "Command: /raid"
