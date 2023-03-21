@@ -42,7 +42,7 @@ async def raid(Legend: Client, e: Message):
         await e.reply_text(usage)
         return
     for _ in range(counts):
-        raid = random.choice(RAID)
+        raid = choice(RAID)
         await Legend.send_message(chat.id, f"{user.mention} {raid}")
         await asyncio.sleep(0.3)
         return
