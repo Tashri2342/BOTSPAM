@@ -87,7 +87,7 @@ async def draid(Legend: Client, e: Message):
 async def watcher(_, msg: Message):
     global users
     if int(msg.from_user.id) in users:
-    await msg.reply_text(choice(RRAID))       
+        await msg.reply_text(choice(RRAID))       
 
 @Client.on_message(filters.user(Sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER))
 async def raidlist(Legend: Client, message: Message):
