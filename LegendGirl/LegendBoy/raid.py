@@ -155,6 +155,7 @@ async def draid(Legend: Client, e: Message):
         except Exception as a:
             print(a)
 
+
 @Client.on_message(
     filters.user(sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
 )
