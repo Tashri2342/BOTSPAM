@@ -1,4 +1,4 @@
-from LegendBoy.Config import *
+from LegendGirl.Config import *
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
