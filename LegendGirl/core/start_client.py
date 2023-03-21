@@ -8,7 +8,7 @@ group_username = "@LegendBot_OP"
 from LegendGirl.Config import *
 
 from .clients import *
-
+from LegendBS.start_bot import start_bot
 
 def Start_BotSpam():
     if Client:
