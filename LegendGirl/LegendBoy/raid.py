@@ -100,7 +100,7 @@ async def raidlist(Legend: Client, message: Message):
                 _reply += f" × {user.mention} \n"
             except:
                 _reply += f" × [{x}](tg://user?id={x}) \n"
-     else:
+    else:
          await message.reply_text("Not yet!")
          return
-     await message.reply_text(_reply)
+    await message.reply_text(_reply)
