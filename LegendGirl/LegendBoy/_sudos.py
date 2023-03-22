@@ -39,7 +39,7 @@ async def remsudo(Legend: Client, message: Message):
     filters.user(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
 )
 async def sudolist(Legend: Client, message: Message):
-    sudo_reply = "**Sudo users list - SpamX** \n\n"
+    sudo_reply = "**Sudo users list - Legend Bot Spam** \n\n"
     for x in sudos:
         try:
             user = await Legend.get_users(x)
