@@ -13,8 +13,8 @@ from .clients import *
 
 
 def Start_BotSpam():
-    if Client:
-        start_bot(Client)
+    if Client1:
+        start_bot(Client1)
 
     if Client2:
         start_bot(Client2)
