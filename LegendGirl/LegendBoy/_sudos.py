@@ -21,7 +21,7 @@ async def addsudo(Legend: Client, message: Message):
     await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
 
 
-@Client.on_message(filters.users(sudos) & filters.command(["rmsudo"], prefixes=HANDLER))
+@Client.on_message(filters.user(sudos) & filters.command(["rmsudo"], prefixes=HANDLER))
 async def remsudo(Legend: Client, message: Message):
     try:
         user = await get_user(Legend, message)
