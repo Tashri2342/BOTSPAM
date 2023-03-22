@@ -35,7 +35,9 @@ async def remsudo(Legend: Client, message: Message):
     await message.reply_text(f"User {user.mention} successfully removed from Sudo!")
 
 
-@Client.on_message(filters.users(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER))
+@Client.on_message(
+    filters.users(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
+)
 async def sudolist(Legend: Client, message: Message):
     sudo_reply = "**Sudo users list - SpamX** \n\n"
     for x in sudos:
