@@ -7,7 +7,7 @@ from LegendGirl.Config import *
 from .. import sudos
 
 
-@Client.on_message(filters.me & filters.command(["addsudo"], prefixes=HANDLER))
+@Client.on_message(filters.user(sudos) & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
     try:
         user = await get_user(Legend, message)
@@ -21,7 +21,7 @@ async def addsudo(Legend: Client, message: Message):
     await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
 
 
-@Client.on_message(filters.me & filters.command(["rmsudo"], prefixes=HANDLER))
+@Client.on_message(filters.users(sudos) & filters.command(["rmsudo"], prefixes=HANDLER))
 async def remsudo(Legend: Client, message: Message):
     try:
         user = await get_user(Legend, message)
@@ -35,9 +35,7 @@ async def remsudo(Legend: Client, message: Message):
     await message.reply_text(f"User {user.mention} successfully removed from Sudo!")
 
 
-@Client.on_message(
-    filters.me & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
-)
+@Client.on_message(filters.users(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER))
 async def sudolist(Legend: Client, message: Message):
     sudo_reply = "**Sudo users list - SpamX** \n\n"
     for x in sudos:
