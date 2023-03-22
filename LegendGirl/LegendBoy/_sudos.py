@@ -36,7 +36,7 @@ async def remsudo(Legend: Client, message: Message):
 
 
 @Client.on_message(
-    filters.users(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["sudos", "sudolist"], prefixes=HANDLER)
 )
 async def sudolist(Legend: Client, message: Message):
     sudo_reply = "**Sudo users list - SpamX** \n\n"
