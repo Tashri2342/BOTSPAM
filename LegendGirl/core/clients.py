@@ -4,7 +4,7 @@ from pyrogram import Client
 from LegendGirl.Config import *
 
 if ":" in BOT_TOKEN:
-    Client = Client(
+    Client1 = Client(
         "LegendSpam",
         api_id=APP_ID,
         api_hash=API_HASH,
