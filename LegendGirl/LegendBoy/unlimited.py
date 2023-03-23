@@ -1,10 +1,12 @@
 import asyncio
 from random import choice
-from LegendGirl.Config import *
+
 from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
 from pyrogram import Client, filters
 from pyrogram.types import Message
+
+from LegendGirl.Config import *
 
 from .. import sudos
 
