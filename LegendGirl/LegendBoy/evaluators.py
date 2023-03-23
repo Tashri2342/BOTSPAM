@@ -32,14 +32,14 @@ async def eval(Legend: Client, message: Message):
     result = sys.stdout = StringIO()
     try:
         exec(code)
-        message.reply_text(
+        await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result.getvalue()}</code>"
         )
     except:
-        message.reply_text(
+        await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
@@ -66,20 +66,20 @@ async def exec(Legend: Client, message: Message):
             except IndexError:
                 pass
     process = await asyncio.create_subprocess_shell(
-        code, stdout=asncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        code, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
     uid = os.geteuid()
     if uid == 0:
-        message.reply_text(
+        await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
     else:
-        message.reply_text(
+        await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
