@@ -48,23 +48,22 @@ async def eval(Legend: Client, message: Message):
 
 @Client.on_message(filters.user(sudos) & filters.command(["exec"], prefixes=HANDLER))
 async def exec(Legend: Client, message: Message):
-    global cmd
-    code = message.text[6:]
+    cmd = message.text[6:]
     if message.reply_to_message:
-        cmd = message.reply_to_message.text.markdown
-    elif code:
+        code = message.reply_to_message.text.markdown
+    elif cmd:
         try:
-            cmd = message.text.split(" ", maxsplit=1)[1]
-            if not cmd:
+            code = message.text.split(" ", maxsplit=1)[1]
+            if not code:
                 message.reply_text("Gib me code")
         except IndexError:
-            cmd = message.text.split(" \n", maxsplit=1)[1]
-            if not cmd:
+            code = message.text.split(" \n", maxsplit=1)[1]
+            if not code:
                 return await message.reply_text("Gib me code!")
     else:
         return await message.reply("Gib me execute code")
     process = await asyncio.create_subprocess_shell(
-        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        code, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
