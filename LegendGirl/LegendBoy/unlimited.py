@@ -85,7 +85,7 @@ async def stop(_, e: Message):
        unlimited = False
        await e.reply_text("Stopped Unlimited Spam/Raid/abuse -;")
 
-@Client.on_message(filters.user(sudos) & filters.command(["echo", "repeat"], prefixes=HANDLER)
+@Client.on_message(filters.user(sudos) & filters.command(["echo", "repeat"], prefixes=HANDLER))
 async def echo_(Legend: Client, message: Message):
     txt = ' '.join(message.command[1:])
     if message.reply_to_message:
