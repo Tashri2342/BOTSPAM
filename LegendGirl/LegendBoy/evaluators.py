@@ -13,7 +13,6 @@ from .. import sudos
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
-    global code
     cmd = message.text[6:]
     if message.reply_to_message:
         code = message.reply_to_message.text.markdown
@@ -25,9 +24,9 @@ async def eval(Legend: Client, message: Message):
         except IndexError:
             code = message.text.split(" \n", maxsplit=1)[1]
             if not code:
-                return await message.reply_text("Gib mep")
+                return await message.reply_text("Gib me code")
     else:
-        return await message.reply_text("Gib Code")
+        return await message.reply_text("Gib me Code")
     result = sys.stdout = StringIO()
     lol = await exec(message, code)
     try:
@@ -71,14 +70,14 @@ async def exec(Legend: Client, message: Message):
     if uid == 0:
         await message.reply_text(
             f"<b>Code:</b>\n"
-            f"<code>{cmd}</code>\n\n"
+            f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
     else:
         await message.reply_text(
             f"<b>Code:</b>\n"
-            f"<code>{cmd}</code>\n\n"
+            f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
