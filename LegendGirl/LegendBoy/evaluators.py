@@ -30,7 +30,7 @@ async def eval(Legend: Client, message: Message):
             except IndexError:
                 pass
     result = sys.stdout = StringIO()
-    lol = exec(code)
+    lol = exec(message, code)
     try:
         await message.reply_text(
             f"<b>Code:</b>\n"
