@@ -1,29 +1,33 @@
+import asyncio
+import os
+import sys
+from io import StringIO
+
 from pyrogram import Client, filters
 
 from LegendGirl.Config import *
-import asyncio
+
 from .. import sudos
-import os, sys
-from io import StringIO
+
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
     if message.reply_to_message:
-       code= message.reply_to_message.text.markdown
+        code = message.reply_to_message.text.markdown
     else:
-       try:
-           code = message.text.split(" ", maxsplit=1)[1]
-           if not code:
-              message.reply_text("Gib me code!")
-              return
-       except IndexError:
-           try:
-              code = message.text.split(" \n", maxsplit=1)[1]
-              if not code:
-                 message.reply_text("Gib me code!")
-                 return
-           except IndexError:
-              pass
+        try:
+            code = message.text.split(" ", maxsplit=1)[1]
+            if not code:
+                message.reply_text("Gib me code!")
+                return
+        except IndexError:
+            try:
+                code = message.text.split(" \n", maxsplit=1)[1]
+                if not code:
+                    message.reply_text("Gib me code!")
+                    return
+            except IndexError:
+                pass
     result = sys.stdout = StringIO()
     try:
         exec(code)
@@ -41,24 +45,25 @@ async def eval(Legend: Client, message: Message):
             f"<code>{sys.exc_info()[0].__name__}: {sys.exc_info()[1]}</code>"
         )
 
+
 @Client.on_message(filters.user(sudos) & filters.command(["exec"], prefixes=HANDLER))
 async def exec(Legend: Client, message: Message):
     if message.reply_to_message:
-       code= message.reply_to_message.text.markdown
+        code = message.reply_to_message.text.markdown
     else:
-       try:
-           code = message.text.split(" ", maxsplit=1)[1]
-           if not code:
-              message.reply_text("Gib me code!")
-              return
-       except IndexError:
-           try:
-              code = message.text.split(" \n", maxsplit=1)[1]
-              if not code:
-                 message.reply_text("Gib me code!")
-                 return
-           except IndexError:
-              pass
+        try:
+            code = message.text.split(" ", maxsplit=1)[1]
+            if not code:
+                message.reply_text("Gib me code!")
+                return
+        except IndexError:
+            try:
+                code = message.text.split(" \n", maxsplit=1)[1]
+                if not code:
+                    message.reply_text("Gib me code!")
+                    return
+            except IndexError:
+                pass
     process = await asyncio.create_subprocess_shell(
         code, stdout=asncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -79,4 +84,3 @@ async def exec(Legend: Client, message: Message):
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
-        
