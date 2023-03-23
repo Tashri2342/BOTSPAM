@@ -28,20 +28,20 @@ async def eval(Legend: Client, message: Message):
     else:
         return await message.reply_text("Gib me Code")
     result = sys.stdout = StringIO()
-    lol = await exec(message, code)
     try:
-        await message.reply_text(
+        exec(code)
+        message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{lol}</code>"
+            f"<code>{result.getvalue()}</code>"
         )
     except:
-        await message.reply_text(
+        message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{lol}</code>"
+            f"<code>{sys.exc_info()[0].__name__}: {sys.exc_info()[1]}</code>"
         )
 
 
