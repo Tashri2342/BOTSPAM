@@ -14,10 +14,10 @@ from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
     global code
-    code = message.text[6:]
+    cmd = message.text[6:]
     if message.reply_to_message:
         code = message.reply_to_message.text.markdown
-    elif code:
+    elif cmd:
         try:
             code = message.text.split(" ", maxsplit=1)[1]
             if not code:
