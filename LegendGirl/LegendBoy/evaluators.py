@@ -13,6 +13,7 @@ from .. import sudos
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
+    global code
     if message.reply_to_message:
         code = message.reply_to_message.text.markdown
     else:
@@ -49,6 +50,7 @@ async def eval(Legend: Client, message: Message):
 
 @Client.on_message(filters.user(sudos) & filters.command(["exec"], prefixes=HANDLER))
 async def exec(Legend: Client, message: Message):
+    global code
     if message.reply_to_message:
         cmd = message.reply_to_message.text.markdown
     else:
