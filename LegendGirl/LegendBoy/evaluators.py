@@ -46,7 +46,7 @@ async def eval(Legend: Client, message: Message):
 @Client.on_message(filters.user(sudos) & filters.command(["exec"], prefixes=HANDLER))
 async def exec(Legend: Client, message: Message):
     global cmd
-    code = message.text[4:]
+    code = message.text[6:]
     if message.reply_to_message:
         cmd = message.reply_to_message.text.markdown
     elif code:
