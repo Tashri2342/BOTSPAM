@@ -20,16 +20,11 @@ async def eval(Legend: Client, message: Message):
         try:
             code = message.text.split(" ", maxsplit=1)[1]
             if not code:
-                message.reply_text("Gib me code!")
-                return
+                return message.reply_text("Gib me code!")
         except IndexError:
-            try:
-                code = message.text.split(" \n", maxsplit=1)[1]
-                if not code:
-                    message.reply_text("Gib me code!")
-                    return
-            except IndexError:
-                pass
+            code = message.text.split(" \n", maxsplit=1)[1]
+            if not code:
+                return message.reply_text("Gib mep")
     result = sys.stdout = StringIO()
     lol = exec(message, code)
     try:
@@ -57,16 +52,11 @@ async def exec(Legend: Client, message: Message):
         try:
             cmd = message.text.split(" ", maxsplit=1)[1]
             if not cmd:
-                message.reply_text("Gib me code!")
-                return
+                message.reply_text("Gib me code")
         except IndexError:
-            try:
-                cmd = message.text.split(" \n", maxsplit=1)[1]
-                if not cmd:
-                    message.reply_text("Gib me code!")
-                    return
-            except IndexError:
-                pass
+            cmd = message.text.split(" \n", maxsplit=1)[1]
+            if not cmd:
+                retun message.reply_text("Gib me code!")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
