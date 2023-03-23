@@ -1,4 +1,4 @@
-Qimport asyncio
+import asyncio
 import os
 import sys
 from io import StringIO
