@@ -56,7 +56,7 @@ async def exec(Legend: Client, message: Message):
         except IndexError:
             cmd = message.text.split(" \n", maxsplit=1)[1]
             if not cmd:
-                retun message.reply_text("Gib me code!")
+                return message.reply_text("Gib me code!")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
