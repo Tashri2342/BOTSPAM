@@ -20,13 +20,13 @@ async def eval(Legend: Client, message: Message):
         try:
             code = message.text.split(" ", maxsplit=1)[1]
             if not code:
-                return message.reply_text("Gib me code!")
+                return await message.reply_text("Gib me code!")
         except IndexError:
             code = message.text.split(" \n", maxsplit=1)[1]
             if not code:
-                return message.reply_text("Gib mep")
+                return await message.reply_text("Gib mep")
     result = sys.stdout = StringIO()
-    lol = exec(message, code)
+    lol = await exec(message, code)
     try:
         await message.reply_text(
             f"<b>Code:</b>\n"
