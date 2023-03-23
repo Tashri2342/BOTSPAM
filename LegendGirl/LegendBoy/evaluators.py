@@ -14,9 +14,10 @@ from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
     global code
+    code = message.text[6:]
     if message.reply_to_message:
         code = message.reply_to_message.text.markdown
-    else:
+    elif code:
         try:
             code = message.text.split(" ", maxsplit=1)[1]
             if not code:
@@ -25,6 +26,8 @@ async def eval(Legend: Client, message: Message):
             code = message.text.split(" \n", maxsplit=1)[1]
             if not code:
                 return await message.reply_text("Gib mep")
+    else:
+        return await message.reply_text("Gib Code")
     result = sys.stdout = StringIO()
     lol = await exec(message, code)
     try:
@@ -59,7 +62,7 @@ async def exec(Legend: Client, message: Message):
             if not cmd:
                 return await message.reply_text("Gib me code!")
     else:
-        return message.reply("Gib me execute code")
+        return await message.reply("Gib me execute code")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
