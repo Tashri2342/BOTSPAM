@@ -46,7 +46,7 @@ async def uraid(Legend: Client, e: Message):
     mention = user.mention
     try:
         while unlimited == True:
-            choice(RAID)
+            reply = choice(RAID)
             raid_msg = f"{mention} {reply}"
             await Legend.send_message(e.chat.id, raid_msg)
     except Exception as f:
