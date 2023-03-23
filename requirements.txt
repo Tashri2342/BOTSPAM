@@ -6,4 +6,4 @@ sqlalchemy==1.3.20
 psycopg2
 gitpython
 tgcrypto
-pyLegendBS
+git+https://github.com/LEGEND-AI/pyLegendBS
