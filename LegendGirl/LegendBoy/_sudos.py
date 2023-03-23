@@ -1,7 +1,7 @@
 from LegendBS.get_user import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+from LegendBS.error import user_errors
 from LegendGirl.Config import *
 
 from .. import sudos
