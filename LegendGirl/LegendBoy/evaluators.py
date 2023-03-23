@@ -30,43 +30,43 @@ async def eval(Legend: Client, message: Message):
             except IndexError:
                 pass
     result = sys.stdout = StringIO()
+    lol = exec(code)
     try:
-        exec(code)
         await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{result.getvalue()}</code>"
+            f"<code>{lol}</code>"
         )
     except:
         await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{sys.exc_info()[0].__name__}: {sys.exc_info()[1]}</code>"
+            f"<code>{lol}</code>"
         )
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["exec"], prefixes=HANDLER))
 async def exec(Legend: Client, message: Message):
     if message.reply_to_message:
-        code = message.reply_to_message.text.markdown
+        cmd = message.reply_to_message.text.markdown
     else:
         try:
-            code = message.text.split(" ", maxsplit=1)[1]
-            if not code:
+            cmd = message.text.split(" ", maxsplit=1)[1]
+            if not cmd:
                 message.reply_text("Gib me code!")
                 return
         except IndexError:
             try:
-                code = message.text.split(" \n", maxsplit=1)[1]
-                if not code:
+                cmd = message.text.split(" \n", maxsplit=1)[1]
+                if not cmd:
                     message.reply_text("Gib me code!")
                     return
             except IndexError:
                 pass
     process = await asyncio.create_subprocess_shell(
-        code, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
@@ -74,14 +74,14 @@ async def exec(Legend: Client, message: Message):
     if uid == 0:
         await message.reply_text(
             f"<b>Code:</b>\n"
-            f"<code>{code}</code>\n\n"
+            f"<code>{cmd}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
     else:
         await message.reply_text(
             f"<b>Code:</b>\n"
-            f"<code>{code}</code>\n\n"
+            f"<code>{cmd}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
         )
