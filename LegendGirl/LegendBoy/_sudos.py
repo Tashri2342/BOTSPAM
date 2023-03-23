@@ -1,4 +1,4 @@
-from LegendBS.get_user import get_user, users_errors
+from LegendBS.get_user import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
