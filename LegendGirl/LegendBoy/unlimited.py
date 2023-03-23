@@ -1,6 +1,6 @@
 import asyncio
 from random import choice
-
+from LegendGirl.Config import *
 from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
 from pyrogram import Client, filters
