@@ -14,7 +14,7 @@ from .. import sudos
     filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=HANDLER)
 )
 async def spam(Legend: Client, e: Message):
-    usage = "Command :- /spam <count> <text>\nExample :- `/spam 5 SpamBot OP`\n\n/bigspam <count> <text>\nExample :- `/bigspam 103 Legend Spam Bot`"
+    usage = "Command :- /spam (count) (text)\nExample :- `/spam 5 SpamBot OP`\n\n/bigspam (count) (text)\nExample :- `/bigspam 103 Legend Spam Bot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     if len(lol) == 2:
         counts = int(lol[0])
@@ -40,7 +40,7 @@ async def spam(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["dspam", "delayspam"], prefixes=HANDLER)
 )
 async def delayspam(Legend: Client, e: Message):
-    usage = "Command :- /dspam <count> <sleeptime> <text>\nExample :- `/dspam 25 8 LegendBot`"
+    usage = "Command :- /dspam (coun) (sleeptime) (text)\nExample :- `/dspam 25 8 LegendBot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     owo = lol[1:]
     chat = e.chat
@@ -68,7 +68,7 @@ async def delayspam(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["pspam", "pornspam"], prefixes=HANDLER)
 )
 async def pornspam(Legend: Client, e: Message):
-    usage = "Command :- /pspam <count>\n\nExample :- `/pspam 23`"
+    usage = "Command :- /pspam (count)\n\nExample :- `/pspam 23`"
     lol = e.text.split(" ", 1)[1].split(" ", 1)
     counts = int(lol[0])
     chat = e.chat
