@@ -5,6 +5,5 @@ heroku3
 sqlalchemy==1.3.20
 psycopg2
 gitpython
-
 git+https://github.com/LEGEND-AI/pyLegendBS
 tgcrypto
