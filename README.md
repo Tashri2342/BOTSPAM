@@ -40,6 +40,8 @@
 
 ## 📄 <a name=" Required Variable"></a>Commands
 
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Collect+•+Variable+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
 Required Variable | Description
 :--- | :---
 • APP_ID / API_HASH | Get This From my.telegram.org Or [Start Bot](https://t.me/Api_scrapper_fastbot)
@@ -53,6 +55,7 @@ Required Variable | Description
 ## Deploy On Heroku
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 
 
