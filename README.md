@@ -11,7 +11,7 @@
 </h6>
 
 
-![](https://img.shields.io/badge/BotSpam→V∞1.0-blue)]
+![](https://img.shields.io/badge/BotSpam→V∞1.0-blue)
 
 ![Branch](https://img.shields.io/badge/Branch-main-white?&style=social&logo=github)
 
@@ -38,26 +38,21 @@
 
 ## 📄 <a name=" Required Variable"></a>Commands
 
-Variable | Description
+Required Variable | Description
 :--- | :---
 • APP_ID / API_HASH | Get This From my.telegram.org Or [Start Bot](https://t.me/Api_scrapper_fastbot)
 • BOT_TOKEN | Get This From [Click Here](https://t.me/BotFather)
 • SUDO_USERS | Start [Rose Bot](https://t.me/MissRose_Bot)
-
-optional :-
-- ALIVE_MESSAGE
-- ALIVE_PIC
-- START_PIC
-- PING_PIC
-- LOG_CHANNEL
-- HANDLER
+Optional Variable | Description
+:--- | :---
+• ALIVE_PIC / START_PIC / PING_PIC | Get This From [Click Here](https://t.me/vtelegraphbot)
+• HANDLER | Put Any One HANDLER [. , * #  / % ]p
+• LOG_CHANNEL | Create New Group Add [Bot](https://t.me/missrose_bot)
 
 ⚡ Deploy On Heroku ⚡
 
 <br>
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-
 
 
