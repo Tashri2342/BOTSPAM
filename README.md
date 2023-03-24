@@ -1,6 +1,6 @@
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=LEGEND-AI&repo=BOTSPAM&theme=lite)
 
-[![LEGENDBOT](https://graph.org/file/89ed7d3a2bd8aa2c61385.jpg)](https://github.com/LEGEND-AI/BOTSPAM)
+[![LEGENDBOTSPAM](https://graph.org/file/89ed7d3a2bd8aa2c61385.jpg)](https://github.com/LEGEND-AI/BOTSPAM)
 
 <h1 align="center">
 <b> 『ẞø†ẞpâm』 </b>
@@ -52,9 +52,93 @@ Required Variable | Description
 • HANDLER | Put Any One HANDLER [. , * #  / % ]
 • LOG_CHANNEL | Create New Group Add [Bot](https://t.me/missrose_bot)
 
+-------
 ## Deploy On Heroku
 
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Deploy+•+Heroku+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+-------
+
+## Vps Deployment 
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Vps+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+## Okteto Deployment 
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Okteto+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+## Railway Deployment 
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Railway+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Mongenius Deployment </h3>
+
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Termux Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Qovery Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Qovery+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Fly.io Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Fly.io+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+<h3> GitHub Action Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Github+•+Action+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+<h3> Render Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Render+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+<h3> Koyeb Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Koyeb+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+## 📄 <a name=" Commands "></a>Commands
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=All+•+Cmds+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+Commands | Description
+:--- | :---
+• Yaa | yay
+
+## Disclaimer
+  
+>                     ❗YOU ARE FOREWARNED❗
+> We won't be responsible for any kind of ban due to this bot.
+
+> Bot Spam was made for fun purpose and to make group management easier.
+
+> It's your concern if you spam and gets your account banned.
+
+> Also, Forks won't be entertained.
+
+> If you fork this repo and edit plugins, it's your concern for further updates.
+
+> Forking Repo is fine. But if you edit something we will not provide any help.
+
+> In short, Fork At Your Own Risk    
+
+>               💖 Thanks for using our bot 💖
+
+</details>
+
+
+> Made with 💕 by [@LegendUserBot_XD](https://t.me/LegendUserBot_XD).    
 
 
 
