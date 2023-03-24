@@ -38,8 +38,3 @@ async def restarter(Legend: Client, message: Message):
     args = [sys.executable, "-m", "LegendGirl"]
     os.execl(sys.executable, *args)
     quit()
-
-
-await message.reply_text(
-    f"**Wrong Usage** \n Syntax: {HANDLER}setvar (var name) (value)"
-)
