@@ -55,6 +55,12 @@ Required Variable | Description
 • BOT_TOKEN2 | Get This From [Bot Father](https://t.me/BotFather)
 • BOT_TOKEN3 | Get This From [Bot Father](https://t.me/BotFather)
 • BOT_TOKEN4 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN5 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN6 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN7 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN8 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN9 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN10 | Get This From [Bot Father](https://t.me/BotFather)
 
 -------
 ## Deploy On Heroku
