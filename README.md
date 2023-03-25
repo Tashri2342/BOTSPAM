@@ -61,6 +61,21 @@ Required Variable | Description
 • BOT_TOKEN8 | Get This From [Bot Father](https://t.me/BotFather)
 • BOT_TOKEN9 | Get This From [Bot Father](https://t.me/BotFather)
 • BOT_TOKEN10 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN11 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN12 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN13 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN14 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN15 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN16 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN17 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN18 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN19 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN20 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN21 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN22 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN23 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN24 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN25 | Get This From [Bot Father](https://t.me/BotFather)
 
 -------
 ## Deploy On Heroku
