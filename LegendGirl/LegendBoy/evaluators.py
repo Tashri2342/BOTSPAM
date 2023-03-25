@@ -10,7 +10,8 @@ from LegendGirl.Config import *
 
 from .. import sudos
 
-# full debugging 
+
+# full debugging
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
     cmd = message.text[6:]
@@ -38,7 +39,7 @@ async def eval(Legend: Client, message: Message):
             f"<code>{lol}</code>"
         )
     except:
-        print ("Exception Working")
+        print("Exception Working")
         await message.reply_text(
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
