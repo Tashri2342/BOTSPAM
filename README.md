@@ -46,12 +46,15 @@
 Required Variable | Description
 :--- | :---
 • APP_ID / API_HASH | Get This From my.telegram.org Or [Start Bot](https://t.me/Api_scrapper_fastbot)
-• BOT_TOKEN | Get This From [Click Here](https://t.me/BotFather)
+• BOT_TOKEN | Get This From [Bot Father](https://t.me/BotFather)
 • SUDO_USERS | Start [Rose Bot](https://t.me/MissRose_Bot)
 **Optional Variable** | **Description**
 • ALIVE_PIC / START_PIC / PING_PIC | Get This From [Click Here](https://t.me/vtelegraphbot)
 • HANDLER | Put Any One HANDLER [. , * #  / % ]
 • LOG_CHANNEL | Create New Group Add [Bot](https://t.me/missrose_bot)
+• BOT_TOKEN2 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN3 | Get This From [Bot Father](https://t.me/BotFather)
+• BOT_TOKEN4 | Get This From [Bot Father](https://t.me/BotFather)
 
 -------
 ## Deploy On Heroku
