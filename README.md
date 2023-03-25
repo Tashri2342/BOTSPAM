@@ -11,7 +11,7 @@
 </h6>
 
 
-![](https://img.shields.io/badge/BotSpam→V∞1.0-blue)
+![](https://img.shields.io/badge/BotSpam→V1.0-blue)
 
 ![Branch](https://img.shields.io/badge/Branch-main-white?&style=social&logo=github)
 
