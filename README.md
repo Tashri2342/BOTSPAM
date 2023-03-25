@@ -28,6 +28,7 @@
 ## Telegram 🏪
 
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/LegendBotSpam)
+
 [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-brightgreen)](https://t.me/LegendBot_AI)
  
 -------
@@ -38,7 +39,7 @@
 
 ------
 
-## 📄 <a name=" Required Variable"></a>Commands
+## 📄 <a name=" Required Variable"></a>Variable
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Collect+•+Variable+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
