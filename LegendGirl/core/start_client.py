@@ -4,7 +4,7 @@ from pyrogram import __version__ as py_version
 from pyrogram import idle
 
 version = "v1.0"
-group_username = "@LegendBot_OP"
+group_username = "@LegendBotSpam"
 from LegendBS.start_bot import start_bot
 
 from LegendGirl.Config import *
@@ -89,9 +89,9 @@ def Start_BotSpam():
         start_bot(Client25)
 
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
-    print(f"Legend Spam Bot [INFO] : Group Username {group_username}")
-    print(f"Legend Spam Bot [INFO] : Version - {platform.python_version()}")
-    print(f"Legend Spam Bot [INFO]: SpamBot Version - {version}")
-    print(f"Legend Spam Bot  [INFO]: Pyrogram Version - {py_version}")
+    print(f"🔥 Bot Spam 🔥[INFO] : Group Username {group_username}")
+    print(f"🔥 Bot Spam 🔥[INFO] : Version - {platform.python_version()}")
+    print(f"🔥 Bot Spam 🔥[INFO]: SpamBot Version - {version}")
+    print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
