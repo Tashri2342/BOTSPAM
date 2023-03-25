@@ -2,7 +2,7 @@ import time
 
 from .Config import *
 from .core import *
-from .Resources import *
+
 
 start_time = time.time()
 # Sudo Users
