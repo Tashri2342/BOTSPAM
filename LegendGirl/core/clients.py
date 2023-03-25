@@ -1,10 +1,10 @@
 # starting all clients
-from pyrogram import Client
+from pyrogram import Client as call
 
 from LegendGirl.Config import *
 
 if ":" in BOT_TOKEN:
-    Client1 = Client(
+    Client1 = call(
         "LegendSpam",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -17,7 +17,7 @@ else:
 
 
 if BOT_TOKEN2:
-    Client2 = Client(
+    Client2 = call(
         "LegendSpam2",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -30,7 +30,7 @@ else:
 
 
 if BOT_TOKEN3:
-    Client3 = Client(
+    Client3 = call(
         "LegendSpam3",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -43,7 +43,7 @@ else:
 
 
 if BOT_TOKEN4:
-    Client4 = Client(
+    Client4 = call(
         "LegendSpam4",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -55,7 +55,7 @@ else:
     Client4 = None
 
 if BOT_TOKEN5:
-    Client5 = Client(
+    Client5 = call(
         "LegendSpam5",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -67,7 +67,7 @@ else:
     Client5 = None
 
 if BOT_TOKEN6:
-    Client6 = Client(
+    Client6 = call(
         "LegendSpam6",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -79,7 +79,7 @@ else:
     Client6 = None
 
 if BOT_TOKEN7:
-    Client7 = Client(
+    Client7 = call(
         "LegendSpam7",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -91,7 +91,7 @@ else:
     Client7 = None
 
 if BOT_TOKEN8:
-    Client8 = Client(
+    Client8 = call(
         "LegendSpam8",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -103,7 +103,7 @@ else:
     Client8 = None
 
 if BOT_TOKEN9:
-    Client9 = Client(
+    Client9 = call(
         "LegendSpam9",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -115,7 +115,7 @@ else:
     Client9 = None
 
 if BOT_TOKEN10:
-    Client10 = Client(
+    Client10 = call(
         "LegendSpam10",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -127,7 +127,7 @@ else:
     Client10 = None
 
 if BOT_TOKEN11:
-    Client11 = Client(
+    Client11 = call(
         "LegendSpam11",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -139,7 +139,7 @@ else:
     Client11 = None
 
 if BOT_TOKEN12:
-    Client12 = Client(
+    Client12 = call(
         "LegendSpam12",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -151,7 +151,7 @@ else:
     Client12 = None
 
 if BOT_TOKEN13:
-    Client13 = Client(
+    Client13 = call(
         "LegendSpam13",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -163,7 +163,7 @@ else:
     Client13 = None
 
 if BOT_TOKEN14:
-    Client14 = Client(
+    Client14 = call(
         "LegendSpam14",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -175,7 +175,7 @@ else:
     Client14 = None
 
 if BOT_TOKEN15:
-    Client15 = Client(
+    Client15 = call(
         "LegendSpam15",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -187,7 +187,7 @@ else:
     Client15 = None
 
 if BOT_TOKEN16:
-    Client16 = Client(
+    Client16 = call(
         "LegendSpam16",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -199,7 +199,7 @@ else:
     Client16 = None
 
 if BOT_TOKEN17:
-    Client17 = Client(
+    Client17 = call(
         "LegendSpam17",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -211,7 +211,7 @@ else:
     Client17 = None
 
 if BOT_TOKEN18:
-    Client18 = Client(
+    Client18 = call(
         "LegendSpam18",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -223,7 +223,7 @@ else:
     Client18 = None
 
 if BOT_TOKEN19:
-    Client19 = Client(
+    Client19 = call(
         "LegendSpam19",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -235,7 +235,8 @@ else:
     Client19 = None
 
 if BOT_TOKEN20:
-    Client20 = Client(
+    Client20 = call
+L(
         "LegendSpam20",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -247,7 +248,7 @@ else:
     Client20 = None
 
 if BOT_TOKEN21:
-    Client11 = Client(
+    Client11 = call(
         "LegendSpam21",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -259,7 +260,7 @@ else:
     Client21 = None
 
 if BOT_TOKEN22:
-    Client12 = Client(
+    Client12 = call(
         "LegendSpam22",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -271,7 +272,7 @@ else:
     Client22 = None
 
 if BOT_TOKEN23:
-    Client23 = Client(
+    Client23 = call(
         "LegendSpam23",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -283,7 +284,7 @@ else:
     Client23 = None
 
 if BOT_TOKEN24:
-    Client24 = Client(
+    Client24 = call(
         "LegendSpam14",
         api_id=APP_ID,
         api_hash=API_HASH,
@@ -295,7 +296,7 @@ else:
     Client24 = None
 
 if BOT_TOKEN25:
-    Client25 = Client(
+    Client25 = call(
         "LegendSpam25",
         api_id=APP_ID,
         api_hash=API_HASH,
