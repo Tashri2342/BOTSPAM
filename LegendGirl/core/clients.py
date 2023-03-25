@@ -235,8 +235,7 @@ else:
     Client19 = None
 
 if BOT_TOKEN20:
-    Client20 = call
-L(
+    Client20 = call(
         "LegendSpam20",
         api_id=APP_ID,
         api_hash=API_HASH,
