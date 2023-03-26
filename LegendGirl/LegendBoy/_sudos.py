@@ -15,7 +15,7 @@ heroku_var = app.config()
 
 @Client.on_message(filters.user(sudos) & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
-    if not HEROKU_APP_NAME:
+    if HEROKU_APP_NAME is None:
         return await message.reply("Fill The Variable Of HEROKU_APP_NAME")
     try:
         user = await get_user(Legend, message)
