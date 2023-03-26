@@ -179,6 +179,6 @@ async def rllist(Legend: Client, e: Message):
 @Client.on_message(filters.all)
 async def watcher(Legend: Client, msg: Message):
     global users
-    user = await get_user(Legend, message)
+    user = await get_user(Legend, msg)
     if int(user.id) in users:
         await msg.reply_text(choice(RRAID))
