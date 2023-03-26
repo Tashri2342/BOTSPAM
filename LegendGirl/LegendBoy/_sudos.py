@@ -33,7 +33,7 @@ async def remsudo(Legend: Client, message: Message):
     if int(user.id) not in sudos:
         await message.reply_text(f"User {user.mention} not in sudo list!")
         return
-    sudos.remove(user.id)
+    sudos.remove(int(user.id))
     await message.reply_text(f"User {user.mention} successfully removed from Sudo!")
 
 
