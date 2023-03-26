@@ -4,8 +4,6 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 from LegendGirl.Config import *
 
-from .. import sudos
-
 
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
 async def start(Legend: Client, message: Message):
