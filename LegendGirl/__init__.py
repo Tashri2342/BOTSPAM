@@ -14,6 +14,7 @@ def make_list(sudos):
         _list.append(int(x))
     return _list
 
+
 sudoser = []
 sudos = sudoser
 # full debugging
