@@ -38,7 +38,7 @@ async def _eval(Legend: Client, message: Message):
             f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{lol}</code>
+            f"<code>{lol}</code>"
         )
     except:
         await message.reply_text(
