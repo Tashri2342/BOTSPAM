@@ -11,14 +11,14 @@ async def start(Legend: Client, message: Message):
         await Legend.send_photo(
             message.chat.id,
             START_PIC,
-            caption=ALIVE_MESSAGE,
+            caption=START_MESSAGE,
             reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
         )
     elif ".mp4" in START_PIC.lower():
         await Legend.send_video(
             message.chat.id,
             START_PIC,
-            caption=ALIVE_MESSAGE,
+            caption=START_MESSAGE,
             reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
         )
     else:
