@@ -39,7 +39,8 @@ except Exception:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
 
 START_MESSAGE = getenv(
-    "ALIVE_MESSAGE", "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/LegendUserBot_XD)"
+    "ALIVE_MESSAGE",
+    "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/LegendUserBot_XD)",
 )
 
 PING_PIC = getenv("PING_PIC", "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg")
