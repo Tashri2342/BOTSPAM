@@ -8,7 +8,7 @@ from LegendGirl.Config import *
 
 from .. import sudos
 
-Heroku = heroku3.from_key(Config.API_KEY)
+Heroku = heroku3.from_key(HEROKU_API_KEY)
 app = Heroku.app(HEROKU_APP_NAME)
 heroku_var = app.config()
 
