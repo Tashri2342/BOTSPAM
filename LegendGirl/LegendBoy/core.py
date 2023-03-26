@@ -16,7 +16,7 @@ from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["ping"], prefixes=HANDLER))
 async def ping(_, e: Message):
     start = datetime.datetime.now()
-    uptime = await get_time((time.time() - start_time))
+    uptime = get_time((time.time() - start_time))
     pong_msg = await e.reply("**Pong !!**")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
