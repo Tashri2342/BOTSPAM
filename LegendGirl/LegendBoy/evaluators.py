@@ -61,24 +61,20 @@ async def exec(Legend: Client, message: Message):
             if not code:
                 return await message.reply_text("Gib me code!")
     else:
-        return await message.reply("Gib me execute code")
-    process = await asyncio.create_subprocess_shell(
-        code, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
-    )
-    stdout, stderr = await process.communicate()
-    result = str(stdout.decode().strip()) + str(stderr.decode().strip())
+        return await message.reply_text("Gib me execute code")
+    try:
+        process = await asyncio.create_subprocess_shell(
+            code, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await process.communicate()
+        result = str(stdout.decode().strip()) + str(stderr.decode().strip())
+    except Exception as e:
+        result = f"Error: {str(e)}"
     uid = os.geteuid()
-    if uid == 0:
-        await message.reply_text(
-            f"<b>Code:</b>\n"
-            f"<code>{code}</code>\n\n"
-            f"<b>Result</b>:\n"
-            f"<code>{result}</code>"
-        )
-    else:
-        await message.reply_text(
-            f"<b>Code:</b>\n"
-            f"<code>{code}</code>\n\n"
-            f"<b>Result</b>:\n"
-            f"<code>{result}</code>"
-        )
+    await message.reply_text(
+        f"<b>Code:</b>\n"
+        f"<code>{code}</code>\n\n"
+        f"<b>result</b>:\n"
+        f"<code>{result}</code>",
+        reply_to_message_id=message.message_id
+    )
