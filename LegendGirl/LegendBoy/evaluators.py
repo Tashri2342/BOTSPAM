@@ -70,11 +70,11 @@ async def exec(Legend: Client, message: Message):
         result = str(stdout.decode().strip()) + str(stderr.decode().strip())
     except Exception as e:
         result = f"Error: {str(e)}"
-    uid = os.geteuid()
+    os.geteuid()
     await message.reply_text(
         f"<b>Code:</b>\n"
         f"<code>{code}</code>\n\n"
         f"<b>result</b>:\n"
         f"<code>{result}</code>",
-        reply_to_message_id=message.message_id
+        reply_to_message_id=message.message_id,
     )
