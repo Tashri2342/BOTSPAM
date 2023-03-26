@@ -1,6 +1,6 @@
 import asyncio
 from random import choice
-
+from LegendBS.get_user import get_user
 from LegendBS.raid import RAID, RRAID
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -176,7 +176,8 @@ async def rllist(Legend: Client, e: Message):
 
 
 @Client.on_message(filters.all)
-async def watcher(_, msg: Message):
+async def watcher(Legend: Client, msg: Message):
     global users
-    if int(msg.from_user.id) in users:
+    user = await get_user(Legend, message)
+    if int(user.id) in users:
         await msg.reply_text(choice(RRAID))
