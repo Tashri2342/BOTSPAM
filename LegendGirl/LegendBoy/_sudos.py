@@ -27,12 +27,11 @@ async def addsudo(Legend: Client, message: Message):
         return
     try:
         heroku_var[SUDO_USERS] = user.id
+        """sudos.append(int(user.id))
+        print(sudos)"""
+        await message.reply_text(f"User {user.mention} successfully promoted as Sudo!\nWait For Some Days")
     except:
-        await message.reply("Fill The Variable of HEROKU_APP_NAME & HEROKU_API_KEY")
-    """sudos.append(int(user.id))
-    print(sudos)"""
-    await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
-
+        return await message.reply("Fill The Variable of HEROKU_APP_NAME & HEROKU_API_KEY")
 
 @Client.on_message(filters.user(sudos) & filters.command(["rmsudo"], prefixes=HANDLER))
 async def remsudo(Legend: Client, message: Message):
