@@ -14,35 +14,39 @@ from .. import sudos
 # full debugging
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
-    cmd = message.text[6:]
     if message.reply_to_message:
-        code = message.reply_to_message.text.markdown
-    elif cmd:
-        try:
-            code = message.text.split(" ", maxsplit=1)[1]
-            if not code:
-                return await message.reply_text("Gib me code!")
-        except IndexError:
-            code = message.text.split(" \n", maxsplit=1)[1]
-            if not code:
-                return await message.reply_text("Gib me code")
+       msg = message.reply_to_message.text.markdown
     else:
-        return await message.reply_text("Gib me Code")
+       try:
+           code = message.text.split(" ", maxsplit=1)[1]
+           if not code:
+              message.reply_text("Gime code!")
+              return
+       except IndexError:
+           try:
+              code = message.text.split(" \n", maxsplit=1)[1]
+              if not code:
+                 message.reply_text("Gime code!")
+                 return
+           except IndexError:
+              pass
+
     result = sys.stdout = StringIO()
     try:
-        lol = await eval("Your Result", code)
-        await message.reply_text(
-            f"<b>Code Try:</b>\n"
+        exec(code)
+
+        message.reply_text(
+            f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{lol}</code>"
+            f"<code>{result.getvalue()}</code>"
         )
-    except Exception:
-        await message.reply_text(
-            f"<b>Code Exception:</b>\n"
+    except:
+        message.reply_text(
+            f"<b>Code:</b>\n"
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
-            f"<code>{sys.exc_info()[0].name}: {sys.exc_info()[1]}</code>"
+            f"<code>{sys.exc_info()[0].__name__}: {sys.exc_info()[1]}</code>"
         )
 
 
