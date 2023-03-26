@@ -21,7 +21,7 @@ sudos = sudoser
 if SUDO_USERS:
     try:
         sudoser = make_list(SUDO_USERS)
-        print(sudoser)
+        print(sudos)
     except Exception as e:
         sudoser = SUDO_USERS
         print(e)
