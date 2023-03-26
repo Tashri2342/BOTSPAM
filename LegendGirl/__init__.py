@@ -5,18 +5,24 @@ from .core import *
 
 start_time = time.time()
 # Sudo Users
-sudos = []
+
+
+def make_list(sudos):
+    str_list = sudos.split(" ")
+    _list = []
+    for x in str_list:
+        _list.append(int(x))
+    return _list
+
+sudoser = []
+sudos = sudoser
 # full debugging
 if SUDO_USERS:
     try:
-        sudouser = SUDO_USERS
-        print(sudouser)
-        _list = []
-        for x in sudouser:
-            _list.append(int(x))
-        sudos = _list
+        sudoser = make_list(SUDO_USERS)
+        print(sudoser)
     except Exception as e:
-        sudos = SUDO_USERS
+        sudoser = SUDO_USERS
         print(e)
 else:
     print("Add Key Sudo User")
