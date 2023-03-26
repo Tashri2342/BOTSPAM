@@ -21,7 +21,7 @@ async def ping(_, e: Message):
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await pong_msg.edit_text(
-        f" {ping_msg} \n\n ༝ ᴘɪɴɢ: `{ms}` ᴍs \n ༝ ᴜᴘᴛɪᴍᴇ: `{uptime}`"
+        f"🔰Ping Pong🔰\n\n ༝ ᴘɪɴɢ: `{ms}` ᴍs \n ༝ ᴜᴘᴛɪᴍᴇ: `{uptime}`"
     )
 
 
