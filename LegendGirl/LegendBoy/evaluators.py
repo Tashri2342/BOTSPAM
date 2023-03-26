@@ -82,3 +82,4 @@ async def exec(Legend: Client, message: Message):
             f"<code>{code}</code>\n\n"
             f"<b>Result</b>:\n"
             f"<code>{result}</code>"
+        )
