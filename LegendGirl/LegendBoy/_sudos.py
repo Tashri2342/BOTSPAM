@@ -22,10 +22,13 @@ async def addsudo(Legend: Client, message: Message):
     except Exception as e:
         await message.reply(user_errors(e))
         return
-    if int(user.id) in sudos:
+    if int(user.id) in heroku_var:
         await message.reply_text(f"User {user.mention} already in sudo list!")
         return
-    heroku_var[SUDO_USERS] = user.id
+    try:
+        heroku_var[SUDO_USERS] = user.id
+    except:
+        await message.reply("Fill The Variable of HEROKU_APP_NAME & HEROKU_API_KEY")
     """sudos.append(int(user.id))
     print(sudos)"""
     await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
