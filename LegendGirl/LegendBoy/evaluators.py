@@ -15,21 +15,21 @@ from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def eval(Legend: Client, message: Message):
     if message.reply_to_message:
-       msg = message.reply_to_message.text.markdown
+        message.reply_to_message.text.markdown
     else:
-       try:
-           code = message.text.split(" ", maxsplit=1)[1]
-           if not code:
-              message.reply_text("Gime code!")
-              return
-       except IndexError:
-           try:
-              code = message.text.split(" \n", maxsplit=1)[1]
-              if not code:
-                 message.reply_text("Gime code!")
-                 return
-           except IndexError:
-              pass
+        try:
+            code = message.text.split(" ", maxsplit=1)[1]
+            if not code:
+                message.reply_text("Gime code!")
+                return
+        except IndexError:
+            try:
+                code = message.text.split(" \n", maxsplit=1)[1]
+                if not code:
+                    message.reply_text("Gime code!")
+                    return
+            except IndexError:
+                pass
 
     result = sys.stdout = StringIO()
     try:
