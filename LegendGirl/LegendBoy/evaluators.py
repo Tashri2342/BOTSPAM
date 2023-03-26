@@ -14,7 +14,7 @@ from .. import sudos
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
 async def pm(Client, Message):
     global c, m
-    c,m = Client,Message
+    c, m = Client, Message
     text = m.text[6:]
     try:
         vc = eval(text)
