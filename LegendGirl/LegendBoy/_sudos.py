@@ -7,9 +7,14 @@ from LegendGirl.Config import *
 
 from .. import sudos
 
+Heroku = heroku3.from_key(Config.API_KEY)
 
 @Client.on_message(filters.user(sudos) & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
+    if not HEROKU_APP_NAME: 
+         return await message.reply("Fill The Variable Of HEROKU_APP_NAME")
+    app = Heroku.app(HEROKU_APP_NAME)
+    heroku_var = app.config()
     try:
         user = await get_user(Legend, message)
     except Exception as e:
@@ -18,8 +23,9 @@ async def addsudo(Legend: Client, message: Message):
     if int(user.id) in sudos:
         await message.reply_text(f"User {user.mention} already in sudo list!")
         return
-    sudos.append(int(user.id))
-    print(sudos)
+    heroku_var[SUDO_USERS] = user.id
+    """sudos.append(int(user.id))
+    print(sudos)"""
     await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
 
 
