@@ -9,10 +9,11 @@ from .. import sudos
 
 Heroku = heroku3.from_key(Config.API_KEY)
 
+
 @Client.on_message(filters.user(sudos) & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
-    if not HEROKU_APP_NAME: 
-         return await message.reply("Fill The Variable Of HEROKU_APP_NAME")
+    if not HEROKU_APP_NAME:
+        return await message.reply("Fill The Variable Of HEROKU_APP_NAME")
     app = Heroku.app(HEROKU_APP_NAME)
     heroku_var = app.config()
     try:
