@@ -7,7 +7,7 @@ from LegendGirl.Config import *
 from .. import sudos
 
 
-@Client.on_message(filters.user(sudos) & filters.command(["start"], prefixes=HANDLER))
+@Client.on_message(filters.command(["start"], prefixes=HANDLER))
 async def start(Legend: Client, message: Message):
     if ".jpg" in START_PIC or ".png" in START_PIC:
         await Legend.send_photo(
