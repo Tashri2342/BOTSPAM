@@ -37,8 +37,7 @@ async def eval(Legend: Client, message: Message):
             f"<b>Result</b>:\n"
             f"<code>{lol}</code>"
         )
-    except Exception as e:
-        
+    except Exception:
         await message.reply_text(
             f"<b>Code Exception:</b>\n"
             f"<code>{code}</code>\n\n"
