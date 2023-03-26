@@ -13,8 +13,7 @@ from .. import sudos
 
 # full debugging
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
-async def _eval(Legend: Client, message: Message):
-async def pm(c: client,m: Message):
+async def pm(c: Client, m: Message):
   global c,m
   text = m.text[6:]
   try:
