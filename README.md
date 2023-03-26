@@ -49,7 +49,8 @@ Required Variable | Description
 • BOT_TOKEN | Get This From [Bot Father](https://t.me/BotFather)
 • SUDO_USERS | Start [Rose Bot](https://t.me/MissRose_Bot)
 **Optional Variable** | **Description**
-• ALIVE_PIC / START_PIC / PING_PIC | Get This From [Click Here](https://t.me/vtelegraphbot)
+• START_PIC / PING_PIC | Get This From [Click Here](https://t.me/vtelegraphbot)
+• START_MESSAGE | Put Your Start Message Here
 • HANDLER | Put Any One HANDLER [. , * #  / % ]
 • LOG_CHANNEL | Create New Group Add [Bot](https://t.me/missrose_bot)
 • BOT_TOKEN2 | Get This From [Bot Father](https://t.me/BotFather)
