@@ -18,8 +18,8 @@ async def addsudo(Legend: Client, message: Message):
     if int(user.id) in sudos:
         await message.reply_text(f"User {user.mention} already in sudo list!")
         return
-    SUDO_USERS.append(user.id)
-    print(SUDO_USERS)
+    sudos.append(user.id)
+    print(sudos)
     await message.reply_text(f"User {user.mention} successfully promoted as Sudo!")
 
 
