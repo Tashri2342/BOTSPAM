@@ -13,7 +13,7 @@ from .. import sudos
 
 # full debugging
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
-async def eval(Legend: Client, message: Message):
+async def _eval(Legend: Client, message: Message):
     if message.reply_to_message:
         message.reply_to_message.text.markdown
     else:
