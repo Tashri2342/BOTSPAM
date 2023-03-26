@@ -2,20 +2,19 @@ from LegendBS.error import user_errors
 from LegendBS.get_user import get_user
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+import heroku3
 from LegendGirl.Config import *
 
 from .. import sudos
 
 Heroku = heroku3.from_key(Config.API_KEY)
-
+app = Heroku.app(HEROKU_APP_NAME)
+heroku_var = app.config()
 
 @Client.on_message(filters.user(sudos) & filters.command(["addsudo"], prefixes=HANDLER))
 async def addsudo(Legend: Client, message: Message):
     if not HEROKU_APP_NAME:
         return await message.reply("Fill The Variable Of HEROKU_APP_NAME")
-    app = Heroku.app(HEROKU_APP_NAME)
-    heroku_var = app.config()
     try:
         user = await get_user(Legend, message)
     except Exception as e:
