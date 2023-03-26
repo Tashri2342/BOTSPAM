@@ -34,7 +34,7 @@ async def _eval(Legend: Client, message: Message):
     result = sys.stdout = StringIO()
     try:
         # lol = exec(message, f"{code}")
-        await message.reply_text(exec(code))
+        await message.reply(exec(code))
     except:
         await message.reply_text(
             f"<b>Code:</b>\n"
