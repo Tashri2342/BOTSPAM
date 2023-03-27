@@ -35,7 +35,7 @@
 
 ## YouTube 📺
 
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCvp8PY25PTRhFDZjLv3sVfg?style=social)](https://youtube.com/@TeamLegendBot)
+[![YouTube Channel Subscribers](https://img.shields.io/https://www.youtube.com/@TeamLegendBot?style=social)](https://youtube.com/@TeamLegendBot)
 
 ------
 
