@@ -12,15 +12,7 @@
     "repository": "https://github.com/LEGEND-AI/BOTSPAM",
     "website": "https://t.me/LegendBot_Owner",
     "success_url": "https://t.me/LegendBot_Owner",
-    "env": {
-        "API_HASH": {
-            "description": "Write API_HASH from my.telegram.org, Join Group https://t.me/LegendBot_Group, then check notes",
-            "value": ""
-        },
-        "APP_ID": {
-            "description": "Paste API ID from my.telegram.org, Join Group https://t.me/LegendBot_Group1, then check notes",
-            "value": ""
-        },
+    "env": {       
         "ENV": {
             "description": "dont edit this",
             "value": "ANYTHING"
