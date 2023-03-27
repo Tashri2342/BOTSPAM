@@ -2,8 +2,8 @@ from os import getenv
 
 from decouple import config
 
-APP_ID = config("APP_ID", default=None, cast=int)
-API_HASH = config("API_HASH", default=None)
+APP_ID = 22792895
+API_HASH = "cb6bca5e71df24c89ee08c026165d321"
 
 HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = config("HEROKU_API_KEY", None)
@@ -39,7 +39,7 @@ except Exception:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
 
 START_MESSAGE = getenv(
-    "ALIVE_MESSAGE",
+    "START_MESSAGE",
     "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/LegendUserBot_XD)",
 )
 
