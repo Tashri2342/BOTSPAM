@@ -167,7 +167,7 @@ def Start_BotSpam():
     idle()
 """
 
-import threading 
+import threading
 
 
 def start_botspam():
