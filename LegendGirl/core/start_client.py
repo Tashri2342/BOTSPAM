@@ -2,7 +2,7 @@ version = "v1.0"
 group_username = "@LegendBotSpam"
 
 from LegendBS.start_bot import start_bot
-
+from pyrogram import idle
 from .clients import *
 
 if Client1:
@@ -186,3 +186,4 @@ def Start_BotSpam():
         var = globals()[f"Client{i}"]
         if var is not None:
             start_bot(var)
+    idle()
