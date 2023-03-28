@@ -1,4 +1,4 @@
 from . import start_botspam
 
-if name == "main":
+if __name__ == "__main__":
     start_botspam()
