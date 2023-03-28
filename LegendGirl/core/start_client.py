@@ -1,6 +1,7 @@
 """import platform
 
 from pyrogram import __version__ as py_version
+
 from pyrogram import idle
 
 version = "v1.0"
@@ -169,6 +170,9 @@ def Start_BotSpam():
 
 import threading
 
+from LegendBS.start_bot import start_bot
+
+from LegendGirl.Config import *
 
 def start_botspam():
     threads = []
