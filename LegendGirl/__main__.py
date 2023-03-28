@@ -22,9 +22,9 @@ for token in tokens:
         Client2 = Client(
             f"app{i}",
             bot_token=f"{token}",
-            api_id=api_id,
-            api_hash=api_hash,
-            plugins=plugins,
+            api_id=APP_ID,
+            api_hash=API_HASH,
+            plugins=dict(root="LegendGirl.LegendBoy"),
         )
         clients.append(Client2)
 
