@@ -3,6 +3,7 @@ group_username = "@LegendBotSpam"
 import threading
 
 from LegendBS.start_bot import start_bot
+
 from LegendGirl.Config import *
 
 if BOT_TOKEN:
