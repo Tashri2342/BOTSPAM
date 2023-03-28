@@ -172,7 +172,7 @@ import threading
 
 def start_botspam():
     threads = []
-    for i in range(1, 26):
+    for i in range(2, 26):
         var = globals()[f"BOT_TOKEN{i}"]
         if var is not None:
             t = threading.Thread(target=start_bot, args=(var,))
