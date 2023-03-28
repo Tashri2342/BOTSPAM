@@ -37,6 +37,7 @@
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCgv4QgLLpyHVWtBiTpr5srg?label=TeamLegend&style=social)](https://youtube.com/@TeamLegendBot)
 
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Intro+•&style=social)](https://youtu.be/1A4xVEfyxYU)
 ------
 
 ## 📄 <a name=" Required Variable"></a>Variable
