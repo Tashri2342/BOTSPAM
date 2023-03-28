@@ -29,25 +29,46 @@ def Start_BotSpam():
             print(e)
 
     if BOT_TOKEN4:
-        start_bot(Client4)
+        try:
+            start_bot(Client4)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN5:
-        start_bot(Client5)
+        try:
+            start_bot(Client5)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN6:
-        start_bot(Client6)
+        try:
+            start_bot(Client6)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN7:
-        start_bot(Client7)
+        try:
+            start_bot(Client7)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN8:
-        start_bot(Client8)
+        try:
+            start_bot(Client8)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN9:
-        start_bot(Client9)
+        try:
+            start_bot(Client9)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN10:
-        start_bot(Client10)
+        try:
+            start_bot(Client10)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN11:
         start_bot(Client11)
