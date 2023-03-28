@@ -2,6 +2,7 @@ version = "v1.0"
 group_username = "@LegendBotSpam"
 
 from LegendBS.start_bot import start_bot
+
 from .clients import *
 
 if Client1:
