@@ -3,12 +3,8 @@ group_username = "@LegendBotSpam"
 
 from LegendBS.start_bot import start_bot
 
-from LegendGirl.Config import *
+from .clients import *
 
-if BOT_TOKEN:
-    BOT_TOKEN1 = BOT_TOKEN
-else:
-    pass
 
 # def Start_BotSpam():
 #     if BOT_TOKEN:
@@ -185,6 +181,6 @@ def Start_BotSpam():
 
 def Start_BotSpam():
     for i in range(1, 26):
-        var = globals()[f"BOT_TOKEN{i}"]
+        var = globals()[f"Client{i}"]
         if var is not None:
             start_bot(var)
