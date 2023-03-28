@@ -1,14 +1,34 @@
+import platform
+
+from pyrogram import __version__ as py_version
+from pyrogram import idle
+
 version = "v1.0"
 group_username = "@LegendBotSpam"
-import threading
-
 from LegendBS.start_bot import start_bot
-from pyrogram import idle
+
+from LegendGirl.Config import *
 
 from .clients import *
 
 if Client1:
     pass
+
+
+
+def Start_BotSpam():
+    for i in range(1, 26):
+        var = globals()[f"Client{i}"]
+        if var is not None:
+            start_bot(var)
+    print("➖➖➖➖➖➖➖➖➖➖➖➖")
+    print(f"🔥 Bot Spam 🔥[INFO] : Group Username {group_username}")
+    print(f"🔥 Bot Spam 🔥[INFO] : Version - {platform.python_version()}")
+    print(f"🔥 Bot Spam 🔥[INFO]: SpamBot Version - {version}")
+    print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
+    print("➖➖➖➖➖➖➖➖➖➖➖➖")
+    idle()
+
 
 # def Start_BotSpam():
 #     if BOT_TOKEN:
@@ -165,7 +185,7 @@ if Client1:
 #     print("➖➖➖➖➖➖➖➖➖➖➖➖")
 #     idle()
 
-
+"""
 def Start_BotSpam():
     threads = []
     for i in range(1, 26):
@@ -181,14 +201,5 @@ def Start_BotSpam():
     for t in threads:
         t.join()
     idle()
-
-
 """
 
-def Start_BotSpam():
-    for i in range(1, 26):
-        var = globals()[f"Client{i}"]
-        if var is not None:
-            start_bot(var)
-    idle()
-"""
