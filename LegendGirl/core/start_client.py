@@ -13,79 +13,79 @@ from .clients import *
 
 
 def Start_BotSpam():
-    if Client1:
+    if BOT_TOKEN:
         start_bot(Client1)
 
-    if Client2:
+    if BOT_TOKEN2:
         start_bot(Client2)
 
-    if Client3:
+    if BOT_TOKEN3:
         start_bot(Client3)
 
-    if Client4:
+    if BOT_TOKEN4:
         start_bot(Client4)
 
-    if Client5:
+    if BOT_TOKEN5:
         start_bot(Client5)
 
-    if Client6:
+    if BOT_TOKEN6:
         start_bot(Client6)
 
-    if Client7:
+    if BOT_TOKEN7:
         start_bot(Client7)
 
-    if Client8:
+    if BOT_TOKEN8:
         start_bot(Client8)
 
-    if Client9:
+    if BOT_TOKEN9:
         start_bot(Client9)
 
-    if Client10:
+    if BOT_TOKEN10:
         start_bot(Client10)
 
-    if Client11:
+    if BOT_TOKEN11:
         start_bot(Client11)
 
-    if Client12:
+    if BOT_TOKEN12:
         start_bot(Client12)
 
-    if Client13:
+    if BOT_TOKEN13:
         start_bot(Client13)
 
-    if Client14:
+    if BOT_TOKEN14:
         start_bot(Client14)
 
-    if Client15:
+    if BOT_TOKEN15:
         start_bot(Client15)
 
-    if Client16:
+    if BOT_TOKEN16:
         start_bot(Client16)
 
-    if Client17:
+    if BOT_TOKEN17:
         start_bot(Client17)
 
-    if Client18:
+    if BOT_TOKEN18:
         start_bot(Client18)
 
-    if Client19:
+    if BOT_TOKEN19:
         start_bot(Client19)
 
-    if Client20:
+    if BOT_TOKEN20:
         start_bot(Client20)
 
-    if Client21:
+    if BOT_TOKEN21:
         start_bot(Client21)
 
-    if Client22:
+    if BOT_TOKEN22:
         start_bot(Client22)
 
-    if Client23:
+    if BOT_TOKEN23:
         start_bot(Client23)
 
-    if Client24:
+    if BOT_TOKEN24:
         start_bot(Client24)
 
-    if Client25:
+    if BOT_TOKEN25:
         start_bot(Client25)
 
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
