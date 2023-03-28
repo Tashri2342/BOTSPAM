@@ -1,6 +1,5 @@
 version = "v1.0"
 group_username = "@LegendBotSpam"
-import threading
 
 from LegendBS.start_bot import start_bot
 
@@ -182,6 +181,7 @@ def Start_BotSpam():
     for t in threads:
         t.join()
 """
+
 
 def Start_BotSpam():
     for i in range(1, 26):
