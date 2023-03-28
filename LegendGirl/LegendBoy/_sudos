@@ -26,9 +26,9 @@ async def addsudo(Legend: Client, message: Message):
         await message.reply_text(f"User {user.mention} already in sudo list!")
         return
     try:
-        heroku_var[SUDO_USERS] = user.id
-        """sudos.append(int(user.id))
-        print(sudos)"""
+        # heroku_var[SUDO_USERS] = user.id
+        sudos.append(int(user.id))
+        print(sudos)
         await message.reply_text(
             f"User {user.mention} successfully promoted as Sudo!\nWait For Some Days"
         )
