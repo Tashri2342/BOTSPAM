@@ -1,8 +1,9 @@
 version = "v1.0"
 group_username = "@LegendBotSpam"
 import threading
-from pyrogram import idle
+
 from LegendBS.start_bot import start_bot
+from pyrogram import idle
 
 from .clients import *
 
@@ -180,6 +181,7 @@ def Start_BotSpam():
     for t in threads:
         t.join()
     idle()
+
 
 """
 
