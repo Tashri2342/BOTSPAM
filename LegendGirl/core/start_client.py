@@ -1,17 +1,8 @@
-import platform
-
-from pyrogram import __version__ as py_version
-from pyrogram import idle
-
 version = "v1.0"
 group_username = "@LegendBotSpam"
-from LegendBS.start_bot import start_bot
-
-from LegendGirl.Config import *
-
-from .clients import *
-
 import threading
+
+from LegendBS.start_bot import start_bot
 
 # def Start_BotSpam():
 #     if BOT_TOKEN:
