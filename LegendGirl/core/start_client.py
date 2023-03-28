@@ -17,10 +17,16 @@ def Start_BotSpam():
         start_bot(Client1)
 
     if BOT_TOKEN2:
-        start_bot(Client2)
-
+        try:
+            start_bot(Client2)
+        except Exception as e:
+            print(e)l0
+  
     if BOT_TOKEN3:
-        start_bot(Client3)
+        try:
+            start_bot(Client3)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN4:
         start_bot(Client4)
