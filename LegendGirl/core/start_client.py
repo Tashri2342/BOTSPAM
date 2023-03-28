@@ -20,7 +20,7 @@ def Start_BotSpam():
         try:
             start_bot(Client2)
         except Exception as e:
-            print(e)l0
+            print(e)
   
     if BOT_TOKEN3:
         try:
@@ -71,49 +71,93 @@ def Start_BotSpam():
             print(e)
 
     if BOT_TOKEN11:
-        start_bot(Client11)
+        try:
+            start_bot(Client11)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN12:
-        start_bot(Client12)
+        try:
+            start_bot(Client12)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN13:
-        start_bot(Client13)
+        try:
+            start_bot(Client13)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN14:
-        start_bot(Client14)
+        try:
+            start_bot(Client14)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN15:
-        start_bot(Client15)
+        try:
+            start_bot(Client10)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN16:
-        start_bot(Client16)
+        try:
+            start_bot(Client16)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN17:
-        start_bot(Client17)
+        try:
+            start_bot(Client17)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN18:
-        start_bot(Client18)
+        try:
+            start_bot(Client18)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN19:
-        start_bot(Client19)
+        try:
+            start_bot(Client19)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN20:
-        start_bot(Client20)
+        try:
+            start_bot(Client20)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN21:
-        start_bot(Client21)
+        try:
+            start_bot(Client21)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN22:
-        start_bot(Client22)
+        try:
+            start_bot(Client22)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN23:
-        start_bot(Client23)
+        try:
+            start_bot(Client23)
+        except Exception as e:
+            print(e)
 
     if BOT_TOKEN24:
-        start_bot(Client24)
-
+        try:
+            start_bot(Client24)
+        except Exception as e:
+            print(e)
     if BOT_TOKEN25:
-        start_bot(Client25)
+        try:
+            start_bot(Client25)
+        except Exception as e:
+            print(e)
 
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     print(f"🔥 Bot Spam 🔥[INFO] : Group Username {group_username}")
