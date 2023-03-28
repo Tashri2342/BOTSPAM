@@ -1,7 +1,6 @@
 import asyncio
 from random import choice
 
-from LegendBS.get_user import get_user
 from LegendBS.raid import RAID, RRAID
 from pyrogram import Client, filters
 from pyrogram.types import Message
