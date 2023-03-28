@@ -1,4 +1,4 @@
-from . import start_botspam
+from . import Start_BotSpam
 
 if __name__ == "__main__":
-    start_botspam()
+    Start_BotSpam()
