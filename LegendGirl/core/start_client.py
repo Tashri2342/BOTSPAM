@@ -1,4 +1,4 @@
-import platform
+"""import platform
 
 from pyrogram import __version__ as py_version
 
