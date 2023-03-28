@@ -164,12 +164,12 @@ if Client1:
 #     print("➖➖➖➖➖➖➖➖➖➖➖➖")
 #     idle()
 
-"""
+
 def Start_BotSpam():
     threads = []
-    for i in range(2, 26):
+    for i in range(1, 26):
         try:
-            var = globals()[f"BOT_TOKEN{i}"]
+            var = globals()[f"Client{i}"]
             if var is not None:
                 t = threading.Thread(target=start_bot, args=(var,))
                 threads.append(t)
@@ -179,8 +179,8 @@ def Start_BotSpam():
 
     for t in threads:
         t.join()
-"""
 
+"""
 
 def Start_BotSpam():
     for i in range(1, 26):
@@ -188,3 +188,4 @@ def Start_BotSpam():
         if var is not None:
             start_bot(var)
     idle()
+"""
