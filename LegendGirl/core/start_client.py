@@ -1,7 +1,6 @@
 import platform
 
 from pyrogram import __version__ as py_version
-
 from pyrogram import idle
 
 version = "v1.0"
@@ -11,6 +10,7 @@ from LegendBS.start_bot import start_bot
 from LegendGirl.Config import *
 
 from .clients import *
+
 
 def Start_BotSpam():
     if BOT_TOKEN:
@@ -166,6 +166,7 @@ def Start_BotSpam():
     print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
+
 
 """
 import threading
