@@ -1,4 +1,4 @@
-import platform
+"""import platform
 
 from pyrogram import __version__ as py_version
 from pyrogram import idle
@@ -10,7 +10,6 @@ from LegendBS.start_bot import start_bot
 from LegendGirl.Config import *
 
 from .clients import *
-
 
 def Start_BotSpam():
     if BOT_TOKEN:
@@ -166,3 +165,19 @@ def Start_BotSpam():
     print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
+"""
+
+import threading 
+
+
+def start_botspam():
+    threads = []
+    for i in range(1, 26):
+        var = globals()[f"BOT_TOKEN{i}"]
+        if var is not None:
+            t = threading.Thread(target=start_bot, args=(var,))
+            threads.append(t)
+            t.start()
+
+    for t in threads:
+        t.join()
