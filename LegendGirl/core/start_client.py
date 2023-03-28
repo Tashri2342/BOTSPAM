@@ -15,7 +15,6 @@ if Client1:
     pass
 
 
-
 def Start_BotSpam():
     for i in range(1, 26):
         var = globals()[f"Client{i}"]
@@ -202,4 +201,3 @@ def Start_BotSpam():
         t.join()
     idle()
 """
-
