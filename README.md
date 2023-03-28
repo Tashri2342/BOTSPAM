@@ -168,7 +168,7 @@ Commands | Description
 
 - 1.Make Help Menu
 
-- 2. .shayri, .gm, .lslove,
+- 2. .shayri, .gm, .lslove, .reactionraid, 
 
 ## Bugs
 
