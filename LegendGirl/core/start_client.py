@@ -172,7 +172,6 @@ import threading
 
 from LegendBS.start_bot import start_bot
 
-from LegendGirl.Config import *
 
 def start_botspam():
     threads = []
