@@ -166,7 +166,7 @@ else:
 #     print("➖➖➖➖➖➖➖➖➖➖➖➖")
 #     idle()
 
-
+"""
 def Start_BotSpam():
     threads = []
     for i in range(2, 26):
@@ -181,3 +181,10 @@ def Start_BotSpam():
 
     for t in threads:
         t.join()
+"""
+
+def Start_BotSpam():
+    for i in range(1, 26):
+        var = globals()[f"BOT_TOKEN{i}"]
+        if var is not None:
+            start_bot(var)
