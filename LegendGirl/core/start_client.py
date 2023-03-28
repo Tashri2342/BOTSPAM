@@ -3,9 +3,6 @@ group_username = "@LegendBotSpam"
 
 from LegendBS.start_bot import start_bot
 
-from .clients import *
-
-
 # def Start_BotSpam():
 #     if BOT_TOKEN:
 #         start_bot(Client1)
