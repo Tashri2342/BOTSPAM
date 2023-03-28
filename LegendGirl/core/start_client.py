@@ -1,4 +1,4 @@
-"""import platform
+import platform
 
 from pyrogram import __version__ as py_version
 
@@ -166,12 +166,15 @@ def Start_BotSpam():
     print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
-"""
 
+"""
 import threading
 
 from LegendBS.start_bot import start_bot
+from LegendGirl.Config import *
 
+if BOT_TOKEN:
+    print("BOT TOKEN IS FOUND")
 
 def start_botspam():
     threads = []
