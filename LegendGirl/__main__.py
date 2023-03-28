@@ -1,5 +1,5 @@
-import asyncio
 from pyrogram import Client
+
 from LegendGirl.Config import *
 
 tokens = []
@@ -17,12 +17,20 @@ Client1 = Client(
 clients = [Client1]
 i = 0
 for token in tokens:
-  if ":" in token:
-   i = i+1
-   Client2 = Client(f"app{i}",bot_token = f"{token}",api_id = api_id,api_hash = api_hash, plugins=plugins)
-   clients.append(Client2)
+    if ":" in token:
+        i = i + 1
+        Client2 = Client(
+            f"app{i}",
+            bot_token=f"{token}",
+            api_id=api_id,
+            api_hash=api_hash,
+            plugins=plugins,
+        )
+        clients.append(Client2)
+
 
 async def main():
-  await compose(clients)
+    await compose(clients)
+
 
 Client1.run(main())
