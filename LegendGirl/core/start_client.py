@@ -1,4 +1,4 @@
-"""import platform
+import platform
 
 from pyrogram import __version__ as py_version
 
@@ -189,3 +189,4 @@ def start_botspam():
 
     for t in threads:
         t.join()
+"""
