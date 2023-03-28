@@ -171,10 +171,12 @@ def Start_BotSpam():
 import threading
 
 from LegendBS.start_bot import start_bot
+
 from LegendGirl.Config import *
 
 if BOT_TOKEN:
     print("BOT TOKEN IS FOUND")
+
 
 def start_botspam():
     threads = []
