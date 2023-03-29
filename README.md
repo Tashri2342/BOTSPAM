@@ -43,7 +43,7 @@
 
 ## 📄 <a name=" Required Variable"></a>Variable
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Collect+•+Variable+•&style=social)](https://youtu.be/CH_KO1wim2o)
+- [![YouTube Video Views](https://img.shields.io/youtube/views/yA9NsYE7SoM?label=Collect+•+Variable+•&style=social)](https://youtu.be/yA9NsYE7SoM)
 
 Required Variable | Description
 :--- | :---
