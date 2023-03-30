@@ -83,7 +83,7 @@ Required Variable | Description
 -------
 ## Deploy On Heroku
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Deploy+•+Heroku+•&style=social)](https://youtu.be/CH_KO1wim2o)
+- [![YouTube Video Views](https://img.shields.io/youtube/views/1pLXf9jG8e4?label=Deploy+•+Heroku+•&style=social)](https://youtu.be/1pLXf9jG8e4)
 
 - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
