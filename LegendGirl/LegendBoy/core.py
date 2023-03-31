@@ -2,7 +2,7 @@ import datetime
 import os
 import sys
 import time
-import asyncio
+
 from LegendBS.get_time import get_time
 from pyrogram import Client, filters
 from pyrogram.types import Message
