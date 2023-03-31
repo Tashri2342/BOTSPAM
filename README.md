@@ -169,7 +169,7 @@ Commands | Description
 
 - 1.Make Help Menu
 
-- 2. .shayri, .gm, .lslove, .reactionraid, 
+- 2. .shayri, .gm, .lslove, .birthday 
 
 ## Bugs
 
