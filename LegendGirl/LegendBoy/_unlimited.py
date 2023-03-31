@@ -1,4 +1,3 @@
-
 import asyncio
 from random import choice
 from pyrogram.errors import FloodWait
@@ -11,6 +10,7 @@ from ..core.clients import *
 from .. import sudos
 
 unlimited = False
+
 
 @Client.on_message(filters.user(sudos) & filters.command(["uspam"], prefixes=HANDLER))
 async def uspam(Legend: Client, message: Message):
@@ -52,7 +52,7 @@ async def uspam(Legend: Client, message: Message):
         except Exception as a:
             print(a)
 
-
+"""
 @Client.on_message(filters.user(sudos) & filters.command(["uraid"], prefixes=HANDLER))
 async def uraid(Legend: Client, e: Message):
     global spam
@@ -142,3 +142,4 @@ async def echo_(Legend: Client, message: Message):
     except Exception as a:
         await Legend.send_message(message.chat.id, msg)
         print(str(a))
+"""
