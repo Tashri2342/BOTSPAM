@@ -6,11 +6,12 @@ import time
 from LegendBS.get_time import get_time
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from ..core.clients import *
+
 from LegendGirl import start_time
 from LegendGirl.Config import *
 
 from .. import sudos
+from ..core.clients import *
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["ping"], prefixes=HANDLER))
@@ -36,7 +37,9 @@ async def ping(_, e: Message):
     filters.user(sudos) & filters.command(["restart", "reboot"], prefixes=HANDLER)
 )
 async def restarter(Legend: Client, message: Message):
-    await message.reply_text("**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping")
+    await message.reply_text(
+        "**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping"
+    )
     try:
         await Legend.stop()
     except Exception as error:
