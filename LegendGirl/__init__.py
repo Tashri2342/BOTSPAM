@@ -2,8 +2,8 @@ import time
 
 from .Config import *
 from .core import *
-
 version = "v1"
+group_username = "@LegendBotSpam"
 start_time = time.time()
 # Sudo Users
 sudos = []
