@@ -36,7 +36,9 @@ async def ping(_, e: Message):
     filters.user(sudos) & filters.command(["restart", "reboot"], prefixes=HANDLER)
 )
 async def restarter(Legend: Client, message: Message):
-    await message.reply_text("**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping")
+    await message.reply_text(
+        "**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping"
+    )
     try:
         await Legend.stop()
     except Exception as error:
