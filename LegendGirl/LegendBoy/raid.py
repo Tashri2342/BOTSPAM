@@ -1,6 +1,6 @@
 import asyncio
 from random import choice
-from ..core.clients import *
+
 from LegendBS.raid import RAID, RRAID
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -8,6 +8,7 @@ from pyrogram.types import Message
 from LegendGirl.Config import *
 
 from .. import sudos
+from ..core.clients import *
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
@@ -15,7 +16,7 @@ async def raid(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}raid (count) (reply to anyone)\nUsage :- `{HANDLER}raid 3 <reply to anyone>`\n\nCommand :- {HANDLER}raid <count> <username>\nUsage :- `{HANDLER}raid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
-    try: 
+    try:
         counts = int(lol[0])
     except ValueError:
         return await event.reply_text(usage)
@@ -47,10 +48,10 @@ async def raid(Legend: Client, e: Message):
     for _ in range(counts):
         raid = choice(RAID)
         for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(chat.id, f"{user.mention} {raid}")
-                    await asyncio.sleep(0.3)
+            lol = globals()[f"Client{i}"]
+            if lol is not None:
+                await lol.send_message(chat.id, f"{user.mention} {raid}")
+                await asyncio.sleep(0.3)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -188,4 +189,6 @@ async def watcher(Legend: Client, msg: Message):
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
-                await lol.send_message(user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)}")
+                await lol.send_message(
+                    user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)}"
+                )
