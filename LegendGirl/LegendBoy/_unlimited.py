@@ -9,21 +9,21 @@ from LegendGirl.Config import *
 from ..core.clients import *
 from .. import sudos
 
-spam = False
+unlimited = False
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["uspam"], prefixes=HANDLER))
-async def uspam(Legend: Client, e: Message):
+async def uspam(Legend: Client, message: Message):
     usage = f"Command : {HANDLER}uspam (message)"
     try:
         msg = str(e.text[6:])
     except IndexError:
         return await event.reply_text(usage)
-    if e.reply_to_message:
-        lmao = e.reply_to_message
-        global spam
-        spam = True
-        while spam == True:
+    if message.reply_to_message:
+        lmao = message.reply_to_message
+        global unlimited 
+        unlimited = True
+        while unlimited == True:
             try:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
@@ -33,9 +33,9 @@ async def uspam(Legend: Client, e: Message):
                 print(op)
             return
     else:
-        global spam
-        spam = True
-        while spam == True:
+        global unlimited 
+        unlimited = True
+        while unlimited == True:
             try:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
