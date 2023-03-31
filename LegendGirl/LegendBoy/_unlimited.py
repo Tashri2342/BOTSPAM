@@ -1,4 +1,3 @@
-import asyncio
 from random import choice
 
 from LegendBS.get_user import user_only
@@ -92,7 +91,7 @@ async def abuse(Legend: Client, e: Message):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
-    else:    
+    else:
         while unlimited == True:
             msg = choice(RAID)
             for i in range(1, 26):
@@ -107,6 +106,7 @@ async def abuse(Legend: Client, e: Message):
             )
         except Exception as a:
             print(a)
+
 
 @Client.on_message(filters.user(sudos) & filters.command(["stop"], prefixes=HANDLER))
 async def stop(_, e: Message):
