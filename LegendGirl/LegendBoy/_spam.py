@@ -22,7 +22,7 @@ async def _spam(Legend: Client, e: Message):
         chat = e.chat
         for _ in range(counts):
             for i in range(1, 26):
-                lol = globals()[f"Client{i}"]l
+                lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(chat.id, str(spam_text))
             await asyncio.sleep(0.3)
