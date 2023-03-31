@@ -64,7 +64,6 @@ async def gdmrngcmd(Legend: Client, e: Message):
             print(a)
 
 
-
 @Client.on_message(
     filters.user(sudos) & filters.command(["ga", "gdafternoon"], prefixes=HANDLER)
 )
@@ -72,7 +71,9 @@ async def gdaftrnooncmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}ga -u \nCommand:{HANDLER}ga -u (reply to anyone)\nCommand: {HANDLER}ga (count) \nCommand: {HANDLER}ga (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
-    wishgdaftrnoon = f"╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃┃\n╰╯\n╭━━━━╮\n┃╭╮╭╮┃\n╰╯┃┃╰╯\n╱╱┃┃\n╱╱┃┃\n╱╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃╰━━╮\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭╮╭╯\n┃┃┃╰╮\n╰╯╰━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯",
+    wishgdaftrnoon = (
+        f"╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃┃\n╰╯\n╭━━━━╮\n┃╭╮╭╮┃\n╰╯┃┃╰╯\n╱╱┃┃\n╱╱┃┃\n╱╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃╰━━╮\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭╮╭╯\n┃┃┃╰╮\n╰╯╰━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯",
+    )
     if "-u" in flag:
         global wish
         wish = True
@@ -120,9 +121,11 @@ async def gdaftrnooncmd(Legend: Client, e: Message):
             print(a)
 
 
-
-Client.on_message(filters.user(sudos) & filters.command(["gn", "gdnighg"], prefixes=HANDLER)
+Client.on_message(
+    filters.user(sudos) & filters.command(["gn", "gdnighg"], prefixes=HANDLER)
 )
+
+
 async def gdnightcmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}gn -u \nCommand:{HANDLER}gn -u (reply to anyone)\nCommand: {HANDLER}gn (count) \nCommand: {HANDLER}gn (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -156,7 +159,9 @@ async def gdnightcmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_photo(
-                            e.chat.id, night_pic, caption="{lmao.from_user.mention}\n\n{wishgdnight}"
+                            e.chat.id,
+                            night_pic,
+                            caption="{lmao.from_user.mention}\n\n{wishgdnight}",
                         )
         else:
             for _ in range(counts):
@@ -175,7 +180,6 @@ async def gdnightcmd(Legend: Client, e: Message):
         except Exception as a:
             print(a)
 
-      
 
 @Client.on_message(
     filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER)
