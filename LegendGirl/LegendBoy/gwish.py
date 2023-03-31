@@ -115,17 +115,15 @@ async def gdaftrnooncmd(Legend: Client, e: Message):
         try:
             await Legend.send_message(
                 LOG_CHANNEL,
-                f"#Started Good Morning Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}",
+                f"#Started Good Afternoon Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}",
             )
         except Exception as a:
             print(a)
 
 
-Client.on_message(
-    filters.user(sudos) & filters.command(["gn", "gdnighg"], prefixes=HANDLER)
+@Client.on_message(
+    filters.user(sudos) & filters.command(["gn", "gdnight"], prefixes=HANDLER)
 )
-
-
 async def gdnightcmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}gn -u \nCommand:{HANDLER}gn -u (reply to anyone)\nCommand: {HANDLER}gn (count) \nCommand: {HANDLER}gn (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -175,7 +173,7 @@ async def gdnightcmd(Legend: Client, e: Message):
         try:
             await Legend.send_message(
                 LOG_CHANNEL,
-                f"#Started Good Morning Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}",
+                f"#Started Good Nightl Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}",
             )
         except Exception as a:
             print(a)
