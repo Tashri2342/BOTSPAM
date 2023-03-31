@@ -23,11 +23,12 @@ async def uspam(Legend: Client, e: Message):
         await e.reply("Gime Spam message bruh!")
         return
     if e.reply_to_message:
+        lmao = e.reply_to_message
         while unlimited == True:
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(e.chat.id, msg)
+                    await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
     else:
         while unlimited == True:
             for i in range(1, 26):
@@ -50,15 +51,23 @@ async def uraid(Legend: Client, e: Message):
     unlimited = True
     user = await user_only(Legend, e)
     mention = user.mention
-    try:
+    if e.reply_to_message:
+        lmao = e.reply_to_message
+        while unlimited == True:
+            reply = choice(RAID)
+            raid_msg = f"{lmao.from_user.mention} {reply}"
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(e.chat.id, raid_msg)
+    else:
         while unlimited == True:
             reply = choice(RAID)
             raid_msg = f"{mention} {reply}"
-            await Legend.send_message(e.chat.id, raid_msg)
-    except Exception as f:
-        await e.reply_text(f" Error -! \n\n {f}")
-        return
-
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(e.chat.id, raid_msg)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -77,7 +86,7 @@ async def abuse(Legend: Client, e: Message):
     if sex:
         counts = int(sex)
         for _ in range(counts):
-            msg = choice(one_word)
+            msg = choice(ABUSE)
             await Legend.send_message(e.chat.id, msg)
             await asyncio.sleep(0.2)
     else:
