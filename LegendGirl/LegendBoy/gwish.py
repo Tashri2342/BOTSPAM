@@ -128,7 +128,7 @@ async def gdnightcmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}gn -u \nCommand:{HANDLER}gn -u (reply to anyone)\nCommand: {HANDLER}gn (count) \nCommand: {HANDLER}gn (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
-    wishgnight = "╭━━━╮╱╱╱╱╱╱╱╭╮\n┃╭━╮┃╱╱╱╱╱╱╱┃┃\n┃┃╱╰╋━━┳━━┳━╯┃\n┃┃╭━┫╭╮┃╭╮┃╭╮┃\n┃╰┻━┃╰╯┃╰╯┃╰╯┃\n╰━━━┻━━┻━━┻━━╯\n╭━╮╱╭╮╱╱╱╭╮╱╭╮\n┃┃╰╮┃┃╱╱╱┃┃╭╯╰╮\n┃╭╮╰╯┣┳━━┫╰┻╮╭╯\n┃┃╰╮┃┣┫╭╮┃╭╮┃┃\n┃┃╱┃┃┃┃╰╯┃┃┃┃╰╮\n╰╯╱╰━┻┻━╮┣╯╰┻━╯\n╱╱╱╱╱╱╭━╯┃\n╱╱╱╱╱╱╰━━╯"
+    wishgdnight = "╭━━━╮╱╱╱╱╱╱╱╭╮\n┃╭━╮┃╱╱╱╱╱╱╱┃┃\n┃┃╱╰╋━━┳━━┳━╯┃\n┃┃╭━┫╭╮┃╭╮┃╭╮┃\n┃╰┻━┃╰╯┃╰╯┃╰╯┃\n╰━━━┻━━┻━━┻━━╯\n╭━╮╱╭╮╱╱╱╭╮╱╭╮\n┃┃╰╮┃┃╱╱╱┃┃╭╯╰╮\n┃╭╮╰╯┣┳━━┫╰┻╮╭╯\n┃┃╰╮┃┣┫╭╮┃╭╮┃┃\n┃┃╱┃┃┃┃╰╯┃┃┃┃╰╮\n╰╯╱╰━┻┻━╮┣╯╰┻━╯\n╱╱╱╱╱╱╭━╯┃\n╱╱╱╱╱╱╰━━╯"
     if "-u" in flag:
         global wish
         wish = True
@@ -159,7 +159,7 @@ async def gdnightcmd(Legend: Client, e: Message):
                         await lol.send_photo(
                             e.chat.id,
                             night_pic,
-                            caption="{lmao.from_user.mention}\n\n{wishgdnight}",
+                            caption=f"{lmao.from_user.mention}\n\n{wishgdnight}",
                         )
         else:
             for _ in range(counts):
