@@ -84,7 +84,9 @@ async def _delayspam(Legend: Client, e: Message):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(chat.id, f"{lmao.from_user.mention} {spam_text}")
+                    await lol.send_message(
+                        chat.id, f"{lmao.from_user.mention} {spam_text}"
+                    )
             await asyncio.sleep(sleeptime)
     elif len(owo) == 2:
         for _ in range(counts):
@@ -128,13 +130,21 @@ async def _pornspam(Legend: Client, e: Message):
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_photo(chat.id, porn, caption=f"{lmao.from_user.mention} {random.choice(RAID)}")
+                        await lol.send_photo(
+                            chat.id,
+                            porn,
+                            caption=f"{lmao.from_user.mention} {random.choice(RAID)}",
+                        )
                 await asyncio.sleep(0.4)
             if ".mp4" in porn.lower():
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_video(chat.id, porn, caption=f"{lmao.from_user.mention} {random.choice(RAID)}")
+                        await lol.send_video(
+                            chat.id,
+                            porn,
+                            caption=f"{lmao.from_user.mention} {random.choice(RAID)}",
+                        )
                 await asyncio.sleep(0.4)
     elif counts:
         for _ in range(counts):
@@ -186,7 +196,9 @@ async def _hangchat(Legend: Client, e: Message):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {messhang}")
+                    await lol.send_message(
+                        e.chat.id, f"{lmao.from_user.mention} {messhang}"
+                    )
         await asyncio.sleep(0.3)
     else:
         for _ in range(count):
