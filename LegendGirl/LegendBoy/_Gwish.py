@@ -14,7 +14,7 @@ wish = False
 )
 async def gdmrngcmd(Legend: Client, e: Message):
     try:
-        text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+        text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     except IndexError:
         return await e.reply_text(usage)
     wishgdmrng = "╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.\n\n╱╱╱╱╱╱╱╱╱╱╭╮\n╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯"
