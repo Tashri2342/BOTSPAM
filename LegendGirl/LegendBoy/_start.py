@@ -12,22 +12,25 @@ async def start(Legend: Client, message: Message):
     if ".jpg" in START_PIC or ".png" in START_PIC:
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
-            await lol.send_photo(
-                message.chat.id,
-                START_PIC,
-                caption=START_MESSAGE,
-                reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
-            )
+            if lol is not None:
+                await lol.send_photo(
+                    message.chat.id,
+                    START_PIC,
+                    caption=START_MESSAGE,
+                    reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
+                )
     elif ".mp4" in START_PIC.lower():
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
-            await lol.send_video(
-                message.chat.id,
-                START_PIC,
-                caption=START_MESSAGE,
-                reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
-            )
+            if lol is not None:
+                await lol.send_video(
+                    message.chat.id,
+                    START_PIC,
+                    caption=START_MESSAGE,
+                    reply_markup=InlineKeyboardMarkup(await start_cmd(Legend)),
+                )
     else:
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
-            await lol.send_message(message.chat_id, START_MESSAGE)
+            if lol is not None:
+                await lol.send_message(message.chat_id, START_MESSAGE)
