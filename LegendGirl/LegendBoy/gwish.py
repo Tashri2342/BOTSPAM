@@ -12,7 +12,7 @@ wish = False
 @Client.on_message(
     filters.user(sudos) & filters.command(["gm" "gdmrng"], prefixes=HANDLER)
 )
-async def _gm(Legend: Client, e: Message):
+async def gdmrngcmd(Legend: Client, e: Message):
     try:
         text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     except IndexError:
@@ -64,8 +64,8 @@ async def _gm(Legend: Client, e: Message):
             print(a)
 
 
-@Client.on_message(filters.user(sudos) & filters.command(["stop"], prefixes=HANDLER))
-async def stop(_, e: Message):
+@Client.on_message(filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER))
+async def stopwish(_, e: Message):
     global wish
     wish = False
     await e.reply_text("Stopped Unlimited Wish gdmrng")
