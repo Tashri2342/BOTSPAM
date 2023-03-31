@@ -1,7 +1,6 @@
 import asyncio
 from random import choice
 from pyrogram.errors import FloodWait
-from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -17,19 +16,19 @@ spam = False
 async def uspam(Legend: Client, e: Message):
     global spam
     spam = True
-    msg = str(e.text[6:])
     reply = e.reply_to_message
+    msg = str(e.text[6:])
     if reply:
-        try:
-            while spam == True:
+        while spam == True:
+            try:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(chat.id, f"{reply.from_user.mention} {msg}")
-        except FloodWait as op:
-            print(op)
+            except FloodWait as op:
+                print(op)
         return
-    elif not msg or not reply:
+    elif not msg:
         await e.reply("Give me Spam message bro")
         return
     else:
