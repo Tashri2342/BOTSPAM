@@ -30,8 +30,6 @@ async def _spam(Legend: Client, e: Message):
             await asyncio.sleep(0.3)
     else:
         await e.reply_text(usage)
-    else:
-        await e.reply_text(usage)
         return
     if LOG_CHANNEL:
         try:
