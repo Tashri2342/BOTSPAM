@@ -1,5 +1,5 @@
 import platform
-
+import asyncio
 from LegendBS.start_bot import start_bot
 from pyrogram import __version__ as py_version
 from pyrogram import idle
