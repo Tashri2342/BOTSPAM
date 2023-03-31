@@ -1,6 +1,6 @@
 import asyncio
 from random import choice
-
+from pyrogram.errors import FloodWait
 from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
 from pyrogram import Client, filters
@@ -10,29 +10,40 @@ from LegendGirl.Config import *
 
 from .. import sudos
 
-unlimited = False
+spam = False
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["uspam"], prefixes=HANDLER))
 async def uspam(Legend: Client, e: Message):
-    global unlimited
-    unlimited = True
+    global spam
+    spam = True
     msg = str(e.text[6:])
-    if not msg:
-        await e.reply("Gime Spam message bruh!")
+    reply = e.reply_to_message 
+    if reply:
+        try:
+            while spam == True:
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(chat.id, f"{reply.from_user.mention} {msg}")
+        except FloodWait as e:
+            print(e)
         return
-    try:
-        while unlimited == True:
-            await Legend.send_message(e.chat.id, msg)
-    except Exception as ex:
-        print(ex)
-        await e.reply_text(f" Error -! \n\n {ex}")
-
+    elif not msg or not reply:
+        await e.reply("Give me Spam message bro")
+        return
+    else:
+        try:
+            while spam == True:
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(chat.id, msg)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
                 LOG_CHANNEL,
-                f"started Unlimited Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Spam Message: {msg}",
+                f"#Started Unlimited Spam \n\n• User: {e.from_user.id} \n• Chat: {e.chat.id} \n• Spam Message: {msg}",
             )
         except Exception as a:
             print(a)
@@ -40,14 +51,15 @@ async def uspam(Legend: Client, e: Message):
 
 @Client.on_message(filters.user(sudos) & filters.command(["uraid"], prefixes=HANDLER))
 async def uraid(Legend: Client, e: Message):
-    global unlimited
-    unlimited = True
-    user = await user_only(Legend, e)
-    mention = user.mention
+    global spam
+    spam = True
+    reply = e.reply_to_message
+    if reply:
+        
     try:
-        while unlimited == True:
-            reply = choice(RAID)
-            raid_msg = f"{mention} {reply}"
+        while spam == True:
+            msg = choice(RAID)
+            
             await Legend.send_message(e.chat.id, raid_msg)
     except Exception as f:
         await e.reply_text(f" Error -! \n\n {f}")
