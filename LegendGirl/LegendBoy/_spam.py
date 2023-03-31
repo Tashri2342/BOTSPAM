@@ -188,7 +188,7 @@ async def _hangchat(Legend: Client, e: Message):
                 if lol is not None:
                     await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {messhang}")
         await asyncio.sleep(0.3)
-    else
+    else:
         for _ in range(count):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
