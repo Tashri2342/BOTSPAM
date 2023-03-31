@@ -1,3 +1,4 @@
+
 import asyncio
 from random import choice
 from pyrogram.errors import FloodWait
@@ -10,7 +11,6 @@ from ..core.clients import *
 from .. import sudos
 
 unlimited = False
-
 
 @Client.on_message(filters.user(sudos) & filters.command(["uspam"], prefixes=HANDLER))
 async def uspam(Legend: Client, message: Message):
