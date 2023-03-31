@@ -21,11 +21,14 @@ async def _spam(Legend: Client, e: Message):
         lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     except IndexError:
         return await e.reply_text(usage)
-    counts = int(lol[0])
+    try:
+        counts = int(lol[0])
+    except ValueError:
+        return await e.reply_text(usage)
     spam_text = str(lol[1])
     chat = e.chat
     if e.reply_to_message:
-        e.reply_to_message
+        lmao = e.reply_to_message
         sweetie = 0
         while sweetie < counts:
             sweetie += 1
@@ -33,7 +36,7 @@ async def _spam(Legend: Client, e: Message):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(
-                        chat.id, f"{reply.from_user.mention} {spam_text}"
+                        chat.id, f"{lmao.from_user.mention} {spam_text}"
                     )
             await asyncio.sleep(0.3)
     elif len(lol) == 2:
