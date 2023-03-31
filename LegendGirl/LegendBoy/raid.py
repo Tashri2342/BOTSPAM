@@ -15,8 +15,11 @@ async def raid(Legend: Client, e: Message):
     usage = "Command :- /raid <count> <reply to anyone>\n Usage :- `/raid 3 <reply to anyone>`\n\nCommand :- /raid <count> <username>\n Usage :- `/raid 3 @Royal`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
-    if len(lol) == 2:
+    try: 
         counts = int(lol[0])
+    except ValueError:
+        return await event.reply_text(usage)
+    if len(lol) == 2:
         if not counts:
             await e.reply_text(
                 f"Gib raid Counts or use `{HANDLER}.uraid` for Unlimited raid!"
@@ -34,7 +37,6 @@ async def raid(Legend: Client, e: Message):
             await e.reply_text("**Error:** User not found!")
             return
     elif e.reply_to_message:
-        counts = int(lol[0])
         try:
             user = await Legend.get_users(e.reply_to_message.from_user.id)
         except:
@@ -44,8 +46,11 @@ async def raid(Legend: Client, e: Message):
         return
     for _ in range(counts):
         raid = choice(RAID)
-        await Legend.send_message(chat.id, f"{user.mention} {raid}")
-        await asyncio.sleep(0.3)
+        for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(chat.id, f"{user.mention} {raid}")
+                    await asyncio.sleep(0.3)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -166,9 +171,9 @@ async def rllist(Legend: Client, e: Message):
         for x in users:
             try:
                 user = await Legend.get_users(x)
-                _reply += f" × {user.mention} \n"
+                _reply += f" ✨ Users: {user.mention} \n"
             except:
-                _reply += f" × [{x}](tg://user?id={x}) \n"
+                _reply += f" ✨ Users: [{x}](tg://user?id={x}) \n"
     else:
         await e.reply_text("Not yet!")
         return
@@ -180,4 +185,8 @@ async def watcher(Legend: Client, msg: Message):
     global users
     user = msg.chat
     if int(user.id) in users:
-        await msg.reply_text(choice(RRAID))
+        lmao = msg.reply_to_message
+        for i in range(1, 26):
+            lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)})
