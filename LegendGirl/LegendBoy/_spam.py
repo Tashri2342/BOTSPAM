@@ -32,7 +32,7 @@ async def _spam(Legend: Client, e: Message):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(chat.id, {reply.from_user.mention} {spam_text})
+                    await lol.send_message(chat.id, f"{reply.from_user.mention} {spam_text}")
             await asyncio.sleep(0.3)
     elif len(lol) == 2:
         sweetie = 0
