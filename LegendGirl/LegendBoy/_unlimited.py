@@ -18,7 +18,7 @@ async def uspam(Legend: Client, message: Message):
     try:
         msg = str(e.text[6:])
     except IndexError:
-        return await event.reply_text(usage)
+        return await message.reply_text(usage)
     if message.reply_to_message:
         lmao = message.reply_to_message
         global unlimited 
