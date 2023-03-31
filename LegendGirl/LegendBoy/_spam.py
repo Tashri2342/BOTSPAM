@@ -4,10 +4,11 @@ import random
 from LegendBS.porn import pornlinks
 from pyrogram import Client, filters
 from pyrogram.types import *
-from ..core.clients import *
+
 from LegendGirl.Config import *
 
 from .. import sudos
+from ..core.clients import *
 
 
 @Client.on_message(
@@ -21,8 +22,8 @@ async def _spam(Legend: Client, e: Message):
         spam_text = str(lol[1])
         chat = e.chat
         sweetie = 0
-        while (sweetie<counts):
-            sweetie += 1        
+        while sweetie < counts:
+            sweetie += 1
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
