@@ -34,14 +34,14 @@ async def _gm(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}")
-                await asyncio.sleep(0.4)
+                    await asyncio.sleep(0.4)
         else:
             while wish == True: 
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(e.chat.id, wishgdmrng)
-                 await asyncio.sleep(0.4)
+                     await asyncio.sleep(0.4)
     else:
         if e.reply_to_message:
             lmao = e.reply_to_message
@@ -50,7 +50,7 @@ async def _gm(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}")
-                await asyncio.sleep(0.4)
+                    await asyncio.sleep(0.4)
         else:
             for _ in range(counts):
                 for i in range(1, 26):
