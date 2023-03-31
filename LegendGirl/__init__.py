@@ -2,7 +2,7 @@ import time
 
 from .Config import *
 from .core import *
-
+version = "v1"
 start_time = time.time()
 # Sudo Users
 sudos = []
