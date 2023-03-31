@@ -13,16 +13,13 @@ wish = False
     filters.user(sudos) & filters.command(["gm", "gdmrng"], prefixes=HANDLER)
 )
 async def gdmrngcmd(Legend: Client, e: Message):
-    try:
-        text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-    except IndexError:
-        return await e.reply_text(usage)
-    counts = int(text[1])
-    print(counts)
+    text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 3)
     flag = str(text[0])
+    counts = int(text[1])
     print(flag)
+    print(counts)
     wishgdmrng = "╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.\n\n╱╱╱╱╱╱╱╱╱╱╭╮\n╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯"
-    if "-u" in text:
+    if flag == " -u":
         global wish
         wish = True
         if e.reply_to_message:
