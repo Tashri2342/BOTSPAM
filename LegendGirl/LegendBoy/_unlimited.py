@@ -15,14 +15,14 @@ spam = False
 @Client.on_message(filters.user(sudos) & filters.command(["uspam"], prefixes=HANDLER))
 async def uspam(Legend: Client, e: Message):
     usage = f"Command : {HANDLER}uspam (message)"
-    global spam
-    spam = True
     try:
         msg = str(e.text[6:])
     except IndexError:
         return await event.reply_text(usage)
     if e.reply_to_message:
         lmao = e.reply_to_message
+        global spam
+        spam = True
         while spam == True:
             try:
                 for i in range(1, 26):
@@ -33,6 +33,8 @@ async def uspam(Legend: Client, e: Message):
                 print(op)
             return
     else:
+        global spam
+        spam = True
         while spam == True:
             try:
                 for i in range(1, 26):
