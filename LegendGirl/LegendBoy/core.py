@@ -2,7 +2,7 @@ import datetime
 import os
 import sys
 import time
-
+import asyncio
 from LegendBS.get_time import get_time
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -18,8 +18,10 @@ from ..core.clients import *
 async def ping(_, e: Message):
     start = datetime.datetime.now()
     uptime = get_time((time.time() - start_time))
+    a = await e.reply_text("Pong")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
+    await a.delete()
     ping_temp = f"🏓 Ping Pong\n\n✨ Ping: {ms}\n✨Uptime: {uptime}"
     for i in range(1, 26):
         lol = globals()[f"Client{i}"]
@@ -30,7 +32,6 @@ async def ping(_, e: Message):
                 await lol.send_video(e.chat.id, PING_PIC, caption=ping_temp)
             else:
                 await lol.send_message(e.chat.id, ping_temp)
-            await asyncio.sleep(0.3)
 
 
 @Client.on_message(
@@ -38,7 +39,7 @@ async def ping(_, e: Message):
 )
 async def restarter(Legend: Client, message: Message):
     await message.reply_text(
-        "**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping"
+        f"**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping"
     )
     try:
         await Legend.stop()
