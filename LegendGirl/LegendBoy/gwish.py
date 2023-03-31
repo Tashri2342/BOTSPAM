@@ -13,7 +13,7 @@ wish = False
     filters.user(sudos) & filters.command(["gm", "gdmrng"], prefixes=HANDLER)
 )
 async def gdmrngcmd(Legend: Client, e: Message):
-    text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = str(text[0])
     print(text)
     print(text[0])
