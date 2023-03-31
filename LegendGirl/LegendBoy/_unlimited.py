@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from LegendGirl.Config import *
-
+from ..core.clients import *
 from .. import sudos
 
 unlimited = False
