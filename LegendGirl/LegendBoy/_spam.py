@@ -170,7 +170,7 @@ async def _hangchat(Legend: Client, e: Message):
     usage = f"Command : {HANDLER}hang (count)"
     try:
         counts = e.text[5:]
-     except IndexError:
+    except IndexError:
         await e.reply_text(usage)
     if not counts:
         await e.reply_text("Gime Counts")
