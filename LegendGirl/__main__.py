@@ -1,10 +1,12 @@
-import platform 
+import platform
 
-from . import *
+from LegendBS.start_bot import start_bot
 from pyrogram import __version__ as py_version
 from pyrogram import idle
 
-from LegendBS.start_bot import start_bot
+from . import *
+
+
 def Start_BotSpam():
     for i in range(1, 26):
         var = globals()[f"Client{i}"]
@@ -17,5 +19,6 @@ def Start_BotSpam():
     print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     idle()
+
 
 asyncio.run(Start_BotSpam())
