@@ -188,4 +188,4 @@ async def watcher(Legend: Client, msg: Message):
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)})
+                    await lol.send_message(user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)}")
