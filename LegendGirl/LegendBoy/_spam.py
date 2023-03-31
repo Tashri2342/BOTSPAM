@@ -65,7 +65,7 @@ async def _spam(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["dspam", "delayspam"], prefixes=HANDLER)
 )
 async def _delayspam(Legend: Client, e: Message):
-    usage = "Command :- {HANDLER}dspam (coun) (sleeptime) (text)\nExample :- `{HANDLER}dspam 25 8 LegendBot`"
+    usage = f"Command :- {HANDLER}dspam (coun) (sleeptime) (text)\nExample :- `{HANDLER}dspam 25 8 LegendBot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     try:
         owo = lol[1:]
