@@ -22,16 +22,18 @@ async def uspam(Legend: Client, e: Message):
     if not msg:
         await e.reply("Gime Spam message bruh!")
         return
-    try:
+    if e.reply_to_message:
         while unlimited == True:
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(e.chat.id, msg)
-    except Exception as ex:
-        print(ex)
-        await e.reply_text(f" Error -! \n\n {ex}")
-
+    else:
+        while unlimited == True:
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(e.chat.id, msg)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
