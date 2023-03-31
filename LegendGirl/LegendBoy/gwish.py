@@ -10,7 +10,7 @@ wish = False
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["gm" "gdmrng"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["gm", "gdmrng"], prefixes=HANDLER)
 )
 async def gdmrngcmd(Legend: Client, e: Message):
     try:
