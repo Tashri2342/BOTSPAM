@@ -39,6 +39,8 @@ async def uspam(Legend: Client, e: Message):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(chat.id, msg)
+        except FloodWait as e:
+            print(e)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -55,16 +57,27 @@ async def uraid(Legend: Client, e: Message):
     spam = True
     reply = e.reply_to_message
     if reply:
-        
-    try:
-        while spam == True:
-            msg = choice(RAID)
-            
-            await Legend.send_message(e.chat.id, raid_msg)
-    except Exception as f:
-        await e.reply_text(f" Error -! \n\n {f}")
+        try:
+            while spam == True:
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(chat.id, f"{reply.from_user.mention} {choice(RAID)}")
+        except FloodWait as e:
+            print(e)
         return
-
+    elif not msg or not reply:
+        await e.reply("Give me Spam message bro")
+        return
+    else:
+        try:
+            while spam == True:
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(chat.id, msg)
+        except FloodWait as e:
+            print(e)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
