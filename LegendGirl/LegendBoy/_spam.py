@@ -4,7 +4,7 @@ import random
 from LegendBS.porn import pornlinks
 from pyrogram import Client, filters
 from pyrogram.types import *
-
+from ..core.clients import *
 from LegendGirl.Config import *
 
 from .. import sudos
@@ -21,8 +21,13 @@ async def _spam(Legend: Client, e: Message):
         spam_text = str(lol[1])
         chat = e.chat
         for _ in range(counts):
-            await Legend.send_message(chat.id, str(spam_text))
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]l
+                if lol is not None:
+                    await lol.send_message(chat.id, str(spam_text))
             await asyncio.sleep(0.3)
+    else:
+        await e.reply_text(usage)
     else:
         await e.reply_text(usage)
         return
