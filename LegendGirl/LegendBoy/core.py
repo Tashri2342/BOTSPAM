@@ -19,12 +19,16 @@ async def ping(_, e: Message):
     uptime = get_time((time.time() - start_time))
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
+    ping_temp = f"🏓 Ping Pong\n\n✨ Ping: {ms}\n✨Uptime: {uptime}"
     for i in range(1, 26):
         lol = globals()[f"Client{i}"]
         if lol is not None:
-            await lol.send_message(
-                chat.id, f"⚜️Ping Pong\n\n✨ Ping :`{ms}`\n✨ Uptime: `{uptime}`"
-            )
+            if ".jpg" in PING_PIC or ".png" in PING_PIC:
+                await lol.send_photo(e.chat.id, PING_PIC, caption=ping_temp)
+            elif ".mp4" in PING_PIC.lower():
+                await lol.send_video(e.chat.id, PING_PIC, caption=ping_temp)
+            else:
+                await lol.send_message(e.chat.id, ping_temp)
             await asyncio.sleep(0.3)
 
 
@@ -32,9 +36,7 @@ async def ping(_, e: Message):
     filters.user(sudos) & filters.command(["restart", "reboot"], prefixes=HANDLER)
 )
 async def restarter(Legend: Client, message: Message):
-    await message.reply_text(
-        "**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping"
-    )
+    await message.reply_text("**Bot Is Restarting**\n\n Please Wait 5 min till bot is restart.\nAfter 5 Min Type {HANDLER}ping")
     try:
         await Legend.stop()
     except Exception as error:
