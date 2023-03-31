@@ -23,7 +23,10 @@ async def uspam(Legend: Client, e: Message):
         return
     try:
         while unlimited == True:
-            await Legend.send_message(e.chat.id, msg)
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(e.chat.id, msg)            
     except Exception as ex:
         print(ex)
         await e.reply_text(f" Error -! \n\n {ex}")
