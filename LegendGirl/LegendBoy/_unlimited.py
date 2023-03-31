@@ -18,16 +18,16 @@ async def uspam(Legend: Client, e: Message):
     global spam
     spam = True
     msg = str(e.text[6:])
-    reply = e.reply_to_message 
+    reply = e.reply_to_message
     if reply:
         try:
             while spam == True:
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(chat.id, f"{reply.from_user.mention} {msg}")
-        except FloodWait as e:
-            print(e)
+                for i in range(1, 26):
+                    lol = globals()[f"Client{i}"]
+                    if lol is not None:
+                        await lol.send_message(chat.id, f"{reply.from_user.mention} {msg}")
+        except FloodWait as op:
+            print(op)
         return
     elif not msg or not reply:
         await e.reply("Give me Spam message bro")
@@ -35,12 +35,12 @@ async def uspam(Legend: Client, e: Message):
     else:
         try:
             while spam == True:
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(chat.id, msg)
-        except FloodWait as e:
-            print(e)
+                for i in range(1, 26):
+                    lol = globals()[f"Client{i}"]
+                    if lol is not None:
+                        await lol.send_message(chat.id, msg)
+        except FloodWait as op:
+            print(op)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -59,10 +59,10 @@ async def uraid(Legend: Client, e: Message):
     if reply:
         try:
             while spam == True:
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(chat.id, f"{reply.from_user.mention} {choice(RAID)}")
+                for i in range(1, 26):
+                    lol = globals()[f"Client{i}"]
+                    if lol is not None:
+                        await lol.send_message(chat.id, f"{reply.from_user.mention} {choice(RAID)}")
         except FloodWait as e:
             print(e)
         return
@@ -72,12 +72,12 @@ async def uraid(Legend: Client, e: Message):
     else:
         try:
             while spam == True:
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(chat.id, msg)
-        except FloodWait as e:
-            print(e)
+                for i in range(1, 26):
+                    lol = globals()[f"Client{i}"]
+                    if lol is not None:
+                        await lol.send_message(chat.id, msg)
+        except FloodWait as op:
+            print(op)
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -108,9 +108,9 @@ async def abuse(Legend: Client, e: Message):
         try:
             while spam == True:
                 for i in range(1, 26):
-                lol = global()[f"Client{i}"]
-                await lol.send_message(e.chat.id, f"{reply.from_user.mention} {msg}")
-            await asyncio.sleep(0.2)
+                    lol = global()[f"Client{i}"]
+                    await lol.send_message(e.chat.id, f"{reply.from_user.mention} {msg}")
+                await asyncio.sleep(0.2)
         except FloodWait as ex:
             print(ex)
         
