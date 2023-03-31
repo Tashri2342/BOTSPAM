@@ -21,7 +21,7 @@ async def _spam(Legend: Client, e: Message):
         spam_text = str(lol[1])
         chat = e.chat
         sweetie = 0
-        while(sweetie<counts):
+        while (sweetie<counts):
             sweetie += 1        
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
