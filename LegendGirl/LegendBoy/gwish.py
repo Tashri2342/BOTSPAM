@@ -64,7 +64,9 @@ async def gdmrngcmd(Legend: Client, e: Message):
             print(a)
 
 
-@Client.on_message(filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER))
+@Client.on_message(
+    filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER)
+)
 async def stopwish(_, e: Message):
     global wish
     wish = False
