@@ -13,13 +13,11 @@ wish = False
     filters.user(sudos) & filters.command(["gm", "gdmrng"], prefixes=HANDLER)
 )
 async def gdmrngcmd(Legend: Client, e: Message):
-    text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 3)
+    text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     flag = str(text[0])
-    counts = int(text[1])
     print(flag)
-    print(counts)
     wishgdmrng = "╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.\n\n╱╱╱╱╱╱╱╱╱╱╭╮\n╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯"
-    if flag == " -u":
+    if flag == "-u":
         global wish
         wish = True
         if e.reply_to_message:
@@ -37,7 +35,8 @@ async def gdmrngcmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(e.chat.id, wishgdmrng)
-    else:
+    counts = int(text[1])
+    if flag != "-u":
         if e.reply_to_message:
             lmao = e.reply_to_message
             for _ in range(counts):
