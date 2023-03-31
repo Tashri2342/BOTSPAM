@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from LegendGirl.Config import *
-
+from ..core.clients import *
 from .. import sudos
 
 spam = False
@@ -92,29 +92,33 @@ async def uraid(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["abuse", "gali"], prefixes=HANDLER)
 )
 async def abuse(Legend: Client, e: Message):
+    reply = e.reply_to_message
     sex = e.text[7:]
-    if sex:
+    msg = choice(ABUSE)
+    if reply:
         counts = int(sex)
         for _ in range(counts):
-            msg = choice(one_word)
-            await Legend.send_message(e.chat.id, msg)
+            for i in range(1, 26):
+                lol = global()[f"Client{i}"]
+                await lol.send_message(e.chat.id, f"{reply.from_user.mention} {msg}")
             await asyncio.sleep(0.2)
     else:
-        global unlimited
-        unlimited = True
+        global spam
+        spam = True
         try:
-            while unlimited == True:
-                msg = choice(RAID)
-                await Legend.send_message(e.chat.id, msg)
-        except Exception as ex:
+            while spam == True:
+                for i in range(1, 26):
+                lol = global()[f"Client{i}"]
+                await lol.send_message(e.chat.id, f"{reply.from_user.mention} {msg}")
+            await asyncio.sleep(0.2)
+        except FloodWait as ex:
             print(ex)
-            await e.reply_text(f" Error -! \n\n {ex}")
-
+        
 
 @Client.on_message(filters.user(sudos) & filters.command(["stop"], prefixes=HANDLER))
 async def stop(_, e: Message):
-    global unlimited
-    unlimited = False
+    global spam
+    spam = False
     await e.reply_text("Stopped Unlimited Spam/Raid/abuse -;")
 
 
