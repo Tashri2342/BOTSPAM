@@ -14,12 +14,9 @@ wish = False
 )
 async def gdmrngcmd(Legend: Client, e: Message):
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-    flag = str(text[0])
-    print(text)
-    print(text[0])
-    print(text[1])
+    flag = text[0]
     wishgdmrng = "╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.\n\n╱╱╱╱╱╱╱╱╱╱╭╮\n╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯"
-    if flag == "-u":
+    if "-u" in flag:
         global wish
         wish = True
         if e.reply_to_message:
@@ -37,8 +34,8 @@ async def gdmrngcmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(e.chat.id, wishgdmrng)
-    elif flag != "-u":
-        counts = int(text[1])
+    elif "-u" not in flag:
+        counts = int(text[0])
         if e.reply_to_message:
             lmao = e.reply_to_message
             for _ in range(counts):
