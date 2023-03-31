@@ -122,7 +122,7 @@ async def _hangchat(Legend: Client, e: Message):
         for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(e.chat.id, str(spam_text))
+                    await lol.send_message(e.chat.id, messhang)
             await asyncio.sleep(0.3)
     if LOG_CHANNEL:
         try:
