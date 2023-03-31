@@ -2,9 +2,10 @@ import asyncio
 import random
 
 from LegendBS.porn import pornlinks
+from LegendBS.raid import RAID
 from pyrogram import Client, filters
 from pyrogram.types import *
-from LegendBS.raid import RAID
+
 from LegendGirl.Config import *
 
 from .. import sudos
