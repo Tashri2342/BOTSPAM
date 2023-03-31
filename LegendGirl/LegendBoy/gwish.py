@@ -1,8 +1,3 @@
-import asyncio
-import random
-
-from LegendBS.porn import pornlinks
-from LegendBS.raid import RAID
 from pyrogram import Client, filters
 from pyrogram.types import *
 
@@ -12,6 +7,7 @@ from .. import sudos
 from ..core.clients import *
 
 wish = False
+
 
 @Client.on_message(
     filters.user(sudos) & filters.command(["gm" "gdmrng"], prefixes=HANDLER)
@@ -33,9 +29,11 @@ async def _gm(Legend: Client, e: Message):
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_message(e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}")
+                        await lol.send_message(
+                            e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}"
+                        )
         else:
-            while wish == True: 
+            while wish == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
@@ -47,7 +45,9 @@ async def _gm(Legend: Client, e: Message):
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_message(e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}")
+                        await lol.send_message(
+                            e.chat.id, f"{lmao.from_user.mention}\n\n{wishgdmrng}"
+                        )
         else:
             for _ in range(counts):
                 for i in range(1, 26):
@@ -56,13 +56,16 @@ async def _gm(Legend: Client, e: Message):
                         await lol.send_message(e.chat.id, wishgdmrng)
     if LOG_CHANNEL:
         try:
-            await Legend.send_message(LOG_CHANNEL, f"#Started Good Morning Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}")
+            await Legend.send_message(
+                LOG_CHANNEL,
+                f"#Started Good Morning Spam By User: {e.from_user.id} \n\n Chat: {e.chat.id} \n Counts: {counts}",
+            )
         except Exception as a:
             print(a)
+
 
 @Client.on_message(filters.user(sudos) & filters.command(["stop"], prefixes=HANDLER))
 async def stop(_, e: Message):
     global wish
     wish = False
     await e.reply_text("Stopped Unlimited Wish gdmrng")
-
