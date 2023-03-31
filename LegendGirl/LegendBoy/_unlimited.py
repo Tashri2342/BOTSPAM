@@ -82,24 +82,31 @@ async def uraid(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["abuse", "gali"], prefixes=HANDLER)
 )
 async def abuse(Legend: Client, e: Message):
-    sex = e.text[7:]
-    if sex:
-        counts = int(sex)
-        for _ in range(counts):
-            msg = choice(ABUSE)
-            await Legend.send_message(e.chat.id, msg)
-            await asyncio.sleep(0.2)
-    else:
-        global unlimited
-        unlimited = True
+    global unlimited
+    unlimited = True
+    if e.reply_to_message:
+        lmao = e.reply_to_message
+        while unlimited == True:
+        msg = choice(RAID)
+        for i in range(1, 26):
+            lol = globals()[f"Client{i}"]
+            if lol is not None:
+                await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
+    else:    
+        while unlimited == True:
+        msg = choice(RAID)
+        for i in range(1, 26):
+            lol = globals()[f"Client{i}"]
+            if lol is not None:
+                await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
+    if LOG_CHANNEL:
         try:
-            while unlimited == True:
-                msg = choice(RAID)
-                await Legend.send_message(e.chat.id, msg)
-        except Exception as ex:
-            print(ex)
-            await e.reply_text(f" Error -! \n\n {ex}")
-
+            await Legend.send_message(
+                LOG_CHANNEL,
+                f"started Raid By User: {e.from_user.id} \n\n On User: {mention} \n Chat: {e.chat.id}",
+            )
+        except Exception as a:
+            print(a)
 
 @Client.on_message(filters.user(sudos) & filters.command(["stop"], prefixes=HANDLER))
 async def stop(_, e: Message):
