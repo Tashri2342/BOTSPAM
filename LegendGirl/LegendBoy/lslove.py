@@ -1,7 +1,7 @@
 import asyncio
 from random import choice
 
-from LegendBS.love import loveraid
+from LegendBS.love import loveraid as luvraid
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -49,7 +49,7 @@ async def lovaid(Legend: Client, e: Message):
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
-                await lol.send_message(chat.id, f"{user.mention} {choice(loveraid)}")
+                await lol.send_message(chat.id, f"{user.mention} {choice(luvraid)}")
                 await asyncio.sleep(0.3)
     if LOG_CHANNEL:
         try:
@@ -162,7 +162,7 @@ async def lovedraid(Legend: Client, e: Message):
 async def lactivate(Legend: Client, msg: Message):
     global USERS
     if int(msg.from_user.id) in USERS:
-        await msg.reply_text(choice(RRAID))
+        await msg.reply_text(choice(luvraid))
 
 
 @Client.on_message(
