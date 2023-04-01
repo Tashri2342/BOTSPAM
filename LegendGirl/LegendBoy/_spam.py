@@ -122,17 +122,17 @@ async def _pornspam(Legend: Client, e: Message):
     except ValueError:
         return await e.reply_text(usage)
     chat = e.chat
-    porn = random.choice(pornlinks)
     if e.reply_to_message:
         lmao = e.reply_to_message
         for _ in range(counts):
+            porn = random.choice(pornlinks)
             if ".jpg" in porn or ".png" in porn:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_photo(
                             chat.id,
-                            porn,
+                            random.choice(pornlinks),
                             caption=f"{lmao.from_user.mention} {random.choice(RAID)}",
                         )
                 await asyncio.sleep(0.4)
