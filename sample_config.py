@@ -47,6 +47,7 @@ PING_PIC = getenv("PING_PIC", "https://graph.org/file/8b665536aee97ee58f5ca.jpg"
 
 START_PIC = getenv("START_PIC", "https://graph.org/file/01d5c1877d6aabdd99c25.jpg")
 
+HELP_PIC = getenv("HELP_PIC", "https://graph.org/file/89ed7d3a2bd8aa2c61385.jpg")
 LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 
 HANDLER = getenv("HANDLER", "/")
