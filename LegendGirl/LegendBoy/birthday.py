@@ -12,7 +12,9 @@ from ..core.clients import *
 bd = False
 
 
-@Client.on_message(filters.user(sudos) & filters.command(["birthday"], prefixes=HANDLER))
+@Client.on_message(
+    filters.user(sudos) & filters.command(["birthday"], prefixes=HANDLER)
+)
 async def brthdaycmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}birthday -u \nCommand:{HANDLER}birthday -u (reply to anyone)\nCommand: {HANDLER}birthday (count) \nCommand: {HANDLER}birthday (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -51,7 +53,9 @@ async def brthdaycmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_photo(
-                            e.chat.id, bdpic, caption=f"{lmao.from_user.mention}\n\n{bdmsg}"
+                            e.chat.id,
+                            bdpic,
+                            caption=f"{lmao.from_user.mention}\n\n{bdmsg}",
                         )
         else:
             for _ in range(counts):
