@@ -66,7 +66,7 @@ async def _spam(Legend: Client, e: Message):
 )
 async def _delayspam(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}dspam (coun) (sleeptime) (text)\nExample :- `{HANDLER}dspam 25 8 LegendBot`"
-    lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
+    lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     try:
         owo = lol[1:]
     except IndexError:
@@ -75,9 +75,9 @@ async def _delayspam(Legend: Client, e: Message):
         counts = int(owo[0])
     except ValueError:
         return await e.reply_text(usage)
-    chat = e.chat
     spam_text = str(owo[1])
     sleeptime = float(lol[0])
+    chat = e.chat
     if e.reply_to_message:
         lmao = e.reply_to_message
         for _ in range(counts):
