@@ -64,6 +64,7 @@ async def lovaid(Legend: Client, e: Message):
 users = []
 unlimited = False
 
+
 @Client.on_message(
     filters.user(sudos)
     & filters.command(["loverraid", "lovereplyraid"], prefixes=HANDLER)
@@ -100,7 +101,6 @@ async def lovereplyraid(Legend: Client, e: Message):
     if int(user.id) in users:
         await e.reply_text("User already in Raid list!")
         return
-    unlimited = True
     users.append(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Activated On User {mention}")
@@ -151,7 +151,7 @@ async def lovedraid(Legend: Client, e: Message):
     if int(user.id) not in users:
         await e.reply_text("User not in Raid list!")
         return
-    unlimited = False 
+    unlimited = False
     users.remove(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Deactivated Successfully On User {mention}")
