@@ -16,6 +16,8 @@ async def gdmrngcmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}gm -u \nCommand:{HANDLER}gm -u (reply to anyone)\nCommand: {HANDLER}gm (count) \nCommand: {HANDLER}gm (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
+    if not flag:
+        return await e.reply_text(usage)
     wishgdmrng = "╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.\n\n╱╱╱╱╱╱╱╱╱╱╭╮\n╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯"
     if "-u" in flag:
         global wish
@@ -36,7 +38,10 @@ async def gdmrngcmd(Legend: Client, e: Message):
                     if lol is not None:
                         await lol.send_message(e.chat.id, wishgdmrng)
     elif "-u" not in flag:
-        counts = int(text[0])
+        try:
+            counts = int(text[0])
+        except ValueError:
+            return await e.reply_text(usage)
         if e.reply_to_message:
             lmao = e.reply_to_message
             for _ in range(counts):
@@ -71,6 +76,8 @@ async def gdaftrnooncmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}ga -u \nCommand:{HANDLER}ga -u (reply to anyone)\nCommand: {HANDLER}ga (count) \nCommand: {HANDLER}ga (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
+    if not flag:
+        return await e.reply_text(usage)
     wishgdaftrnoon = (
         f"╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃┃\n╰╯\n╭━━━━╮\n┃╭╮╭╮┃\n╰╯┃┃╰╯\n╱╱┃┃\n╱╱┃┃\n╱╱╰╯\n╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃╰━━╮\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭╮╭╯\n┃┃┃╰╮\n╰╯╰━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃┃╱┃┃\n┃╰━╯┃\n╰━━━╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯",
     )
@@ -93,7 +100,10 @@ async def gdaftrnooncmd(Legend: Client, e: Message):
                     if lol is not None:
                         await lol.send_message(e.chat.id, wishgdaftrnoon)
     elif "-u" not in flag:
-        counts = int(text[0])
+        try:
+            counts = int(text[0])
+        except ValueError:
+            return await e.reply_text(usage)
         if e.reply_to_message:
             lmao = e.reply_to_message
             for _ in range(counts):
@@ -128,6 +138,8 @@ async def gdnightcmd(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}gn -u \nCommand:{HANDLER}gn -u (reply to anyone)\nCommand: {HANDLER}gn (count) \nCommand: {HANDLER}gn (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
+    if not flag:
+        return await e.reply_text(usage)
     wishgdnight = "╭━━━╮╱╱╱╱╱╱╱╭╮\n┃╭━╮┃╱╱╱╱╱╱╱┃┃\n┃┃╱╰╋━━┳━━┳━╯┃\n┃┃╭━┫╭╮┃╭╮┃╭╮┃\n┃╰┻━┃╰╯┃╰╯┃╰╯┃\n╰━━━┻━━┻━━┻━━╯\n╭━╮╱╭╮╱╱╱╭╮╱╭╮\n┃┃╰╮┃┃╱╱╱┃┃╭╯╰╮\n┃╭╮╰╯┣┳━━┫╰┻╮╭╯\n┃┃╰╮┃┣┫╭╮┃╭╮┃┃\n┃┃╱┃┃┃┃╰╯┃┃┃┃╰╮\n╰╯╱╰━┻┻━╮┣╯╰┻━╯\n╱╱╱╱╱╱╭━╯┃\n╱╱╱╱╱╱╰━━╯"
     if "-u" in flag:
         global wish
@@ -149,7 +161,10 @@ async def gdnightcmd(Legend: Client, e: Message):
                         await lol.send_message(e.chat.id, wishgdnight)
     elif "-u" not in flag:
         night_pic = "https://graph.org/file/f1c39dac664a45be949fd.jpg"
-        counts = int(text[0])
+        try:
+            counts = int(text[0])
+        except ValueError:
+            return await e.reply_text(usage)
         if e.reply_to_message:
             lmao = e.reply_to_message
             for _ in range(counts):
