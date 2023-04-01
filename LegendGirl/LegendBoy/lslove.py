@@ -14,7 +14,7 @@ from ..core.clients import *
 @Client.on_message(
     filters.user(sudos) & filters.command(["loveraid"], prefixes=HANDLER)
 )
-async def loveraid(Legend: Client, e: Message):
+async def lovaid(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}loveraid (count) (reply to anyone)\nUsage :- `{HANDLER}loveraid 3 <reply to anyone>`\n\nCommand :- {HANDLER}loveraid <count> <username>\nUsage :- `{HANDLER}loveraid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
@@ -192,5 +192,5 @@ async def watcher(Legend: Client, msg: Message):
             lol = globals()[f"Client{i}"]
             if lol is not None:
                 await lol.send_message(
-                    user.chat.id, f"{lmao.from_user.mention} {choice(loveraid)}"
+                    user.id, f"{lmao.from_user.mention} {choice(loveraid)}"
                 )
