@@ -87,14 +87,14 @@ async def _delayspam(Legend: Client, e: Message):
                     await lol.send_message(
                         chat.id, f"{lmao.from_user.mention} {spam_text}"
                     )
-                await asyncio.sleep(sleeptime)
+            await asyncio.sleep(sleeptime)
     elif len(owo) == 2:
         for _ in range(counts):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(chat.id, str(spam_text))
-                await asyncio.sleep(sleeptime)
+            await asyncio.sleep(sleeptime)
     else:
         await e.reply_text(usage)
         return
