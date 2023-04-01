@@ -188,7 +188,7 @@ async def loverllist(Legend: Client, e: Message):
 @Client.on_message(filters.all)
 async def watcher(Legend: Client, msg: Message):
     global users
-    gobal unlimited
+    global unlimited
     user = msg.chat
     while unlimited == True:
         if int(user.id) in users:
