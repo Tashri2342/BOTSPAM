@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.shayri import *
+from LegendBS.yup import *
 from pyrogram import Client, filters
 from pyrogram.types import *
 
