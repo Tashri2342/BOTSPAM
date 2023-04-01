@@ -11,7 +11,9 @@ from .. import sudos
 from ..core.clients import *
 
 
-@Client.on_message(filters.user(sudos) & filters.command(["loveraid"], prefixes=HANDLER))
+@Client.on_message(
+    filters.user(sudos) & filters.command(["loveraid"], prefixes=HANDLER)
+)
 async def loveraid(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}loveraid (count) (reply to anyone)\nUsage :- `{HANDLER}loveraid 3 <reply to anyone>`\n\nCommand :- {HANDLER}loveraid <count> <username>\nUsage :- `{HANDLER}loveraid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -22,9 +24,7 @@ async def loveraid(Legend: Client, e: Message):
         return await event.reply_text(usage)
     if len(lol) == 2:
         if not counts:
-            await e.reply_text(
-                f"Gib loveraid Counts"
-            )
+            await e.reply_text(f"Gib loveraid Counts")
             return
         owo = lol[1]
         if not owo:
@@ -46,7 +46,7 @@ async def loveraid(Legend: Client, e: Message):
         await e.reply_text(usage)
         return
     for _ in range(counts):
-        raid = choice(loveraid)
+        choice(loveraid)
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
@@ -66,7 +66,8 @@ users = []
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["loverraid", "lovereplyraid"], prefixes=HANDLER)
+    filters.user(sudos)
+    & filters.command(["loverraid", "lovereplyraid"], prefixes=HANDLER)
 )
 async def lovereplyraid(Legend: Client, e: Message):
     global users
@@ -114,7 +115,8 @@ async def lovereplyraid(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["lovedraid", "lovedreplyraid"], prefixes=HANDLER)
+    filters.user(sudos)
+    & filters.command(["lovedraid", "lovedreplyraid"], prefixes=HANDLER)
 )
 async def lovedraid(Legend: Client, e: Message):
     global users
@@ -162,7 +164,8 @@ async def lovedraid(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["loverlist", "loveraidlist"], prefixes=HANDLER)
+    filters.user(sudos)
+    & filters.command(["loverlist", "loveraidlist"], prefixes=HANDLER)
 )
 async def loverllist(Legend: Client, e: Message):
     global users
