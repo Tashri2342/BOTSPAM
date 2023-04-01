@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.shayri import SHAYRI
+from LegendBS.shayri import shayrilol
 from pyrogram import Client, filters
 from pyrogram.types import *
 
@@ -19,7 +19,7 @@ async def shayricmd(Legend: Client, e: Message):
     flag = text[0]
     if not flag:
         return await e.reply_text(usage)
-    shayrimsg = choice(SHAYRI)
+    shayrimsg = choice(shayrilol)
     if "-u" in flag:
         global shayri
         shayri = True
