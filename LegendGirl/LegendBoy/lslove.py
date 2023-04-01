@@ -71,7 +71,6 @@ unlimited = False
 )
 async def lovereplyraid(Legend: Client, e: Message):
     global users
-    global unlimited
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -83,10 +82,9 @@ async def lovereplyraid(Legend: Client, e: Message):
         if user_.isnumeric():
             user_ = int(user_)
         if not user_:
-            await e.reply_text(
+            return await e.reply_text(
                 "I don't know who you're talking about, you're going to need to specify a user.!"
             )
-            return
         try:
             user = await Legend.get_users(user_)
         except (TypeError, ValueError):
@@ -95,17 +93,18 @@ async def lovereplyraid(Legend: Client, e: Message):
             )
             return
     else:
-        await e.reply_text(
+        return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-        return
     if int(user.id) in users:
-        await e.reply_text("User already in Raid list!")
-        return
+        return await e.reply_text("User already in Raid list!")
+    print(user.id)
+    global unlimited 
     unlimited = True
     users.append(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Activated On User {mention}")
+
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -122,7 +121,6 @@ async def lovereplyraid(Legend: Client, e: Message):
 )
 async def lovedraid(Legend: Client, e: Message):
     global users
-    global unlimited
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -134,29 +132,27 @@ async def lovedraid(Legend: Client, e: Message):
         if user_.isnumeric():
             user_ = int(user_)
         if not user_:
-            await e.reply_text(
+            return await e.reply_text(
                 "I don't know who you're talking about, you're going to need to specify a user.!"
             )
-            return
         try:
             user = await Legend.get_users(user_)
         except (TypeError, ValueError):
-            await message.reply_text(
+            return await message.reply_text(
                 "Looks like I don't have control over that user, or the ID isn't a valid one. If you reply to one of their messages, I'll be able to interact with them."
             )
-            return
     else:
-        await e.reply_text(
+        return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-        return
     if int(user.id) not in users:
-        await e.reply_text("User not in Raid list!")
-        return
+        return await e.reply_text("User not in Raid list!")
+    global unlimited 
     unlimited = False
     users.remove(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Deactivated Successfully On User {mention}")
+
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
@@ -165,6 +161,23 @@ async def lovedraid(Legend: Client, e: Message):
             )
         except Exception as a:
             print(a)
+
+
+
+@Client.on_message(filters.all)
+async def lactivate(Legend: Client, msg: Message):
+    global users
+    global unlimited 
+    while unlimited == True:
+        user = msg.chat
+        if int(user.id) in users:
+            lmao = msg.reply_to_message
+            for i in range(1, 26):
+                lol = globals()[f"Client{i}"]
+                if lol is not None:
+                    await lol.send_message(
+                        user.id, f"{lmao.from_user.mention} {choice(loveraid)}"
+                    )
 
 
 @Client.on_message(
@@ -185,19 +198,3 @@ async def loverllist(Legend: Client, e: Message):
         await e.reply_text("Not yet!")
         return
     await e.reply_text(_reply)
-
-
-@Client.on_message(filters.all)
-async def watcher(Legend: Client, msg: Message):
-    global users
-    global unlimited
-    user = msg.chat
-    while unlimited == True:
-        if int(user.id) in users:
-            lmao = msg.reply_to_message
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(
-                        user.id, f"{lmao.from_user.mention} {choice(loveraid)}"
-                    )
