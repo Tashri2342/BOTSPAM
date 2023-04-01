@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.birthday import birthdayimage, bdmsg
+from LegendBS.birthday import bdmsg, birthdayimage
 from pyrogram import Client, filters
 from pyrogram.types import *
 
