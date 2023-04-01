@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.raid import RAID
+from LegendBS.raid import SHAYRI
 from pyrogram import Client, filters
 from pyrogram.types import *
 
@@ -19,7 +19,6 @@ async def shayricmd(Legend: Client, e: Message):
     flag = text[0]
     if not flag:
         return await e.reply_text(usage)
-    shayrimsg = choice(RAID)
     if "-u" in flag:
         global unlimited
         unlimited = True
@@ -30,14 +29,14 @@ async def shayricmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(
-                            e.chat.id, f"{lmao.from_user.mention}\n\n{shayrimsg}"
+                            e.chat.id, f"{lmao.from_user.mention}\n\n{choice(SHAYRI)}"
                         )
         else:
             while unlimited == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_message(e.chat.id, shayrimsg)
+                        await lol.send_message(e.chat.id, choice(SHAYRI))
     elif "-u" not in flag:
         try:
             counts = int(text[0])
@@ -50,14 +49,14 @@ async def shayricmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(
-                            e.chat.id, f"{lmao.from_user.mention}\n\n{shayrimsg}"
+                            e.chat.id, f"{lmao.from_user.mention}\n\n{choice(SHAYRI)}"
                         )
         else:
             for _ in range(counts):
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_message(e.chat.id, shayrimsg)
+                        await lol.send_message(e.chat.id, choice(SHAYRI))
     else:
         await e.reply_text(usage)
     if LOG_CHANNEL:
