@@ -62,14 +62,14 @@ async def raid(Legend: Client, e: Message):
             print(a)
 
 
-users = []
+USERS = []
 
 
 @Client.on_message(
     filters.user(sudos) & filters.command(["rraid", "replyraid"], prefixes=HANDLER)
 )
-async def replyraid(Legend: Client, e: Message):
-    global users
+async def repraid(Legend: Client, e: Message):
+    global USERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -81,26 +81,22 @@ async def replyraid(Legend: Client, e: Message):
         if user_.isnumeric():
             user_ = int(user_)
         if not user_:
-            await e.reply_text(
+            return await e.reply_text(
                 "I don't know who you're talking about, you're going to need to specify a user.!"
             )
-            return
         try:
             user = await Legend.get_users(user_)
         except (TypeError, ValueError):
-            await message.reply_text(
+            return await message.reply_text(
                 "Looks like I don't have control over that user, or the ID isn't a valid one. If you reply to one of their messages, I'll be able to interact with them."
             )
-            return
     else:
-        await e.reply_text(
+        return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-        return
-    if int(user.id) in users:
-        await e.reply_text("User already in Raid list!")
-        return
-    users.append(user.id)
+    if int(user.id) in USERS:
+        return await e.reply_text("User already in Raid list!")
+    USERS.append(user.id)
     mention = user.mention
     await e.reply_text(f"Reply Raid Activated On User {mention}")
     if LOG_CHANNEL:
@@ -117,7 +113,7 @@ async def replyraid(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["draid", "dreplyraid"], prefixes=HANDLER)
 )
 async def draid(Legend: Client, e: Message):
-    global users
+    global USERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -145,10 +141,10 @@ async def draid(Legend: Client, e: Message):
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
         return
-    if int(user.id) not in users:
+    if int(user.id) not in USERS:
         await e.reply_text("User not in Raid list!")
         return
-    users.remove(user.id)
+    USERS.remove(user.id)
     mention = user.mention
     await e.reply_text(f"Reply Raid Deactivated Successfully On User {mention}")
     if LOG_CHANNEL:
@@ -165,10 +161,10 @@ async def draid(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
 )
 async def rllist(Legend: Client, e: Message):
-    global users
+    global USERS
     _reply = "**Raid users list - Legend Bot Spam** \n\n"
-    if len(users) > 0:
-        for x in users:
+    if len(USERS) > 0:
+        for x in USERS:
             try:
                 user = await Legend.get_users(x)
                 _reply += f" ✨ Users: {user.mention} \n"
@@ -182,9 +178,9 @@ async def rllist(Legend: Client, e: Message):
 
 @Client.on_message(filters.all)
 async def watcher(Legend: Client, msg: Message):
-    global users
+    global USERS
     user = msg.chat
-    if int(user.id) in users:
+    if int(user.id) in USERS:
         lmao = msg.reply_to_message
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
