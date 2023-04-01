@@ -144,7 +144,7 @@ Commands | Description
 :--- | :---
 • /spam or /bigspam | This Cmd Is Used For Spam Or Big Spam
 • /dspam or /delayspam | This Cmd Is Used Delay Spam
-•/pspam or /pornspam | Used Me For Sending Po.. In Chats
+• /pspam or /pornspam | Used Me For Sending Po.. In Chats
 • /hang | Used Me For Hang The Chat
 • /start | Used Me For To Check Start Command
 • /addsuso | Used Me Too Add Anyone In Sudo 
@@ -169,7 +169,7 @@ Commands | Description
 
 - 1.Make Help Menu
 
-- 2. .shayri, .gm, .lslove, .birthday 
+- 2.sudo 
 
 ## Bugs
 
