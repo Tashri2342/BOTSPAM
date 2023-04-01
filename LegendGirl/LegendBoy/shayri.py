@@ -1,7 +1,9 @@
+from random import choice
+
+from LegendBS.shayri import SHAYRI
 from pyrogram import Client, filters
 from pyrogram.types import *
-from random import choice
-from LegendBS.shayri import SHAYRI
+
 from LegendGirl.Config import *
 
 from .. import sudos
@@ -10,9 +12,7 @@ from ..core.clients import *
 shayri = False
 
 
-@Client.on_message(
-    filters.user(sudos) & filters.command(["shayri"], prefixes=HANDLER)
-)
+@Client.on_message(filters.user(sudos) & filters.command(["shayri"], prefixes=HANDLER))
 async def shayri(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}shayri -u \nCommand:{HANDLER}shayri -u (reply to anyone)\nCommand: {HANDLER}shayri (count) \nCommand: {HANDLER}shayri (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
