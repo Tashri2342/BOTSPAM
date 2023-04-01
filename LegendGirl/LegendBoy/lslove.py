@@ -99,7 +99,7 @@ async def lovereplyraid(Legend: Client, e: Message):
     if int(user.id) in users:
         return await e.reply_text("User already in Raid list!")
     print(user.id)
-    global unlimited 
+    global unlimited
     unlimited = True
     users.append(user.id)
     mention = user.mention
@@ -147,7 +147,7 @@ async def lovedraid(Legend: Client, e: Message):
         )
     if int(user.id) not in users:
         return await e.reply_text("User not in Raid list!")
-    global unlimited 
+    global unlimited
     unlimited = False
     users.remove(user.id)
     mention = user.mention
@@ -163,11 +163,10 @@ async def lovedraid(Legend: Client, e: Message):
             print(a)
 
 
-
 @Client.on_message(filters.all)
 async def lactivate(Legend: Client, msg: Message):
     global users
-    global unlimited 
+    global unlimited
     while unlimited == True:
         user = msg.chat
         if int(user.id) in users:
