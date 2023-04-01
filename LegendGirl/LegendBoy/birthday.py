@@ -61,7 +61,9 @@ async def brthdaycmd(Legend: Client, e: Message):
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_photo(e.chat.id, choice(birthdayimage), caption=bdmsg)
+                        await lol.send_photo(
+                            e.chat.id, choice(birthdayimage), caption=bdmsg
+                        )
     else:
         await e.reply_text(usage)
     if LOG_CHANNEL:
