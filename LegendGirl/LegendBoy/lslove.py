@@ -71,6 +71,7 @@ unlimited = False
 )
 async def lovereplyraid(Legend: Client, e: Message):
     global users
+    global unlimited 
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -101,6 +102,7 @@ async def lovereplyraid(Legend: Client, e: Message):
     if int(user.id) in users:
         await e.reply_text("User already in Raid list!")
         return
+    unlimited = True
     users.append(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Activated On User {mention}")
