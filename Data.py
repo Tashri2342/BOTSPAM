@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton
 
-Class Data:
+class Data:
     HELP_MENU = [
         [
             InlineKeyboardButton(
