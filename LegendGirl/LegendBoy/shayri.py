@@ -9,7 +9,7 @@ from LegendGirl.Config import *
 from .. import sudos
 from ..core.clients import *
 
-shayri = False
+unlimited = False
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["shayri"], prefixes=HANDLER))
@@ -21,11 +21,11 @@ async def shayricmd(Legend: Client, e: Message):
         return await e.reply_text(usage)
     shayrimsg = choice(shayrilol)
     if "-u" in flag:
-        global shayri
-        shayri = True
+        global unlimited 
+        unlimited = True
         if e.reply_to_message:
             lmao = e.reply_to_message
-            while shayri == True:
+            while unlimited == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
@@ -33,7 +33,7 @@ async def shayricmd(Legend: Client, e: Message):
                             e.chat.id, f"{lmao.from_user.mention}\n\n{shayrimsg}"
                         )
         else:
-            while shayri == True:
+            while unlimited == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
@@ -74,6 +74,6 @@ async def shayricmd(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["stopshayri"], prefixes=HANDLER)
 )
 async def stopwish(_, e: Message):
-    global shayri
-    shayri = False
+    global unlimited 
+    unlimited = False
     await e.reply_text("Stopped Unlimited Wish Shayri")
