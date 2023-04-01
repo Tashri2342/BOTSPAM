@@ -77,9 +77,9 @@ async def brthdaycmd(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["stopbd"], prefixes=HANDLER)
 )
-async def stopwish(_, e: Message):
+async def stopbd(_, e: Message):
     global bd
     bd = False
     await e.reply_text("Stopped Unlimited Wish Happy Birthday")
