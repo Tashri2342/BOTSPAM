@@ -1,11 +1,11 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
+from Data import Data
 from LegendGirl.Config import *
 
 from ..core.clients import *
 
-from Data import Data
 
 @Client.on_message(filters.command(["help"], prefixes=HANDLER))
 async def help(Legend: Client, message: Message):
@@ -25,4 +25,6 @@ async def help(Legend: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU),
         )
     else:
-        await Legend.send_message(message.chat_id, HELP_MSG , reply_markup=InlineKeyboardMarkup(Data.HELP_MENU))
+        await Legend.send_message(
+            message.chat_id, HELP_MSG, reply_markup=InlineKeyboardMarkup(Data.HELP_MENU)
+        )
