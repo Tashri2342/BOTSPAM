@@ -61,7 +61,7 @@ async def lovaid(Legend: Client, e: Message):
             print(a)
 
 
-users = []
+USERS = []
 unlimited = False
 
 
@@ -70,7 +70,7 @@ unlimited = False
     & filters.command(["loverraid", "lovereplyraid"], prefixes=HANDLER)
 )
 async def lovereplyraid(Legend: Client, e: Message):
-    global users
+    global USERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -96,12 +96,9 @@ async def lovereplyraid(Legend: Client, e: Message):
         return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-    if int(user.id) in users:
+    if int(user.id) in USERS:
         return await e.reply_text("User already in Raid list!")
-    print(user.id)
-    global unlimited
-    unlimited = True
-    users.append(user.id)
+    USERS.append(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Activated On User {mention}")
 
@@ -120,7 +117,7 @@ async def lovereplyraid(Legend: Client, e: Message):
     & filters.command(["lovedraid", "lovedreplyraid"], prefixes=HANDLER)
 )
 async def lovedraid(Legend: Client, e: Message):
-    global users
+    global USERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -145,11 +142,9 @@ async def lovedraid(Legend: Client, e: Message):
         return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-    if int(user.id) not in users:
+    if int(user.id) not in USERS:
         return await e.reply_text("User not in Raid list!")
-    global unlimited
-    unlimited = False
-    users.remove(user.id)
+    USERS.remove(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Deactivated Successfully On User {mention}")
 
@@ -165,18 +160,10 @@ async def lovedraid(Legend: Client, e: Message):
 
 @Client.on_message(filters.all)
 async def lactivate(Legend: Client, msg: Message):
-    global users
-    global unlimited
-    while unlimited == True:
-        user = msg.chat
-        if int(user.id) in users:
-            lmao = msg.reply_to_message
-            for i in range(1, 26):
-                lol = globals()[f"Client{i}"]
-                if lol is not None:
-                    await lol.send_message(
-                        user.id, f"{lmao.from_user.mention} {choice(loveraid)}"
-                    )
+    global USERS
+    if int(msg.from_user.id) in USERS:
+        await msg.reply_text(choice(RRAID))       
+
 
 
 @Client.on_message(
@@ -184,10 +171,10 @@ async def lactivate(Legend: Client, msg: Message):
     & filters.command(["loverlist", "loveraidlist"], prefixes=HANDLER)
 )
 async def loverllist(Legend: Client, e: Message):
-    global users
+    global USERS
     _reply = "**Love Raid users list - Legend Bot Spam** \n\n"
-    if len(users) > 0:
-        for x in users:
+    if len(USERS) > 0:
+        for x in USERS:
             try:
                 user = await Legend.get_users(x)
                 _reply += f" ✨ Users: {user.mention} \n"
