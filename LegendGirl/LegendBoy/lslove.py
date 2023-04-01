@@ -162,8 +162,7 @@ async def lovedraid(Legend: Client, e: Message):
 async def lactivate(Legend: Client, msg: Message):
     global USERS
     if int(msg.from_user.id) in USERS:
-        await msg.reply_text(choice(RRAID))       
-
+        await msg.reply_text(choice(RRAID))
 
 
 @Client.on_message(
