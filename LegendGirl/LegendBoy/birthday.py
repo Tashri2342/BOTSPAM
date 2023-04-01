@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.birthday import birthdayimage
+from LegendBS.birthday import birthdayimage, bdmsg
 from pyrogram import Client, filters
 from pyrogram.types import *
 
@@ -21,7 +21,6 @@ async def brthdaycmd(Legend: Client, e: Message):
     flag = text[0]
     if not flag:
         return await e.reply_text(usage)
-    bdmsg = "Wish You A Happy Birthday To You"
     if "-u" in flag:
         global bd
         bd = True
@@ -32,14 +31,14 @@ async def brthdaycmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_message(
-                            e.chat.id, f"{lmao.from_user.mention}\n\n{bdmsg}"
+                            e.chat.id, f"{lmao.from_user.mention}\n\{choice(bdmsg)}"
                         )
         else:
             while bd == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
-                        await lol.send_message(e.chat.id, bdmsg)
+                        await lol.send_message(e.chat.id, choice(bdmsg))
     elif "-u" not in flag:
         try:
             counts = int(text[0])
@@ -54,7 +53,7 @@ async def brthdaycmd(Legend: Client, e: Message):
                         await lol.send_photo(
                             e.chat.id,
                             choice(birthdayimage),
-                            caption=f"{lmao.from_user.mention}\n\n{bdmsg}",
+                            caption=f"{lmao.from_user.mention}\n\n{choice(bdmsg)}",
                         )
         else:
             for _ in range(counts):
@@ -62,7 +61,7 @@ async def brthdaycmd(Legend: Client, e: Message):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
                         await lol.send_photo(
-                            e.chat.id, choice(birthdayimage), caption=bdmsg
+                            e.chat.id, choice(birthdayimage), caption=choice(bdmsg)
                         )
     else:
         await e.reply_text(usage)
