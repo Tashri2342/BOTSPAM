@@ -21,7 +21,7 @@ async def shayricmd(Legend: Client, e: Message):
         return await e.reply_text(usage)
     shayrimsg = choice(shayrilol)
     if "-u" in flag:
-        global unlimited 
+        global unlimited
         unlimited = True
         if e.reply_to_message:
             lmao = e.reply_to_message
@@ -74,6 +74,6 @@ async def shayricmd(Legend: Client, e: Message):
     filters.user(sudos) & filters.command(["stopshayri"], prefixes=HANDLER)
 )
 async def stopwish(_, e: Message):
-    global unlimited 
+    global unlimited
     unlimited = False
     await e.reply_text("Stopped Unlimited Wish Shayri")
