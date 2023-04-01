@@ -71,7 +71,7 @@ unlimited = False
 )
 async def lovereplyraid(Legend: Client, e: Message):
     global users
-    global unlimited 
+    global unlimited
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
