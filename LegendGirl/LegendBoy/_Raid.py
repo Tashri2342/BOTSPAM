@@ -179,12 +179,5 @@ async def rllist(Legend: Client, e: Message):
 @Client.on_message(filters.all)
 async def watcher(Legend: Client, msg: Message):
     global USERS
-    user = msg.chat
     if int(user.id) in USERS:
-        lmao = msg.reply_to_message
-        for i in range(1, 26):
-            lol = globals()[f"Client{i}"]
-            if lol is not None:
-                await lol.send_message(
-                    user.chat.id, f"{lmao.from_user.mention} {choice(RRAID)}"
-                )
+        await msg.reply_text(choice(RRAID))
