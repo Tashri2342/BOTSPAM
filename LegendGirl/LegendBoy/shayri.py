@@ -1,6 +1,6 @@
 from random import choice
 
-from LegendBS.yup import *
+from LegendBS.raid import RAID
 from pyrogram import Client, filters
 from pyrogram.types import *
 
@@ -19,7 +19,7 @@ async def shayricmd(Legend: Client, e: Message):
     flag = text[0]
     if not flag:
         return await e.reply_text(usage)
-    shayrimsg = choice(shayrilol)
+    shayrimsg = choice(RAID)
     if "-u" in flag:
         global unlimited
         unlimited = True
