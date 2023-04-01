@@ -77,7 +77,7 @@ async def brthdaycmd(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["stopshayri"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["stopwish"], prefixes=HANDLER)
 )
 async def stopwish(_, e: Message):
     global bd
