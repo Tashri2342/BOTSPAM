@@ -21,7 +21,7 @@ async def loveraid(Legend: Client, e: Message):
     try:
         counts = int(lol[0])
     except ValueError:
-        return await event.reply_text(usage)
+        return await e.reply_text(usage)
     if len(lol) == 2:
         if not counts:
             await e.reply_text(f"Gib loveraid Counts")
@@ -46,11 +46,10 @@ async def loveraid(Legend: Client, e: Message):
         await e.reply_text(usage)
         return
     for _ in range(counts):
-        choice(loveraid)
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
-                await lol.send_message(chat.id, f"{user.mention} {loveraid}")
+                await lol.send_message(chat.id, f"{user.mention} {choice(loveraid)}")
                 await asyncio.sleep(0.3)
     if LOG_CHANNEL:
         try:
