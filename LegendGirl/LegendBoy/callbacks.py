@@ -4,6 +4,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 from Data import Data
 from LegendGirl.cmd_help import *
 
+
 @Client.on_callback_query()
 async def _callbacks(Legend: Client, callback_query: CallbackQuery):
     user = await Legend.get_me()
