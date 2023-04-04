@@ -17,9 +17,55 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             await Legend.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
-                text="Help Menu One Powered By @TeamLegendXD",
+                text="⚜️ Help Menu⚜️\n\n   Powered By @TeamLegendXD",
                 reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
             )
+    elif query == "close":
+        chat_id = callback_query.from_user.id
+        message_id = callback_query.message.id
+        await Legend.edit_message_text(
+            chat_id=chat_id,
+            message_id=message_id,
+            text="Help Menu Has Been Closed\n\n          © @TeamLegendXD",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(Data.REVERT),
+        )
+    elif query == "banall":
+        await callback_query.answer(banall_help, show_alert=True)
+    elif query == "birthday":
+        await callback_query.answer(birthday_help, show_alert=True)
+    elif query == "core_help1":
+        await callback_query.answer(core_help1, show_alert=True)
+    elif query == "core_help2":
+        await callback_query.answer(core_help2, show_alert=True)
+    elif query == "evaluators_help1":
+        await callback_query.answer(evaluators_help1, show_alert=True)
+    elif query == "evaluators_help2":
+        await callback_query.answer(evaluators_help2, show_alert=True)
+    elif query == "gwish_help1":
+        await callback_query.answer(gwish_help2, show_alert=True)
+    elif query == "gwish_help2":
+        await callback_query.answer(gwish_help2, show_alert=True)
+    elif query == "gwish_help3":
+        await callback_query.answer(gwish_help3, show_alert=True)
+    elif query == "lslove_help1":
+        await callback_query.answer(lslove_help1, show_alert=True)
+    elif query == "lslove_help2":
+        await callback_query.answer(lslove_help2, show_alert=True)
+    elif query == "lslove_help3":
+        await callback_query.answer(lslove_help3, show_alert=True)
+    elif query == "lslove_help4":
+        await callback_query.answer(lslove_help4, show_alert=True)
+    elif query == "raid_help1":
+        await callback_query.answer(raid_help1, show_alert=True)
+    elif query == "raid_help2":
+        await callback_query.answer(raid_help2, show_alert=True)
+    elif query == "raid_help3":
+        await callback_query.answer(raid_help3, show_alert=True)
+    elif query == "raid_help4":
+        await callback_query.answer(raid_help4, show_alert=True)
+ 
+#For Future Use
     elif query == "helpmenu2":
         chat_id = callback_query.from_user.id
         message_id = callback_query.message.id
@@ -40,11 +86,5 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU3),
         )
-    elif query == "banall":
-        await callback_query.answer(banall_help, show_alert=True)
-    elif query == "birthday":
-        await callback_query.answer(birthday_help, show_alert=True)
-    elif query == "core_help1":
-        await callback_query.answer(core_help1, show_alert=True)
-    elif query == "core_help2":
-        await callback_query.answer(core_help2, show_alert=True)
+
+
