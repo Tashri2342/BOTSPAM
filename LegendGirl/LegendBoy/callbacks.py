@@ -1,4 +1,7 @@
+from pyrogram.types import (
+    CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup)
 
+from pyrogram import Client
 
 @Client.on_callback_query()
 async def _callbacks(Legend: Client, callback_query: CallbackQuery):
@@ -15,7 +18,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
                 text="testing",
                 reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
             )
-    elif query == "helpmenu2"
+    elif query == "helpmenu2":
         chat_id = callback_query.from_user.id
         message_id = callback_query.message.id
         await Legend.edit_message_text(
@@ -25,7 +28,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU2),
         )
-    elif query == "helpmenu3"
+    elif query == "helpmenu3":
         chat_id = callback_query.from_user.id
         message_id = callback_query.message.id
         await Legend.edit_message_text(
