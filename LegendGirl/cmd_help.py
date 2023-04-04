@@ -1,8 +1,6 @@
-birthday_help = """📜 Intro :
+from .Config import *
+birthday_help = f"""📜 Intro :
 Spam The Chat With Birthday 
-
-🚩 Available Flag: 
-🔸 -u = Unlimited Spam
 
 👨‍💻 Usage :
 🔸 {HANDLER}birthday (counts)
