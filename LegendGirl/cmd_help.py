@@ -124,3 +124,90 @@ Check the list of started raid on it
 
 👨‍💻 Usage :
 🔸 {HANDLER}listraid"""
+
+
+shayri1 = f"""📜 Intro :
+Spam The Chat With Shayri
+
+👨‍💻 Usage :
+🔸 {HANDLER}shayri (counts)
+🔸 {HANDLER}shayri (counts) (reply to anyone)
+🔸 {HANDLER}shayri -u 
+🔸 {HANDLER}shayri -u (reply to anyone)"""
+
+shayri2 = f"""📜 Intro :
+Stop the shayri
+
+👨‍💻 Usage :
+🔸 {HANDLER}shayri"""
+
+spam1 = f"""📜 Intro :
+Start the chat with many spam
+
+👨‍💻 Usage :
+🔸 {HANDLER}spam (counts)
+🔸 {HANDLER}spam (counts) (reply to anyone) """
+
+spam2 = f"""📜 Intro :
+Start The chat with Delay Spam 
+
+👨‍💻 Usage :
+🔸 {HANDLER}dspam (sleeptime) (count) (spam text)
+🔸 {HANDLER}dspam (sleeptime) (count) (spam text) (reply to anyone)"""
+
+spam3 = f"""📜 Intro :
+Porn Spam With Raid
+
+👨‍💻 Usage :
+🔸 {HANDLER}pspam (counts)
+🔸 {HANDLER}pspam (counts) (reply to anyone)"""
+
+spam4 = f"""📜 Intro :
+Start Hang Command Used To Hang The Chat
+
+👨‍💻 Usage :
+🔸 {HANDLER}hang (counts)
+🔸 {HANDLER}hang (counts) (reply to anyone)"""
+
+
+unlimited1 = f"""📜 Intro :
+Start The Spam Till Used Command {HANDLER}stop
+
+👨‍💻 Usage :
+🔸 {HANDLER}uspam (spam text)
+🔸 {HANDLER}uspam (spam text) (reply to anyone)"""
+
+
+unlimited2 = f"""📜 Intro :
+Start The Unlimited Raid
+
+👨‍💻 Usage :
+🔸 {HANDLER}uraid 
+🔸 {HANDLER}uraid (reply to anyone)"""
+
+
+unlimited3 = f"""📜 Intro :
+Start Abuse Without Non Stop
+
+👨‍💻 Usage :
+🔸 {HANDLER}abuse"""
+
+unlimited4 = f"""📜 Intro :
+Stop Unlimited Spam/Raid/abuse
+
+👨‍💻 Usage :
+🔸 {HANDLER}stop"""
+
+
+unlimited5 = f"""📜 Intro :
+Echo the reply message 
+
+👨‍💻 Usage :
+🔸 {HANDLER}echo"""
+
+
+
+
+
+
+
