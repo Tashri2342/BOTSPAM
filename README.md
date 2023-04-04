@@ -167,13 +167,11 @@ Commands | Description
 
 ## Next Update 14th to 28th April
 
-- 1.Make Help Menu
-
-- 2.sudo 
+- Provide Me Any Next Update 
 
 ## Bugs
 
--
+- Provide me any bugs
 
 ## Disclaimer
   
