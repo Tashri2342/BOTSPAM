@@ -41,6 +41,11 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU3),
         )
     elif query == "banall":
-        await callback_query.answer("banall", show_alert=True)
+        await callback_query.answer(banall_help, show_alert=True)
     elif query == "birthday":
         await callback_query.answer(birthday_help, show_alert=True)
+    elif query == "core_help1":
+        await callback_query.answer(core_help1, show_alert=True)
+    elif query == "core_help2":
+        await callback_query.answer(core_help2, show_alert=True)
+
