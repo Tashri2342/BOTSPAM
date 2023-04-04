@@ -64,8 +64,8 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await callback_query.answer(raid_help3, show_alert=True)
     elif query == "raid_help4":
         await callback_query.answer(raid_help4, show_alert=True)
- 
-#For Future Use
+
+    # For Future Use
     elif query == "helpmenu2":
         chat_id = callback_query.from_user.id
         message_id = callback_query.message.id
@@ -86,5 +86,3 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU3),
         )
-
-

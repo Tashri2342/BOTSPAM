@@ -44,9 +44,9 @@ class Data:
     ]
     REVERT = [
         [
-            InlineKeyboardButton ("Reopen Help Menu", callback_data="helpmenu1"),
+            InlineKeyboardButton("Reopen Help Menu", callback_data="helpmenu1"),
         ],
-     ]
+    ]
     HELP_MENU2 = [
         [
             InlineKeyboardButton(text="🔙 Previous", callback_data="helpmenu1"),
