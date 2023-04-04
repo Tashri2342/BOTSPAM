@@ -20,6 +20,8 @@ class Data:
                 text="⚜️ Good Morning ⚜️", callback_data="gwish_help1"
             ),
             InlineKeyboardButton(text="📍Good Afternoon 📍", callback_data="gwish_help2"),
+        ],
+        [
             InlineKeyboardButton(text="⚜️ Good Night ⚜️", callback_data="gwish_help3"),
         ],
         [
@@ -27,6 +29,8 @@ class Data:
             InlineKeyboardButton(
                 text="📍Love Reply Raid📍", callback_data="lslove_help2"
             ),
+        ],
+        [
             InlineKeyboardButton(
                 text="⚜️ Love Dreply Raid ⚜️", callback_data="lslove_help3"
             ),
@@ -35,8 +39,33 @@ class Data:
         [
             InlineKeyboardButton(text="⚜️ Raid ⚜️", callback_data="raid_help1"),
             InlineKeyboardButton(text="📍Reply Raid📍", callback_data="raid_help2"),
+        ],
+        [
             InlineKeyboardButton(text="⚜️ Dreply Raid ⚜️", callback_data="raid_help3"),
             InlineKeyboardButton(text="📍 List Raid 📍", callback_data="raid_help4"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ Shayri ⚜️", callback_data="shayri_help1"),
+            InlineKeyboardButton(text="📍 Stop 📍", callback_data="shayri_help2"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ Spam ⚜️", callback_data="spam_help1"),
+            InlineKeyboardButton(text="📍 Delay Spam 📍", callback_data="spam_help2"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ Porn Spam ⚜️", callback_data="spam_help3"),
+            InlineKeyboardButton(text="📍 Hang Spam 📍", callback_data="spam_help4"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ U Spam ⚜️", callback_data="unlimited_help1"),
+            InlineKeyboardButton(text="📍 U Raid 📍", callback_data="unlimited_help2"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ Abuse ⚜️", callback_data="unlimited_help3"),
+            InlineKeyboardButton(text="📍 Stop 📍", callback_data="unlimited_help4"),
+        ],
+        [
+            InlineKeyboardButton(text="⚜️ Dreply Raid ⚜️", callback_data="unlimited_help5"),
         ],
         [
             InlineKeyboardButton(text="🔒 Close", callback_data="close"),
