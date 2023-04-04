@@ -1,12 +1,11 @@
-from pyrogram.types import (
-    CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup)
-
 from pyrogram import Client
+from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
+
 
 @Client.on_callback_query()
 async def _callbacks(Legend: Client, callback_query: CallbackQuery):
     user = await Legend.get_me()
-    mention = user.mention
+    user.mention
     query = callback_query.data.lower()
     if query.startswith("helpmenu1"):
         if query == "helpmenu1":
@@ -38,4 +37,3 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU3),
         )
-   
