@@ -37,12 +37,11 @@ class Data:
             InlineKeyboardButton(text="📍Reply Raid📍", callback_data="raid_help2"),
             InlineKeyboardButton(text="⚜️ Dreply Raid ⚜️", callback_data="raid_help3"),
             InlineKeyboardButton(text="📍 List Raid 📍", callback_data="raid_help4"),
-        ][
+        ],
+        [
             InlineKeyboardButton(text="🔒 Close", callback_data="close"),
         ],
     ]
-
-    # For Future Purpose
     HELP_MENU2 = [
         [
             InlineKeyboardButton(text="🔙 Previous", callback_data="helpmenu1"),
