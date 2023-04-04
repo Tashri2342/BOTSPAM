@@ -140,34 +140,6 @@ Required Variable | Description
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=All+•+Cmds+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-Commands | Description
-:--- | :---
-• /spam or /bigspam | This Cmd Is Used For Spam Or Big Spam
-• /dspam or /delayspam | This Cmd Is Used Delay Spam
-• /pspam or /pornspam | Used Me For Sending Po.. In Chats
-• /hang | Used Me For Hang The Chat
-• /start | Used Me For To Check Start Command
-• /addsuso | Used Me Too Add Anyone In Sudo 
-• /rmsudo | Used Me Too Remove Anyone Sudo 
-• /sudo or /sudolist | Get The List Of Sudo
-• /uspam | Unlimited Spam
-• /uraid | Unlimited Raid
-• /abuse or /gali | Unlimited Abuse 
-• /stop | Stop Abuse/uraid/uspam
-• /echo or /repeat | Repeat 
-• /banall | BanAll The Member Of Chat
-• /ping | Used Me To Check Ping
-• /restart or /reboot | Used Me To Restart
-• /eval | Used Me For Editing In File 
-• /exec | Used Me For Execute any sh
-• /raid | Used Me To Raid Anyone Person
-• /rraid or /replyraid | Used Me To Activate Raid On It
-• /draid or /dreplyraid | Used Me To Deactivate Raid On Person
-• /rlist or /raidlist | | Used Me to Get The List Of Raid 
-
-## Next Update 14th to 28th April
-
-- Provide Me Any Next Update 
 
 ## Bugs
 
