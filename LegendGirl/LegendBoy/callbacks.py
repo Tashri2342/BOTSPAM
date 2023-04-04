@@ -48,4 +48,3 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await callback_query.answer(core_help1, show_alert=True)
     elif query == "core_help2":
         await callback_query.answer(core_help2, show_alert=True)
-
