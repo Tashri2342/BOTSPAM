@@ -15,14 +15,14 @@ async def help(Legend: Client, message: Message):
             message.chat.id,
             HELP_PIC,
             caption=HELP_MSG,
-            reply_markup=InlineKeyboardMarkup(Data.HELP_MENU),
+            reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
         )
     elif ".mp4" in HELP_PIC.lower():
         await Legend.send_video(
             message.chat.id,
             HELP_PIC,
             caption=HELP_MSG,
-            reply_markup=InlineKeyboardMarkup(Data.HELP_MENU),
+            reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
         )
     else:
         await Legend.send_message(
