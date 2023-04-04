@@ -4,7 +4,8 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     HELP_MENU1 = [
         [
-            InlineKeyboardButton(text="🔙 Previous", callback_data="helpmenu3"),
+            InlineKeyboardButton(text="banall", callback_data="banall"),
+            InlineKeyboardButton(text="birthday", callback_data="birthday"),
         ],
         [
             InlineKeyboardButton(text="Close ", callback_data="close"),
