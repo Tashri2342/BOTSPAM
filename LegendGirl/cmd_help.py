@@ -124,12 +124,3 @@ Check the list of started raid on it
 
 👨‍💻 Usage :
 🔸 {HANDLER}listraid"""
-
-
-
-
-
-
-
-
-
