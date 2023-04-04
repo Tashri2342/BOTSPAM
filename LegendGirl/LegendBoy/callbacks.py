@@ -64,6 +64,28 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await callback_query.answer(raid_help3, show_alert=True)
     elif query == "raid_help4":
         await callback_query.answer(raid_help4, show_alert=True)
+    elif query == "shayri_help1":
+        await callback_query.answer(shayri_help1, show_alert=True)
+    elif query == "shayri_help2":
+        await callback_query.answer(shayri_help2, show_alert=True)
+    elif query == "spam_help1":
+        await callback_query.answer(spam_help1, show_alert=True)
+    elif query == "spam_help2":
+        await callback_query.answer(spam_help2, show_alert=True)
+    elif query == "spam_help3":
+        await callback_query.answer(spam_help3, show_alert=True)
+    elif query == "spam_help4":
+        await callback_query.answer(spam_help4, show_alert=True)
+    elif query == "unlimited_help1":
+        await callback_query.answer(unlimited_help1, show_alert=True)
+    elif query == "unlimited_help2":
+        await callback_query.answer(unlimited_help2, show_alert=True)
+    elif query == "unlimited_help3":
+        await callback_query.answer(unlimited_help3, show_alert=True)
+    elif query == "unlimited_help4":
+        await callback_query.answer(unlimited_help4, show_alert=True)
+    elif query == "unlimited_help5":
+        await callback_query.answer(unlimited_help5, show_alert=True)
 
     # For Future Use
     elif query == "helpmenu2":
