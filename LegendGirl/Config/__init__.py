@@ -1,5 +1,7 @@
 import os
+
 from dotenv import load_dotenv
+
 ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
