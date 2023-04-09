@@ -5,5 +5,5 @@ cryptg
 heroku3
 gitpython
 tgcrypto
-pyLegendBS
+git+https://github.com/LEGEND-AI/BOTSPAM
 async-eval==0.1.11
