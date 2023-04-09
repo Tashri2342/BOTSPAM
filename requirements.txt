@@ -7,3 +7,5 @@ gitpython
 tgcrypto
 git+https://github.com/LEGEND-AI/pyLegendBS
 async-eval==0.1.11
+python-dotenv[cli]
+python-dotenv
