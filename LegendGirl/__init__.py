@@ -1,12 +1,13 @@
+import glob
+import os
 import time
-import os, glob
+
 from .Config import *
 from .core import *
 
 version = "v1"
 group_username = "@LegendBotSpam"
 start_time = time.time()
-
 
 
 async def all_plugins():
