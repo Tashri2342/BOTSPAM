@@ -15,4 +15,4 @@ async def all_plugins():
         if isfile(f) and f.endswith(".py") and not f.endswith("__init__.py")
     ]
     for plug_name in all_plugs:
-        print(sorted(f"Bot Spam - [INFO] : Successfully Importrd {plug_name}"))
+        print(f"Bot Spam - [INFO] : Successfully Importrd {plug_name}")
