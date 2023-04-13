@@ -12,7 +12,7 @@ from ..core.clients import *
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
-async def raid(Legend: Client, e: Message):
+async def raidop(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}raid (count) (reply to anyone)\nUsage :- `{HANDLER}raid 3 <reply to anyone>`\n\nCommand :- {HANDLER}raid <count> <username>\nUsage :- `{HANDLER}raid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
