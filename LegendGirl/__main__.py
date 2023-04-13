@@ -14,7 +14,7 @@ def Start_BotSpam():
         var = globals()[f"Client{i}"]
         if var is not None:
             start_bot(var)
-    print(await all_plugins())
+    print(all_plugins())
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     print(f"🔥 Bot Spam 🔥[INFO] : Group Username {group_username}")
     print(f"🔥 Bot Spam 🔥[INFO] : Version - {platform.python_version()}")
