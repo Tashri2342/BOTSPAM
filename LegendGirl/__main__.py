@@ -15,7 +15,7 @@ def Start_BotSpam():
         if var is not None:
             start_bot(var)
     x = await all_plugins()
-    print(x)
+    print(f"{x} Your ")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
     print(f"🔥 Bot Spam 🔥[INFO] : Group Username {group_username}")
     print(f"🔥 Bot Spam 🔥[INFO] : Version - {platform.python_version()}")
