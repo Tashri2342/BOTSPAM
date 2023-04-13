@@ -1,7 +1,8 @@
-from .clients import *
+import glob
 import os
 
-import glob
+from .clients import *
+
 
 async def all_plugins():
     # This generates a list of plugins in this folder for the * in __main__ to

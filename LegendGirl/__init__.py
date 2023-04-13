@@ -10,7 +10,6 @@ group_username = "@LegendBotSpam"
 start_time = time.time()
 
 
-
 # Sudo Users
 sudos = []
 # full debugging
