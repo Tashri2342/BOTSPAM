@@ -21,7 +21,7 @@ async def Start_BotSpam():
     print(f"🔥 Bot Spam 🔥[INFO]: SpamBot Version - {version}")
     print(f"🔥 Bot Spam 🔥[INFO]: Pyrogram Version - {py_version}")
     print("➖➖➖➖➖➖➖➖➖➖➖➖")
-    idle()
+    await idle()
 
 
 asyncio.run(Start_BotSpam())
