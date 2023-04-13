@@ -1,5 +1,6 @@
-import os
 import glob
+import os
+
 
 async def all_plugins():
     # This generates a list of plugins in this folder for the * in __main__ to
@@ -7,7 +8,7 @@ async def all_plugins():
     from glob import glob
     from os.path import basename, dirname, isfile
 
-    mod_paths = glob(dirname(LegendGirl/LegendBoy) + "/*.py")
+    mod_paths = glob(dirname(LegendGirl / LegendBoy) + "/*.py")
     all_plugs = [
         basename(f)[:-3]
         for f in mod_paths
