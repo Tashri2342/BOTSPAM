@@ -2,7 +2,7 @@ import glob
 import os
 
 
-def all_plugins():
+async def all_plugins():
     # This generates a list of plugins in this folder for the * in __main__ to
     # work.
     from glob import glob
@@ -14,4 +14,4 @@ def all_plugins():
         for f in mod_paths
         if isfile(f) and f.endswith(".py") and not f.endswith("__init__.py")
     ]
-    return sorted(all_plugs)
+    print(sorted(all_plugs))
