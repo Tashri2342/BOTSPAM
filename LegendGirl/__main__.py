@@ -4,7 +4,7 @@ import platform
 from LegendBS.start_bot import start_bot
 from pyrogram import __version__ as py_version
 from pyrogram import idle
-
+from .LegendBoy import all_plugins
 from . import *
 
 
