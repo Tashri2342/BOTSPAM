@@ -11,9 +11,7 @@ from .. import sudos
 from ..core.clients import *
 
 
-@Client.on_message(
-    filters.user(sudos) & filters.command(["lslove"], prefixes=HANDLER)
-)
+@Client.on_message(filters.user(sudos) & filters.command(["lslove"], prefixes=HANDLER))
 async def lslove(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}loveraid (count) (reply to anyone)\nUsage :- `{HANDLER}loveraid 3 <reply to anyone>`\n\nCommand :- {HANDLER}loveraid <count> <username>\nUsage :- `{HANDLER}loveraid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -64,10 +62,7 @@ async def lslove(Legend: Client, e: Message):
 uSERS = []
 
 
-@Client.on_message(
-    filters.user(sudos)
-    & filters.command(["lsrlove"], prefixes=HANDLER)
-)
+@Client.on_message(filters.user(sudos) & filters.command(["lsrlove"], prefixes=HANDLER))
 async def lsrlove(Legend: Client, e: Message):
     global uSERS
     try:
@@ -112,8 +107,7 @@ async def lsrlove(Legend: Client, e: Message):
 
 
 @Client.on_message(
-    filters.user(sudos)
-    & filters.command(["lovedlove"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["lovedlove"], prefixes=HANDLER)
 )
 async def lovedlove(Legend: Client, e: Message):
     global uSERS
@@ -166,7 +160,12 @@ async def lactivate(Legend: Client, msg: Message):
 
 @Client.on_message(
     filters.user(sudos)
-    & filters.command(["lslist",], prefixes=HANDLER)
+    & filters.command(
+        [
+            "lslist",
+        ],
+        prefixes=HANDLER,
+    )
 )
 async def lslist(Legend: Client, e: Message):
     global uSERS
