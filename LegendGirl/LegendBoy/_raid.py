@@ -19,7 +19,7 @@ async def raidop(Legend: Client, e: Message):
     try:
         counts = int(lol[0])
     except ValueError:
-        return await event.reply_text(usage)
+        return await e.reply_text(usage)
     if len(lol) == 2:
         if not counts:
             await e.reply_text(
