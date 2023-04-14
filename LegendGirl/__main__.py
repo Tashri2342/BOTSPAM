@@ -1,5 +1,6 @@
-import platform
 import asyncio
+import platform
+
 from LegendBS.start_bot import start_bot
 from pyrogram import __version__ as py_version
 from pyrogram import idle
@@ -8,6 +9,7 @@ from . import *
 from .LegendBoy import all_plugins
 
 loop = asyncio.get_event_loop()
+
 
 async def Start_BotSpam():
     for i in range(1, 26):
