@@ -8,7 +8,7 @@ from ..core.clients import *
 
 
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
-async def legebsstart(Legend: Client, message: Message):
+async def _start(Legend: Client, message: Message):
     if ".jpg" in START_PIC or ".png" in START_PIC:
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
