@@ -24,4 +24,6 @@ async def Start_BotSpam():
     await idle()
 
 
-asyncio.run(Start_BotSpam())
+if __name__ == "__main__":
+    loop.run_until_complete(Start_BotSpam())
+    print(" Good Bye ! ")
