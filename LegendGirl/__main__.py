@@ -1,4 +1,3 @@
-import asyncio
 import platform
 
 from LegendBS.start_bot import start_bot
