@@ -14,7 +14,6 @@ if ":" in BOT_TOKEN:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN,
-        no_updates=True,
         plugins=dict(root="LegendGirl.LegendBoy"),
     )
     print("LegendSpam : Bot token 1 has been found")
