@@ -1,10 +1,11 @@
 # starting all clients
+import logging
+
 from pyrogram import Client as call
 
 from LegendGirl.Config import *
 
-import logging
-logging.basicConfig (format = "%(levelname)s  %(message)s", level = logging.INFO)
+logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
 
 
 if ":" in BOT_TOKEN:
