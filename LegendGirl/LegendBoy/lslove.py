@@ -62,7 +62,6 @@ async def lovaid(Legend: Client, e: Message):
 
 
 USERS = []
-unlimited = False
 
 
 @Client.on_message(
