@@ -9,7 +9,7 @@ if ":" in BOT_TOKEN:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN,
-        plugins={"root": "LegendBoy"},
+        plugins={"root": "LegendGirl/LegendBoy"},
     )
     print("LegendSpam : Bot token 1 has been found")
 else:
