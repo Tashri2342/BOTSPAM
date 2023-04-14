@@ -13,7 +13,7 @@ unlimited = False
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["shayri"], prefixes=HANDLER))
-async def shayricmd(Legend: Client, e: Message):
+async def shayri(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}shayri -u \nCommand:{HANDLER}shayri -u (reply to anyone)\nCommand: {HANDLER}shayri (count) \nCommand: {HANDLER}shayri (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
@@ -72,7 +72,7 @@ async def shayricmd(Legend: Client, e: Message):
 @Client.on_message(
     filters.user(sudos) & filters.command(["stopshayri"], prefixes=HANDLER)
 )
-async def stopwish(_, e: Message):
+async def stopshayri(_, e: Message):
     global unlimited
     unlimited = False
     await e.reply_text("Stopped Unlimited Wish Shayri")
