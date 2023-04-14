@@ -10,9 +10,8 @@ from LegendGirl.Config import *
 from .. import sudos
 from ..core.clients import *
 
-
 @Client.on_message(filters.user(sudos) & filters.command(["raid"], prefixes=HANDLER))
-async def raidop(Legend: Client, e: Message):
+async def raid(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}raid (count) (reply to anyone)\nUsage :- `{HANDLER}raid 3 <reply to anyone>`\n\nCommand :- {HANDLER}raid <count> <username>\nUsage :- `{HANDLER}raid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
@@ -68,7 +67,7 @@ USERS = []
 @Client.on_message(
     filters.user(sudos) & filters.command(["rraid", "replyraid"], prefixes=HANDLER)
 )
-async def repraid(Legend: Client, e: Message):
+async def rraid(Legend: Client, e: Message):
     global USERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
@@ -160,7 +159,7 @@ async def draid(Legend: Client, e: Message):
 @Client.on_message(
     filters.user(sudos) & filters.command(["rlist", "raidlist"], prefixes=HANDLER)
 )
-async def rllist(Legend: Client, e: Message):
+async def rlist(Legend: Client, e: Message):
     global USERS
     _reply = "**Raid users list - Legend Bot Spam** \n\n"
     if len(USERS) > 0:
@@ -177,7 +176,7 @@ async def rllist(Legend: Client, e: Message):
 
 
 @Client.on_message(filters.all)
-async def watcher(Legend: Client, msg: Message):
+async def checkraid(Legend: Client, msg: Message):
     global USERS
     if int(msg.from_user.id) in USERS:
         await msg.reply_text(choice(RRAID))
