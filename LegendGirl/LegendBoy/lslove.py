@@ -1,7 +1,7 @@
 import asyncio
 from random import choice
 
-from LegendBS.love import loveraid as luvraid
+from LegendBS.love import loveraid
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -12,9 +12,9 @@ from ..core.clients import *
 
 
 @Client.on_message(
-    filters.user(sudos) & filters.command(["loveraid"], prefixes=HANDLER)
+    filters.user(sudos) & filters.command(["lslove"], prefixes=HANDLER)
 )
-async def lovaid(Legend: Client, e: Message):
+async def lslove(Legend: Client, e: Message):
     usage = f"Command :- {HANDLER}loveraid (count) (reply to anyone)\nUsage :- `{HANDLER}loveraid 3 <reply to anyone>`\n\nCommand :- {HANDLER}loveraid <count> <username>\nUsage :- `{HANDLER}loveraid 3 @Hekeke`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     chat = e.chat
@@ -61,15 +61,15 @@ async def lovaid(Legend: Client, e: Message):
             print(a)
 
 
-USERS = []
+uSERS = []
 
 
 @Client.on_message(
     filters.user(sudos)
-    & filters.command(["loverraid", "lovereplyraid"], prefixes=HANDLER)
+    & filters.command(["lsrlove"], prefixes=HANDLER)
 )
-async def lovereplyraid(Legend: Client, e: Message):
-    global USERS
+async def lsrlove(Legend: Client, e: Message):
+    global uSERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -95,9 +95,9 @@ async def lovereplyraid(Legend: Client, e: Message):
         return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-    if int(user.id) in USERS:
+    if int(user.id) in uSERS:
         return await e.reply_text("User already in Raid list!")
-    USERS.append(user.id)
+    uSERS.append(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Activated On User {mention}")
 
@@ -113,10 +113,10 @@ async def lovereplyraid(Legend: Client, e: Message):
 
 @Client.on_message(
     filters.user(sudos)
-    & filters.command(["lovedraid", "lovedreplyraid"], prefixes=HANDLER)
+    & filters.command(["lovedlove"], prefixes=HANDLER)
 )
-async def lovedraid(Legend: Client, e: Message):
-    global USERS
+async def lovedlove(Legend: Client, e: Message):
+    global uSERS
     try:
         lol = e.text.split(" ", 1)[1].split(" ", 1)
     except IndexError:
@@ -141,9 +141,9 @@ async def lovedraid(Legend: Client, e: Message):
         return await e.reply_text(
             "I don't know who you're talking about, you're going to need to specify a user...!"
         )
-    if int(user.id) not in USERS:
+    if int(user.id) not in uSERS:
         return await e.reply_text("User not in Raid list!")
-    USERS.remove(user.id)
+    uSERS.remove(user.id)
     mention = user.mention
     await e.reply_text(f"Love Reply Raid Deactivated Successfully On User {mention}")
 
@@ -159,20 +159,20 @@ async def lovedraid(Legend: Client, e: Message):
 
 @Client.on_message(filters.all)
 async def lactivate(Legend: Client, msg: Message):
-    global USERS
-    if int(msg.from_user.id) in USERS:
-        await msg.reply_text(choice(luvraid))
+    global uSERS
+    if int(msg.from_user.id) in uSERS:
+        await msg.reply_text(choice(loveraid))
 
 
 @Client.on_message(
     filters.user(sudos)
-    & filters.command(["loverlist", "loveraidlist"], prefixes=HANDLER)
+    & filters.command(["lslist",], prefixes=HANDLER)
 )
-async def loverllist(Legend: Client, e: Message):
-    global USERS
+async def lslist(Legend: Client, e: Message):
+    global uSERS
     _reply = "**Love Raid users list - Legend Bot Spam** \n\n"
-    if len(USERS) > 0:
-        for x in USERS:
+    if len(uSERS) > 0:
+        for x in uSERS:
             try:
                 user = await Legend.get_users(x)
                 _reply += f" ✨ Users: {user.mention} \n"
