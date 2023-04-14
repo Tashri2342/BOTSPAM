@@ -43,7 +43,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
     elif query == "evaluators_help2":
         await callback_query.answer(evaluators_help2, show_alert=True)
     elif query == "gwish_help1":
-        await callback_query.answer(gwish_help2, show_alert=True)
+        await callback_query.answer(gwish_help1, show_alert=True)
     elif query == "gwish_help2":
         await callback_query.answer(gwish_help2, show_alert=True)
     elif query == "gwish_help3":
