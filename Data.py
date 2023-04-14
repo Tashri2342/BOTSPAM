@@ -53,9 +53,7 @@ class Data:
             InlineKeyboardButton(text="📍 Stop 📍", callback_data="unlimited_help4"),
         ],
         [
-            InlineKeyboardButton(
-                text="⚜️ Echo ⚜️", callback_data="unlimited_help5"
-            ),
+            InlineKeyboardButton(text="⚜️ Echo ⚜️", callback_data="unlimited_help5"),
         ],
         [
             InlineKeyboardButton(text="🔒 Close", callback_data="close"),
