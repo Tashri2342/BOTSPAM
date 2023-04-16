@@ -104,11 +104,11 @@ def LegendStartUP():
     if START_PIC:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set START_PIC {START_PIC}")
-    START_MESSAGE = input(f"\nEnter START_MESSAGE (Telegraph link) or press enter!: ")
+    START_MESSAGE = input(f"\nEnter START_MESSAGE or press enter!: ")
     if START_MESSAGE:
         print(f"Got it! Fill next value")
-        os.system(f"dotenv set START_MESSAGE{START_MESSAGE}")
-    LOG_CHANNEL = input(f"\Enter Chat ID or Username of LOG_CHANNEL or press enter: ")
+        os.system(f"dotenv set START_MESSAGE {START_MESSAGE}")
+    LOG_CHANNEL = input(f"\nEnter Chat ID or Username of LOG_CHANNEL or press enter: ")
     if LOG_CHANNEL:
         print("Got it! Fill next value")
         os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}")
@@ -118,13 +118,17 @@ def LegendStartUP():
     if sudo_users:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set SUDO_USERS {sudo_users}")
-    cmd_hndlr = input(f"\nEnter HANDLER or press enter: ")
+    cmd_hndlr = input(f"\nEnter HANDLER")
     if cmd_hndlr:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set HANDLER {cmd_hndlr}")
+    else:
+        print(f"You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        LegendStartUP()
     BOT_TOKEN = input(f"\nEnter session or bot token of BOT TOKEN: ")
     if BOT_TOKEN:
-        print(f"{bcyan}Got it! Fill next value")
+        print(f"Got it! Fill next value")
         os.system(f"dotenv set BOT TOKEN {BOT_TOKEN}")
     else:
         print(f"You have to fill this variable! all process restarting..")
