@@ -139,7 +139,7 @@ def LegendStartUP():
         if token:
             print(f"Got it! Fill next value")
             os.system(f"dotenv set BOT_TOKEN{i} {token}")
-
+    check_again()
 
 botspam = input(f"Want to fill vars ? if yes type Y/yes else press enter: ")
 if botspam.lower() in ["y", "yes"]:
@@ -149,11 +149,11 @@ if botspam.lower() in ["y", "yes"]:
         y.close()
         os.system("clear")
         LegendStartUP()
-    if os.path.exists(".env"):
+    elif os.path.exists(".env"):
         f = open(".env")
         check = f.read()
         print(check)
-        x.close()
+        f.close()
         check_again()
         if not len(lines) == 35:
             os.system("rm -rf .env")
