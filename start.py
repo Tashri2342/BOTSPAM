@@ -1,6 +1,7 @@
 import os
 import sys
-import time 
+import time
+
 os.system("clear")
 
 
@@ -111,7 +112,9 @@ def LegendStartUP():
     if LOG_CHANNEL:
         print("Got it! Fill next value")
         os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}")
-    sudo_users = input(f"\nEnter SUDO_USERS (space by space) or press enter: ").replace(" ", "\ ")
+    sudo_users = input(f"\nEnter SUDO_USERS (space by space) or press enter: ").replace(
+        " ", "\ "
+    )
     if sudo_users:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set SUDO_USERS {sudo_users}")
@@ -127,12 +130,11 @@ def LegendStartUP():
         print(f"You have to fill this variable! all process restarting..")
         time.sleep(2)
         LegendStartUP()
-    for i in range(2,26):
+    for i in range(2, 26):
         token = input(f"\nEnter session or bot token of BOT_TOKEN{i} or press enter: ")
         if token:
             print(f"Got it! Fill next value")
             os.system(f"dotenv set BOT_TOKEN{i} {token}")
-
 
 
 botspam = input(f"Want to fill vars ? if yes type Y/yes else press enter: ")
