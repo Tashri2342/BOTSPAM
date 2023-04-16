@@ -110,7 +110,7 @@ def LegendStartUP():
     LOG_CHANNEL = input(f"\Enter Chat ID or Username of LOG_CHANNEL or press enter: ")
     if LOG_CHANNEL:
         print("Got it! Fill next value")
-        os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}"
+        os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}")
     sudo_users = input(f"\nEnter SUDO_USERS (space by space) or press enter: ").replace(" ", "\ ")
     if sudo_users:
         print(f"Got it! Fill next value")
