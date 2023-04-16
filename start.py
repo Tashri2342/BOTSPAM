@@ -112,9 +112,7 @@ def LegendStartUP():
     if LOG_CHANNEL:
         print("Got it! Fill next value")
         os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}")
-    sudo_users = input(f"\nEnter SUDO_USERS (space by space) : ").replace(
-        " ", "\ "
-    )
+    sudo_users = input(f"\nEnter SUDO_USERS (space by space) : ").replace(" ", "\ ")
     if sudo_users:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set SUDO_USERS {sudo_users}")
