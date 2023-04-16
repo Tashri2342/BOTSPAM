@@ -127,8 +127,8 @@ def LegendStartUP():
         print(f"You have to fill this variable! all process restarting..")
         time.sleep(2)
         LegendStartUP()
-    for i range(2,26):
-        token = input(f"\nEnter session or bot token of BOT_TOKEN2 or press enter: ")
+    for i in range(2,26):
+        token = input(f"\nEnter session or bot token of BOT_TOKEN{i} or press enter: ")
         if token:
             print(f"Got it! Fill next value")
             os.system(f"dotenv set BOT_TOKEN{i} {token}")
