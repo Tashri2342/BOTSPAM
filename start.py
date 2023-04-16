@@ -141,6 +141,7 @@ def LegendStartUP():
             os.system(f"dotenv set BOT_TOKEN{i} {token}")
     check_again()
 
+
 botspam = input(f"Want to fill vars ? if yes type Y/yes else press enter: ")
 if botspam.lower() in ["y", "yes"]:
     if not os.path.exists(".env"):
