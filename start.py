@@ -76,7 +76,7 @@ def check_again():
 
 
 def LegendStartUP():
-    app_id = input(f"pEnter APP_ID: ")
+    app_id = input(f"Enter APP_ID: ")
     if app_id:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set APP_ID {app_id}")
@@ -112,13 +112,17 @@ def LegendStartUP():
     if LOG_CHANNEL:
         print("Got it! Fill next value")
         os.system(f"dotenv set LOG_CHANNEL {LOG_CHANNEL}")
-    sudo_users = input(f"\nEnter SUDO_USERS (space by space) or press enter: ").replace(
+    sudo_users = input(f"\nEnter SUDO_USERS (space by space) : ").replace(
         " ", "\ "
     )
     if sudo_users:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set SUDO_USERS {sudo_users}")
-    cmd_hndlr = input(f"\nEnter HANDLER")
+    else:
+        print(f"You have to fill this variable! all process restarting..")
+        time.sleep(2)
+        LegendStartUP()
+    cmd_hndlr = input(f"\nEnter HANDLER: ")
     if cmd_hndlr:
         print(f"Got it! Fill next value")
         os.system(f"dotenv set HANDLER {cmd_hndlr}")
@@ -129,7 +133,7 @@ def LegendStartUP():
     BOT_TOKEN = input(f"\nEnter session or bot token of BOT TOKEN: ")
     if BOT_TOKEN:
         print(f"Got it! Fill next value")
-        os.system(f"dotenv set BOT TOKEN {BOT_TOKEN}")
+        os.system(f"dotenv set BOT_TOKEN {BOT_TOKEN}")
     else:
         print(f"You have to fill this variable! all process restarting..")
         time.sleep(2)
