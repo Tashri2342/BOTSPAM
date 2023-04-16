@@ -135,7 +135,7 @@ def LegendStartUP():
 
 
 
-botspam = input(f"{ask}Want to fill vars ? if yes type Y/yes else press enter: ")
+botspam = input(f"Want to fill vars ? if yes type Y/yes else press enter: ")
 if botspam.lower() in ["y", "yes"]:
     if not os.path.exists(".env"):
         y = open(".env", "w")
