@@ -9,22 +9,22 @@ from LegendGirl.Config import *
 from .. import sudos
 from ..core.clients import *
 
-unlimited = False
+Useru = False
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["shayri"], prefixes=HANDLER))
-async def shayricmd(Legend: Client, e: Message):
+async def shayri(Legend: Client, e: Message):
     usage = f"Command: {HANDLER}shayri -u \nCommand:{HANDLER}shayri -u (reply to anyone)\nCommand: {HANDLER}shayri (count) \nCommand: {HANDLER}shayri (count) (reply to anyone)"
     text = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     flag = text[0]
     if not flag:
         return await e.reply_text(usage)
     if "-u" in flag:
-        global unlimited
-        unlimited = True
+        global Useru
+        Useru = True
         if e.reply_to_message:
             lmao = e.reply_to_message
-            while unlimited == True:
+            while Useru == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
@@ -32,7 +32,7 @@ async def shayricmd(Legend: Client, e: Message):
                             e.chat.id, f"{lmao.from_user.mention}\n\n{choice(SHAYRI)}"
                         )
         else:
-            while unlimited == True:
+            while Useru == True:
                 for i in range(1, 26):
                     lol = globals()[f"Client{i}"]
                     if lol is not None:
@@ -72,7 +72,7 @@ async def shayricmd(Legend: Client, e: Message):
 @Client.on_message(
     filters.user(sudos) & filters.command(["stopshayri"], prefixes=HANDLER)
 )
-async def stopwish(_, e: Message):
-    global unlimited
-    unlimited = False
+async def stopshayri(_, e: Message):
+    global Useru
+    Useru = False
     await e.reply_text("Stopped Unlimited Wish Shayri")

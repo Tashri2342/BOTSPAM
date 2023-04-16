@@ -15,8 +15,8 @@ from ..core.clients import *
 @Client.on_message(
     filters.user(sudos) & filters.command(["spam", "bigspam"], prefixes=HANDLER)
 )
-async def _spam(Legend: Client, e: Message):
-    usage = f"Command :- {HANDLER}spam (count) (text)\nExample :- `{HANDLER}spam 5 SpamBot OP`\n\n{HANDLER}bigspam (count) (text)\nExample :- {HANDLER}bigspam 103 Legend Spam Bot`"
+async def spam(Legend: Client, e: Message):
+    usage = f"Command :- {HANDLER}spam (count) (text)\nExample :- `{HANDLER}spam 5 SpamBot OP`\n\n{HANDLER}bigspam (count) (text)\nExample :- `{HANDLER}bigspam 103 Legend Spam Bot`"
     try:
         lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 1)
     except IndexError:
@@ -64,8 +64,8 @@ async def _spam(Legend: Client, e: Message):
 @Client.on_message(
     filters.user(sudos) & filters.command(["dspam", "delayspam"], prefixes=HANDLER)
 )
-async def _delayspam(Legend: Client, e: Message):
-    usage = f"Command :- {HANDLER}dspam (coun) (sleeptime) (text)\nExample :- `{HANDLER}dspam 25 8 LegendBot`"
+async def delayspam(Legend: Client, e: Message):
+    usage = f"Command :- {HANDLER}dspam (count) (sleeptime) (text)\nExample :- `{HANDLER}dspam 25 8 LegendBot`"
     lol = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
     try:
         owo = lol[1:]
@@ -73,7 +73,7 @@ async def _delayspam(Legend: Client, e: Message):
         return await e.reply_text(usage)
     try:
         counts = int(owo[0])
-    except ValueError:
+    except IndexError:
         return await e.reply_text(usage)
     spam_text = str(owo[1])
     sleeptime = float(lol[0])

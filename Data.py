@@ -25,18 +25,6 @@ class Data:
             InlineKeyboardButton(text="⚜️ Good Night ⚜️", callback_data="gwish_help3"),
         ],
         [
-            InlineKeyboardButton(text="⚜️ Love Raid ⚜️", callback_data="lslove_help1"),
-            InlineKeyboardButton(
-                text="📍Love Reply Raid📍", callback_data="lslove_help2"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⚜️ Love Dreply Raid ⚜️", callback_data="lslove_help3"
-            ),
-            InlineKeyboardButton(text="📍 List Raid 📍", callback_data="lslove_help4"),
-        ],
-        [
             InlineKeyboardButton(text="⚜️ Raid ⚜️", callback_data="raid_help1"),
             InlineKeyboardButton(text="📍Reply Raid📍", callback_data="raid_help2"),
         ],
@@ -65,9 +53,7 @@ class Data:
             InlineKeyboardButton(text="📍 Stop 📍", callback_data="unlimited_help4"),
         ],
         [
-            InlineKeyboardButton(
-                text="⚜️ Dreply Raid ⚜️", callback_data="unlimited_help5"
-            ),
+            InlineKeyboardButton(text="⚜️ Echo ⚜️", callback_data="unlimited_help5"),
         ],
         [
             InlineKeyboardButton(text="🔒 Close", callback_data="close"),

@@ -1,7 +1,12 @@
 # starting all clients
+import logging
+
 from pyrogram import Client as call
 
 from LegendGirl.Config import *
+
+logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
+
 
 if ":" in BOT_TOKEN:
     Client1 = call(
@@ -9,7 +14,7 @@ if ":" in BOT_TOKEN:
         api_id=APP_ID,
         api_hash=API_HASH,
         bot_token=BOT_TOKEN,
-        plugins=dict(root="LegendGirl.LegendBoy"),
+        plugins=dict(root="LegendGirl/LegendBoy"),
     )
     print("LegendSpam : Bot token 1 has been found")
 else:
