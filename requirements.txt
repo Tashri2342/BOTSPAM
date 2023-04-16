@@ -1,7 +1,7 @@
 heroku3
 python-decouple
 pyrogram 
-cryptg
+
 heroku3
 gitpython
 tgcrypto
