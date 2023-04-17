@@ -24,7 +24,7 @@ async def _help(Legend: Client, message: Message):
         )
     else:
         await Legend.send_message(
-            message.chat_id,
+            message.chat.id,
             HELP_MSG,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
         )
