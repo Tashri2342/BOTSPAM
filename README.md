@@ -104,13 +104,13 @@ Required Variable | Description
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Railway+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-<h3> Mongenius Deployment </h3>
+## Mongenius Deployment 
 
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-<h3> Termux Deployment </h3>
+## Termux Deployment 
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
@@ -154,24 +154,24 @@ screen -S BOTSPAM
 python3 start.py
 ```
 
-<h3> Qovery Deployment </h3>
+## Qovery Deployment
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Qovery+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-<h3> Fly.io Deployment </h3>
+## Fly.io Deployment 
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Fly.io+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-<h3> GitHub Action Deployment </h3>
+## GitHub Action Deployment
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Github+•+Action+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-<h3> Render Deployment </h3>
+## Render Deployment 
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Render+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-<h3> Koyeb Deployment </h3>
+## Koyeb Deployment 
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Koyeb+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
