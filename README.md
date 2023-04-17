@@ -93,6 +93,27 @@ Required Variable | Description
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Vps+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
+
+
+## Okteto Deployment 
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Okteto+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+## Railway Deployment 
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Railway+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Mongenius Deployment </h3>
+
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
+
+<h3> Termux Deployment </h3>
+
+- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
 ----
 
 <h3>Commands</h3>
@@ -132,26 +153,6 @@ screen -S BOTSPAM
 ```python
 python3 start.py
 ```
-
-## Okteto Deployment 
-
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Okteto+•&style=social)](https://youtu.be/CH_KO1wim2o)
-
-## Railway Deployment 
-
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Railway+•&style=social)](https://youtu.be/CH_KO1wim2o)
-
-
-<h3> Mongenius Deployment </h3>
-
-
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/CH_KO1wim2o)
-
-
-<h3> Termux Deployment </h3>
-
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/CH_KO1wim2o)
-
 
 <h3> Qovery Deployment </h3>
 
