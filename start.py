@@ -76,6 +76,7 @@ def check_again():
 
 
 def LegendStartUP():
+    os.system("pip3 install -r requirements.txt")
     app_id = input(f"Enter APP_ID: ")
     if app_id:
         print(f"Got it! Fill next value")
