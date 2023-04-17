@@ -93,6 +93,45 @@ Required Variable | Description
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Vps+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
+----
+
+<h3>Commands</h3>
+
+<b>1) apt update & upgrade</b>
+
+```python
+apt upgrade && apt update
+```
+
+<b>2) Install python3, git, screen </b>
+
+```python
+pkg install python3 && pkg install git && pkg install screen 
+```
+
+<b>3) clone repo and open dictionary </b>
+
+```python
+git clone https://github.com/LEGEND-AI/BOTSPAM && cd BOTSPAM
+```
+
+<b>4) Install requirements </b>
+
+```python
+python3 -m pip install --upgrade pip && pip3 install -r requirements.txt
+```
+
+<b>5) Run screen </b>
+
+```python
+screen -S BOTSPAM
+```
+
+<b>6) Run start.py to fill values and start Bot Spam </b>
+
+```python
+python3 start.py
+```
 
 ## Okteto Deployment 
 
