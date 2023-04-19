@@ -14,6 +14,14 @@ from .. import sudos
 from ..core.clients import *
 
 
+
+if PING_PIC:
+    PING_PIC = PING_PIC
+else:
+    PING_PIC = "https://graph.org/file/8b665536aee97ee58f5ca.jpg"
+
+
+
 @Client.on_message(filters.user(sudos) & filters.command(["ping"], prefixes=HANDLER))
 async def ping(_, e: Message):
     start = datetime.datetime.now()
