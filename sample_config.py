@@ -39,15 +39,14 @@ try:
 except Exception:
     SUDO_USERS = str(getenv("SUDO_USERS", "123 456"))
 
-START_MESSAGE = getenv(
-    "START_MESSAGE",
-    "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/TeamLegendXD)",
-)
+START_MESSAGE = getenv("START_MESSAGE", None)
 
-PING_PIC = getenv("PING_PIC", "https://graph.org/file/8b665536aee97ee58f5ca.jpg")
+PING_PIC = getenv("PING_PIC", None)
 
-START_PIC = getenv("START_PIC", "https://graph.org/file/01d5c1877d6aabdd99c25.jpg")
+START_PIC = getenv("START_PIC", None)
 
+
+HELP_MSG = getenv("HELP_MSG", None)
 HELP_PIC = getenv("HELP_PIC", "https://graph.org/file/89ed7d3a2bd8aa2c61385.jpg")
 LOG_CHANNEL = getenv("LOG_CHANNEL", None)
 
