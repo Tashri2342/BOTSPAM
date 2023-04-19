@@ -14,12 +14,10 @@ else:
     )
 
 
-
 if START_PIC:
     START_PIC = START_PIC
 else:
     START_PIC = "https://graph.org/file/89ed7d3a2bd8aa2c61385.jpg"
-
 
 
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
