@@ -139,7 +139,7 @@ git clone https://github.com/LEGEND-AI/BOTSPAM && cd BOTSPAM
 <b>4) Install requirements </b>
 
 ```python
-python3 -m pip install --upgrade pip && pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 <b>5) Run screen </b>
