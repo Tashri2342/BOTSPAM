@@ -6,6 +6,11 @@ from LegendGirl.Config import *
 
 from ..core.clients import *
 
+if START_MESSAGE:
+    START_MESSAGE = START_MESSAGE
+else:
+    START_MESSAGE = "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/TeamLegendXD)"
+
 
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
 async def _start(Legend: Client, message: Message):
