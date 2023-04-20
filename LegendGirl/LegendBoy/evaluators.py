@@ -11,7 +11,7 @@ from .. import sudos
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
-async def eval(Legend: Client, message:Message):
+async def eval(Legend: Client, message: Message):
     cmd = message.text[6:]
     if message.reply_to_message:
         code = message.reply_to_message.text.markdown
