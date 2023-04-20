@@ -1,14 +1,12 @@
 import asyncio
 import os
 
-
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from LegendGirl.Config import *
 
 from .. import sudos
-
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
