@@ -143,11 +143,13 @@ pip3 install -r requirements.txt
 ```
 
 
-<b>6) Run start.py to fill values and start Bot Spam </b>
+<b>5) Run start.py to fill values and start Bot Spam </b>
 
 ```python
 python3 start.py
 ```
+
+<b>6) Now Your Bot Has Been Started Then Click On Exit
 
 ## Qovery Deployment
 
