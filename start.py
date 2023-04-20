@@ -1,6 +1,4 @@
 import os
-import sys
-import time
 
 from LegendBS.startup import *
 
@@ -48,9 +46,6 @@ BOT_TOKEN23=
 BOT_TOKEN24=
 BOT_TOKEN25=
 """
-
-
-
 
 
 botspam = input(f"Want to fill vars ? if yes type Y/yes else press enter: ")
