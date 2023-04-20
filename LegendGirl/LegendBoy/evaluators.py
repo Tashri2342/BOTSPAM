@@ -1,6 +1,6 @@
 import asyncio
 import os
-
+import subprocess
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -8,7 +8,6 @@ from pyrogram.types import Message
 from LegendGirl.Config import *
 
 from .. import sudos
-import subprocess
 
 
 @Client.on_message(filters.user(sudos) & filters.command(["eval"], prefixes=HANDLER))
