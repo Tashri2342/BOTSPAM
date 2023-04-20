@@ -142,11 +142,6 @@ git clone https://github.com/LEGEND-AI/BOTSPAM && cd BOTSPAM
 pip3 install -r requirements.txt
 ```
 
-<b>5) Run screen </b>
-
-```python
-screen -S BOTSPAM
-```
 
 <b>6) Run start.py to fill values and start Bot Spam </b>
 
