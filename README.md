@@ -124,10 +124,10 @@ Required Variable | Description
 apt upgrade && apt update
 ```
 
-<b>2) Install python3, git, screen </b>
+<b>2) Install python3, git </b>
 
 ```python
-pkg install python3 && pkg install git && pkg install screen 
+pkg install python3 && pkg install git
 ```
 
 <b>3) clone repo and open dictionary </b>
