@@ -3,15 +3,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 from LegendGirl.Config import *
-
+from LegendGirl import version
+import platform
 from ..core.clients import *
-
-if START_MESSAGE:
-    START_MESSAGE = START_MESSAGE
-else:
-    START_MESSAGE = (
-        "This is a Powerful Bot Spam Made By [Team Legend](https://t.me/TeamLegendXD)"
-    )
+from pyrogram import __version__ as py_version
 
 
 if START_PIC:
@@ -23,6 +18,14 @@ else:
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
 async def _start(Legend: Client, message: Message):
     if ".jpg" in START_PIC or ".png" in START_PIC:
+        my_detail = Client.get_me()
+        my_mention = my_detail.mention
+        if START_MESSAGE:
+            START_MESSAGE = START_MESSAGE
+        else:
+            START_MESSAGE = (
+                f"Hey👋 {message.from_user.mention}❤️\n✥I am {my_mention}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n✥ Pyrogram Version = {py_version}\n✥ Python Version = {platform.python_version()}\n✥ BotSpam Version = {version}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
+            )
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
