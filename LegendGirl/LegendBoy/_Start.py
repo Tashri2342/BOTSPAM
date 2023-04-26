@@ -25,7 +25,7 @@ async def _start(Legend: Client, message: Message):
         if START_MESSAGE:
             START_MESSAGE = START_MESSAGE
         else:
-            START_MESSAGE = f"Hey👋 {message.from_user.mention}❤️\n✥ I am {my_mention}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n\n✥ Pyrogram Version = {py_version}\n✥ Python Version = {platform.python_version()}\n✥ BotSpam Version = {version}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
+            START_MESSAGE = f"Hey👋 {message.from_user.mention}❤️\n✥ I am {my_mention}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n\n✥ __Pyrogram Version__ = {py_version}\n✥ __Python Version__ = {platform.python_version()}\n✥ __BotSpam Version__ = {version}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
