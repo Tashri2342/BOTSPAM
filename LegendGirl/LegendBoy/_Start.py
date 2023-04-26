@@ -1,13 +1,15 @@
+import platform
+
 from LegendBS.start import start_cmd
-from pyrogram import Client, filters
+from pyrogram import Client
+from pyrogram import __version__ as py_version
+from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from LegendGirl.Config import *
 from LegendGirl import version
-import platform
-from ..core.clients import *
-from pyrogram import __version__ as py_version
+from LegendGirl.Config import *
 
+from ..core.clients import *
 
 if START_PIC:
     START_PIC = START_PIC
@@ -23,9 +25,7 @@ async def _start(Legend: Client, message: Message):
         if START_MESSAGE:
             START_MESSAGE = START_MESSAGE
         else:
-            START_MESSAGE = (
-                f"Hey👋 {message.from_user.mention}❤️\n✥I am {my_mention}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n✥ Pyrogram Version = {py_version}\n✥ Python Version = {platform.python_version()}\n✥ BotSpam Version = {version}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
-            )
+            START_MESSAGE = f"Hey👋 {message.from_user.mention}❤️\n✥I am {my_mention}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n✥ Pyrogram Version = {py_version}\n✥ Python Version = {platform.python_version()}\n✥ BotSpam Version = {version}\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
