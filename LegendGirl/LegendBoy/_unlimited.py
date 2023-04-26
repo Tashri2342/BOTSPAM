@@ -1,8 +1,8 @@
 from random import choice
 
+from LegendBS.abuse import abuse as galia
 from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
-from LegendBS.abuse import abuse as galia
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
