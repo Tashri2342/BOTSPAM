@@ -2,6 +2,7 @@ from random import choice
 
 from LegendBS.get_user import user_only
 from LegendBS.raid import RAID
+from LegendBS.abuse import abuse as galia
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -86,14 +87,14 @@ async def abuse(Legend: Client, e: Message):
     if e.reply_to_message:
         lmao = e.reply_to_message
         while unlimited == True:
-            msg = choice(RAID)
+            msg = choice(galia)
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
                     await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
     else:
         while unlimited == True:
-            msg = choice(RAID)
+            msg = choice(galia)
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
