@@ -139,7 +139,7 @@ shayri_help2 = f"""📜 Intro :
 Stop the shayri
 
 👨‍💻 Usage :
-🔸 {HANDLER}shayri"""
+🔸 {HANDLER}stopshayri"""
 
 spam_help1 = f"""📜 Intro :
 Start the chat with many spam
