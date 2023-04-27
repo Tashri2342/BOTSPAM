@@ -19,13 +19,13 @@ else:
 
 @Client.on_message(filters.command(["start"], prefixes=HANDLER))
 async def _start(Legend: Client, message: Message):
+    if START_MESSAGE:
+        START_MESSAGE = START_MESSAGE
+    else:
+        START_MESSAGE = f"Hey👋 {message.from_user.mention}❤️\n✥ I am {my_mention}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n\n✥ **__Pyrogram Version__** = {py_version}\n✥ **__Python Version__** = {platform.python_version()}\n✥ **__BotSpam Version__** = {version}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
     if ".jpg" in START_PIC or ".png" in START_PIC:
         my_detail = Client.get_me()
         my_mention = my_detail.mention
-        if START_MESSAGE:
-            START_MESSAGE = START_MESSAGE
-        else:
-            START_MESSAGE = f"Hey👋 {message.from_user.mention}❤️\n✥ I am {my_mention}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖\n\n✥ **__Pyrogram Version__** = {py_version}\n✥ **__Python Version__** = {platform.python_version()}\n✥ **__BotSpam Version__** = {version}\n\n❖═══❃≛⃝❈•✵•≛⃝❈❃═══❖"
         for i in range(1, 26):
             lol = globals()[f"Client{i}"]
             if lol is not None:
