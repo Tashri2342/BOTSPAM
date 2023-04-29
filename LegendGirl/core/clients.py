@@ -1,17 +1,13 @@
 # starting all clients
 import logging
-
-from pyrogram import Client as call
-
-from LegendGirl.Config import *
-from pyrogram import idle
-
-
 import platform
 
 from LegendBS.start_bot import start_bot
+from pyrogram import Client as call
 from pyrogram import __version__ as py_version
 from pyrogram import idle
+
+from LegendGirl.Config import *
 
 group_username = "@LegendSpamBot"
 logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
