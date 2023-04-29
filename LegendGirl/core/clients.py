@@ -8,7 +8,7 @@ from pyrogram import __version__ as py_version
 from pyrogram import idle
 
 from LegendGirl.Config import *
-
+version = "v1.0"
 group_username = "@LegendSpamBot"
 logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
 
