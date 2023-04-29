@@ -13,7 +13,7 @@ from LegendBS.start_bot import start_bot
 from pyrogram import __version__ as py_version
 from pyrogram import idle
 
-group_username = @LegendSpamBot
+group_username = "@LegendSpamBot"
 logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
 
 
