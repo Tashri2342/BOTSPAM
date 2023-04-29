@@ -112,7 +112,7 @@ Required Variable | Description
 
 ## Termux Deployment 
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/CH_KO1wim2o)
+- [![YouTube Video Views](https://img.shields.io/youtube/views/PmIPM8ZyQKQ?label=Tutorial+•+Termux+•&style=social)](https://youtu.be/PmIPM8ZyQKQ)
 
 ----
 
