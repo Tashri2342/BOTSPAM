@@ -1,7 +1,7 @@
 heroku3
 python-decouple
 pyrogram
-git+https://github.com/LEGEND-AI/pyLegendBS
+pyLegendBS
 heroku3
 gitpython
 tgcrypto
