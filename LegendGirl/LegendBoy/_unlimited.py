@@ -98,7 +98,7 @@ async def abuse(Legend: Client, e: Message):
             for i in range(1, 26):
                 lol = globals()[f"Client{i}"]
                 if lol is not None:
-                    await lol.send_message(e.chat.id, f"{lmao.from_user.mention} {msg}")
+                    await lol.send_message(e.chat.id, f"{msg}")
     if LOG_CHANNEL:
         try:
             await Legend.send_message(
