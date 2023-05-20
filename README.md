@@ -107,7 +107,7 @@ Required Variable | Description
 ## Mongenius Deployment 
 
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/CH_KO1wim2o)
+- [![YouTube Video Views](https://img.shields.io/youtube/views/ETE_v68Bt8Y?label=Tutorial+•+Mongenius+•&style=social)](https://youtu.be/ETE_v68Bt8Y)
 
 
 ## Termux Deployment 
