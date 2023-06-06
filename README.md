@@ -173,9 +173,8 @@ python3 start.py
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Koyeb+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-## 📄 <a name=" Commands "></a>Commands
 
-- [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=All+•+Cmds+•&style=social)](https://youtu.be/CH_KO1wim2o)
+
 
 
 ## Bugs
