@@ -146,17 +146,34 @@
             "value": ""        
         },
         "HANDLER": {
-            "description": "HANDLER",
+            "description": "Put Your Handler Anything Here",
             "value": "/",
             "required": false 
         },
-        "HEROKU_API_KEY": {
-            "description": "Your Heroku api key to update your bot Get it from https://dashboard.heroku.com/account, then go down and click on reveal",
-            "value": ""
+        "START_PIC": {
+            "description": "Put telegraph link anyone",
+            "value":"",
+            "required": false
         },
-        "HEROKU_APP_NAME": {
-            "description": "Your app name to Update your bot",
-            "value": ""         
+        "HELP_PIC": {
+            "description": "Put telegraph link anyone",
+            "value":"",
+            "required": false
+        },
+        "PING_PIC": {
+            "description": "Put telegraph link anyone",
+            "value":"",
+            "required": false
+        },
+        "START_MESSAGE": {
+            "description": "Write Your message that will show you when you start bot",
+            "value":"",
+            "required": false
+        }
+        "LOG_CHANNEL": {
+            "description": "Paste here log group id",
+            "value":"",
+            "required": false
         }
     },
     "buildpacks": [
