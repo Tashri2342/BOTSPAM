@@ -9,7 +9,7 @@ from pyrogram import idle
 
 from LegendGirl.Config import *
 
-version = "v1.0"
+version = "v1.1"
 group_username = "@LegendSpamBot"
 logging.basicConfig(format="%(levelname)s  %(message)s", level=logging.INFO)
 
