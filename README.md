@@ -13,7 +13,7 @@
 
 ![](https://img.shields.io/badge/BotSpam→V1.1-blue)
 
-![Branch](https://img.shields.io/badge/Branch-main-white?&style=social&logo=github)
+![Branch](https://img.shields.io/badge/Branch-master-white?&style=social&logo=github)
 
 [![Python](https://img.shields.io/badge/Python-3.10.5-blue)](https://www.python.org/)
 
