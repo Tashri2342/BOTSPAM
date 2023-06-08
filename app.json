@@ -169,7 +169,7 @@
             "description": "Write Your message that will show you when you start bot",
             "value":"",
             "required": false
-        }
+        },
         "LOG_CHANNEL": {
             "description": "Paste here log group id",
             "value":"",
