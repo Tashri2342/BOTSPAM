@@ -89,17 +89,17 @@ Required Variable | Description
 
 -------
 
-## Vps Deployment 
+## Vps Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Vps+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
 
-## Okteto Deployment 
+## Okteto Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Okteto+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-## Railway Deployment 
+## Railway Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Railway+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
@@ -151,35 +151,33 @@ python3 start.py
 
 <b>6) Now Your Bot Has Been Started Then Click On Exit
 
-## Qovery Deployment
+## Qovery Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Qovery+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
-## Fly.io Deployment 
+## Fly.io Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Fly.io+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-## GitHub Action Deployment
+## GitHub Action Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Github+•+Action+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-## Render Deployment 
+## Render Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Tutorial+•+Render+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
-## Koyeb Deployment 
+## Koyeb Deployment [Coming soon]
 
 - [![YouTube Video Views](https://img.shields.io/youtube/views/CH_KO1wim2o?label=Koyeb+•+Deployment+•&style=social)](https://youtu.be/CH_KO1wim2o)
 
 
 
 
-
-
 ## Bugs
 
-- Provide me any bugs
+- Provide me any bugs in issues tab of this repo
 
 ## Disclaimer
   
