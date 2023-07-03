@@ -205,9 +205,4 @@ Echo the reply message
 👨‍💻 Usage :
 🔸 {HANDLER}echo"""
 
-spam4me = f"""📜 Intro :
-Spam the reply message 
-
-👨‍💻 Usage :
-🔸 {HANDLER}sleep_time range chat"""
 
