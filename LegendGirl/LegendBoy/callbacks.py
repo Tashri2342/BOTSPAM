@@ -17,7 +17,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
             await Legend.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
-                text="⚜️ Help Menu⚜️\n\n   Powered By @TeamLegendXD",
+                text="⚜️ Help Menu⚜️\n\n   Powered By @Tashribots2342",
                 reply_markup=InlineKeyboardMarkup(Data.HELP_MENU1),
             )
     elif query == "close":
@@ -26,7 +26,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await Legend.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="Help Menu Has Been Closed\n\n          © @TeamLegendXD",
+            text="Help Menu Has Been Closed\n\n          © @Tashribots2342",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.REVERT),
         )
@@ -94,7 +94,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await Legend.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="Help Menu Two Powered By @TeamLegendXD",
+            text="Help Menu Two Powered By @Tashribots2342",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU2),
         )
@@ -104,7 +104,7 @@ async def _callbacks(Legend: Client, callback_query: CallbackQuery):
         await Legend.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="Help Menu Two Powered By @TeamLegendXD",
+            text="Help Menu Two Powered By @Tashribots2342",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.HELP_MENU3),
         )
