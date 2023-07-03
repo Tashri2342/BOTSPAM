@@ -1,6 +1,6 @@
 {
     "name": "LegendSpam",
-    "description": "Spamming Bot Made By LegendBoy @LegendBoy_OP",
+    "description": "Spamming Bot Made By LegendBoy @Tashri2342",
     "logo": "https://te.legra.ph/file/315ec5fe03f2a612139b3.jpg",
     "keywords": [
         "telegram",
@@ -9,9 +9,9 @@
         "legendboy",
         "Botspam"
     ],
-    "repository": "https://github.com/LEGEND-AI/BOTSPAM",
-    "website": "https://t.me/LegendBot_Owner",
-    "success_url": "https://t.me/LegendBot_Owner",
+    "repository": "https://github.com/Tashri2342/BOTSPAM",
+    "website": "https://t.me/Tashri2342",
+    "success_url": "https://t.me/Tashri2342",
     "env": {       
         "ENV": {
             "description": "dont edit this",
