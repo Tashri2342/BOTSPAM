@@ -54,7 +54,6 @@ class Data:
         ],
         [
             InlineKeyboardButton(text="⚜️ Echo ⚜️", callback_data="unlimited_help5"),
-            InlineKeyboardButton(text="📍 Spam 📍", callback_data="Spam4me"),
 
         ],
         [
