@@ -150,21 +150,6 @@
             "value": "/",
             "required": false 
         },
-        "START_PIC": {
-            "description": "Put telegraph link anyone",
-            "value":"",
-            "required": false
-        },
-        "HELP_PIC": {
-            "description": "Put telegraph link anyone",
-            "value":"",
-            "required": false
-        },
-        "PING_PIC": {
-            "description": "Put telegraph link anyone",
-            "value":"",
-            "required": false
-        },
         "START_MESSAGE": {
             "description": "Write Your message that will show you when you start bot",
             "value":"",
